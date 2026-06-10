@@ -134,12 +134,12 @@ function ItemCard({ title, accent, items, hiIdx, preset }: {
 
 /* -- TICKER -- */
 const TICKER_SLIDES = [
-  "🔥 {{STORE_NAME}} — {{STREET_ADDRESS}}, {{CITY}}",
+  "🔥 Pleasant Cannabis — 758 Mt Pleasant Rd, Toronto",
   "200+ Strains In Stock",
   "Open 24 Hours",
   "Pre-Rolls · Edibles · Vapes · Concentrates",
   "ALL SALES ARE FINAL",
-  "🎮 Play Games at {{DOMAIN_NAME}}/games",
+  "🎮 Play Games at pleasantcannabis.ca/games",
 ];
 
 function VerticalTicker() {
