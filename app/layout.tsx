@@ -101,20 +101,9 @@ const jsonLd = {
       closes: "23:59",
     },
   ],
-  sameAs: [
-    "https://maps.google.com/?q=758+Mt+Pleasant+Rd,+Toronto,+ON+M4S+2N6",
-    "https://maps.google.com/?q=758+Mt+Pleasant+Rd,+Toronto,+ON+M4S+2N6",
-  ],
-  hasMap: "https://maps.google.com/?q=758+Mt+Pleasant+Rd,+Toronto,+ON+M4S+2N6",
   areaServed: {
     "@type": "City",
     name: "Toronto",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "15",
-    bestRating: "5",
   },
 };
 

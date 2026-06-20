@@ -24,8 +24,8 @@ export const gbpLocation = {
     "Accessories"
   ],
   menuUrl: "/",
-  directionsUrl: "https://maps.google.com/?q=758+Mt+Pleasant+Rd,+Toronto,+ON+M4S+2N6",
-  mapEmbedUrl: "https://maps.google.com/maps?q=Pleasant%20Cannabis%20758%20Mt%20Pleasant%20Rd%2C%20Toronto%2C%20ON%20M4S%202N6&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  directionsUrl: "",
+  mapEmbedUrl: "",
   latitude: "43.7045",
   longitude: "-79.3915",
   hours: ["Open 24 Hours"],

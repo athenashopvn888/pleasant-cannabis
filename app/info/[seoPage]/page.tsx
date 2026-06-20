@@ -103,26 +103,8 @@ export default async function SeoLandingPage({
           <div className={styles.section}>
             <h2 className={styles.sectionTitle}>Find Us</h2>
             <div className={styles.mapWrap}>
-              <iframe
-                src="https://maps.google.com/maps?q=758%20Mt%20Pleasant%20Rd,+Toronto,+ON+M4S%202N6&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="350"
-                style={{ border: 0, borderRadius: "var(--radius-lg)" }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Pleasant Cannabis — 758 Mt Pleasant Rd, Toronto"
-              />
             </div>
             <div className={styles.visitBtns}>
-              <a
-                href="https://maps.google.com/?q=758+Mt+Pleasant+Rd,+Toronto,+ON+M4S+2N6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.visitBtn}
-              >
-                📍 Get Directions
-              </a>
             </div>
           </div>
 
