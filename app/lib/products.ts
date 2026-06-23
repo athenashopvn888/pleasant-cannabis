@@ -172,12 +172,13 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
   "VAPE PENS": {
     banner: "/banners/01_Vape_Pens.webp",
     name: "THC Vape", slug: "vapes", color: "#8b5cf6", icon: "💨",
-    seoTitle: "Vape Pens Toronto — THC & Nicotine Cartridges",
-    seoIntro: "Shop THC and nicotine vape pens at Pleasant Cannabis, Toronto. Cartridges, 510-thread batteries, and premium vape brands — all in stock.",
-    seoDescription: "Pleasant Cannabis carries a curated selection of vape pens and cartridges in Toronto. From 510-thread THC cartridges to nicotine vape pods, we stock the most popular brands and flavours. Our knowledgeable budtenders can help you choose the right cartridge and battery setup. Visit us at 758 Mt Pleasant Rd for the best vape selection in ByWard Market.",
+    seoTitle: "Vape Pens in Toronto | Pleasant Cannabis",
+    seoIntro: "Browse vape category information at Pleasant Cannabis in Toronto. Review vape-related menu categories and confirm current menu details before visiting.",
+    seoDescription: "Pleasant Cannabis provides vape category and menu information for shoppers in Toronto. Use this page to review vape-related menu categories and check current store details before visiting 758 Mt Pleasant Rd. Product selection can change, so confirm current menu information before you come in.",
     faqs: [
-      { q: "What vape pens do you sell?", a: "We carry 510-thread THC cartridges, nicotine vape pods, disposable vapes, and compatible batteries from top Canadian brands." },
-      { q: "Do you sell vape batteries?", a: "Yes! We stock 510-thread batteries and pod systems that pair with our cartridge selection." },
+      { q: "What vape information can I review?", a: "You can browse vape-related category and menu information when those items appear on the current menu." },
+      { q: "Should I confirm current vape menu details before visiting?", a: "Yes. Check the current menu/category page or contact the store before visiting because menu details can change." },
+      { q: "Where can I review vape category information for Pleasant Cannabis?", a: "Use the vapes category page for Pleasant Cannabis in Toronto and confirm current details before visiting." },
     ],
   },
   "VAPE DISPOSABLE": {
