@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      { source: "/product-category/vape-pens", destination: "/items/vapes", permanent: true },
       { source: "/edibles", destination: "/items/edibles", permanent: true },
       { source: "/vapes", destination: "/items/vapes", permanent: true },
       { source: "/vape-disposables", destination: "/items/vape-disposables", permanent: true },
