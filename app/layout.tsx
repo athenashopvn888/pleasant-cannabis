@@ -5,11 +5,11 @@ import AgeGate from "./components/AgeGate";
 export const metadata: Metadata = {
   metadataBase: new URL("https://pleasantcannabis.ca"),
   title: {
-    default: "Pleasant Cannabis — Premium Cannabis Dispensary, Toronto",
+    default: "24 Hour Mount Pleasant Dispensary | Pleasant Cannabis",
     template: "%s | Pleasant Cannabis",
   },
   description:
-    "Shop 200+ premium cannabis strains at Pleasant Cannabis. Exotic, Premium, AAA+, AA & Budget flower from $3/g. Toronto's uplifting dispensary at 758 Mt Pleasant Rd. Open 24 Hours.",
+    "Pleasant Cannabis is a Midtown Toronto dispensary on Mt Pleasant Rd with flower, pre-rolls, vapes, edibles, concentrates, accessories, and adult 19+ info. Open 24 Hours.",
   keywords: [
     "cannabis dispensary Toronto",
     "weed store Toronto",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     locale: "en_CA",
     url: "https://pleasantcannabis.ca",
     siteName: "Pleasant Cannabis",
-    title: "Pleasant Cannabis — Premium Toronto Cannabis Dispensary",
+    title: "24 Hour Mount Pleasant Dispensary | Pleasant Cannabis",
     description:
-      "200+ strains from $3/g. Exotic to Budget. Toronto's uplifting dispensary at 758 Mt Pleasant Rd. Open 24 Hours.",
+      "Pleasant Cannabis is a Midtown Toronto dispensary on Mt Pleasant Rd with flower, pre-rolls, vapes, edibles, concentrates, accessories, and adult 19+ info. Open 24 Hours.",
     images: [
       {
         url: "https://pleasantcannabis.ca/wp-content/uploads/2026/04/46Oi5.jpg",
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pleasant Cannabis — Toronto's Uplifting Dispensary",
-    description: "200+ strains from $3/g. Open 24 Hours at 758 Mt Pleasant Rd, Toronto.",
+    title: "24 Hour Mount Pleasant Dispensary | Pleasant Cannabis",
+    description: "Pleasant Cannabis is a Midtown Toronto dispensary on Mt Pleasant Rd with flower, pre-rolls, vapes, edibles, concentrates, accessories, and adult 19+ info. Open 24 Hours.",
     images: ["https://pleasantcannabis.ca/wp-content/uploads/2026/04/46Oi5.jpg"],
   },
   robots: {
