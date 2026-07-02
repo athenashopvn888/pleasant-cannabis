@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: "https://pleasantcannabis.ca/sitemap.xml",
+    sitemap: "https://www.pleasantcannabis.ca/sitemap.xml",
   };
 }

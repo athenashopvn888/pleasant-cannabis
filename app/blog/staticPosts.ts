@@ -25,7 +25,7 @@ export const STORE_BLOG_CONFIG = {
   storeCode: "PCB01",
   storeName: "Pleasant Cannabis",
   city: "Toronto",
-  domain: "pleasantcannabis.ca",
+  domain: "www.pleasantcannabis.ca",
   storePath: "/weed-dispensary-toronto",
 };
 
