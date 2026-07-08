@@ -39,7 +39,7 @@ export const STATIC_POSTS: StaticBlogPost[] = [
     meta_description: "Adult 19+ guide to Pleasant Cannabis around Mount Pleasant / Midtown Toronto, with local store-page checks, menu-category context, and safe visit planning.",
     h1: "Pleasant Cannabis Local Store Guide for Adults 19+",
     excerpt: "Pleasant Cannabis guide for adults 19+ reviewing store information around Mount Pleasant / Midtown Toronto.",
-    author: "Athena SEO Team",
+    author: "The Pleasant Cannabis Team",
     date: "2026-07-02",
     category: "Store Guide",
     readTime: "4 min",
