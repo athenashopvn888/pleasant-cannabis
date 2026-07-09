@@ -225,6 +225,93 @@ Use the live menu for current store-specific selection, then use the store page 
       }
     ]
   },
+  {
+    slug: "pleasant-cannabis-local-visit-guide-2026",
+    title: "Pleasant Cannabis Local Visit Guide for Adults 19+",
+    seoTitle: "Pleasant Cannabis Local Visit Guide | Toronto",
+    seo_title: "Pleasant Cannabis Local Visit Guide | Toronto",
+    metaDescription: "Plan a visit to Pleasant Cannabis around Mt Pleasant Rd, Midtown Toronto, and Davisville with adult 19+ store-page checks, menu-category paths, and local directions context.",
+    meta_description: "Plan a visit to Pleasant Cannabis around Mt Pleasant Rd, Midtown Toronto, and Davisville with adult 19+ store-page checks, menu-category paths, and local directions context.",
+    h1: "Pleasant Cannabis Local Visit Guide for Adults 19+",
+    excerpt: "Pleasant Cannabis local visit guide for adults 19+ around Mt Pleasant Rd, Midtown Toronto, and Davisville.",
+    author: "The Pleasant Cannabis Team",
+    date: "2026-07-09",
+    category: "Local Guide",
+    readTime: "4 min",
+    content: `## Pleasant Cannabis Local Visit Guide For Adults 19+
+
+When adults 19+ search for a cannabis store around Mt Pleasant Rd, Midtown Toronto, and Davisville, the most useful page should make three things easy: confirm the right storefront, understand the nearby street context, and move quickly to the store page or menu categories before visiting.
+
+This guide is for shoppers researching Pleasant Cannabis in Toronto. It does not replace current store details, current hours, or live menu information. Use the official store page or contact staff before leaving.
+
+## Confirm The Right Storefront
+
+Pleasant Cannabis is tied to Mt Pleasant Rd, Davisville, Midtown Toronto, and Mount Pleasant Village. Local shoppers often compare several map results and store pages at once, so matching the store name, city, and nearby street language matters before making the trip.
+
+If you are checking directions, start with the official store page and confirm the destination there. That keeps the visit focused on the right storefront instead of relying on a copied listing or an old search result.
+
+## Browse The Useful Menu Paths
+
+Start with the menu category that matches what you want to compare. Most shoppers move fastest when they check flower tiers, pre-rolls, vapes, edibles, concentrates, and accessories first, then ask staff if they need help choosing between options.
+
+The live menu is the best place for current product details. This guide gives local context and points you toward the pages that are most useful before visiting.
+
+## What To Check Before You Go
+
+- The exact store page and map destination.
+- Current hours, directions, and contact options.
+- Menu categories you want to compare before asking staff.
+- Valid adult 19+ identification for the visit.
+
+## Why Local Context Helps
+
+Good local store pages should answer real visit-planning questions instead of repeating a city name. Clear store identity, nearby street context, and helpful internal links make it easier for adults 19+ to decide whether they are looking at the right store.
+
+For Pleasant Cannabis, that means keeping the page focused on Mt Pleasant Rd, Midtown Toronto, and Davisville, practical category browsing, and direct next steps for shoppers who are ready to plan a visit.
+
+## Helpful Next Steps
+
+- Open the Pleasant Cannabis store page for directions and contact details.
+- Use the homepage if you want the broadest store navigation.
+- Browse the blog for more adult 19+ store guides.
+
+## FAQ
+
+### Is this guide only for Pleasant Cannabis?
+
+Yes. It is written for Pleasant Cannabis and its Toronto local context.
+
+### Does this page confirm current product availability?
+
+No. Use the live menu or contact staff for current store-specific details before visiting.
+
+### What should shoppers check first?
+
+Confirm the store page, then use menu categories and directions to plan the visit.
+
+### Why mention nearby streets and areas?
+
+Nearby street and neighbourhood context helps shoppers confirm they are looking at the right storefront before they leave.`,
+    faq: "",
+    internal_links_used: "[Pleasant Cannabis store page](/weed-dispensary-toronto)\\n[Pleasant Cannabis homepage](/)\\n[More Pleasant Cannabis guides](/blog)",
+    relatedLinks: [
+      {
+        title: "Pleasant Cannabis store page",
+        url: "https://www.pleasantcannabis.ca/weed-dispensary-toronto",
+        description: "Primary store-specific page for directions, contact details, and visit planning."
+      },
+      {
+        title: "Pleasant Cannabis homepage",
+        url: "https://www.pleasantcannabis.ca/",
+        description: "Store-scoped navigation for adults 19+."
+      },
+      {
+        title: "More Pleasant Cannabis guides",
+        url: "https://www.pleasantcannabis.ca/blog",
+        description: "Store-scoped blog index for additional visit-planning guides."
+      }
+    ],
+  },
 ];
 export function getStaticPost(slug: string) {
   return STATIC_POSTS.find((post) => post.slug === slug);
