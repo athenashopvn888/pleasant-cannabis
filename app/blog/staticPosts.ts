@@ -189,17 +189,17 @@ This guide is for adults 19+ who want a simple way to understand Pleasant Cannab
     relatedLinks: [
       {
         title: "Pleasant Cannabis store page",
-        url: "https://pleasantcannabis.com/weed-dispensary-toronto",
+        url: "https://www.pleasantcannabis.ca/weed-dispensary-toronto",
         description: "Store-specific page for directions, contact details, and visit planning."
       },
       {
         title: "Pleasant Cannabis homepage",
-        url: "https://pleasantcannabis.com/",
+        url: "https://www.pleasantcannabis.ca/",
         description: "Store-scoped homepage navigation for adults 19+."
       },
       {
         title: "More Pleasant Cannabis guides",
-        url: "https://pleasantcannabis.com/blog",
+        url: "https://www.pleasantcannabis.ca/blog",
         description: "Store-scoped blog index for future approved guides."
       }
     ],
