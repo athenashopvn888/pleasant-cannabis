@@ -8,19 +8,14 @@ export default function Footer() {
         <div className={styles.grid}>
           {/* Column 1 — Store Description */}
           <div className={styles.col}>
-            <div className={styles.brand}>
-              PLEASANT CANNABIS
-            </div>
+            <div className={styles.brand}>PLEASANT CANNABIS</div>
             <p className={styles.desc}>
-              Your Local Cannabis Dispensary At 758 Mt Pleasant Rd, Toronto. Visit
-              Pleasant Cannabis For Premium Flower, Edibles, Vapes &amp; More.
-              Open 24 Hours.
+              Your Local Cannabis Dispensary At 758 Mt Pleasant Rd, Toronto.
+              Visit Pleasant Cannabis For Premium Flower, Edibles, Vapes &amp;
+              More. Open 24 Hours.
             </p>
             <div className={styles.buttons}>
-              <a
-                href="tel:+14374270758"
-                className={styles.btnPrimary}
-              >
+              <a href="tel:+14374270758" className={styles.btnPrimary}>
                 Call Now
               </a>
             </div>
@@ -37,7 +32,11 @@ export default function Footer() {
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Phone:</span>
-              <span><a href="tel:+14374270758" style={{color: "inherit"}}>(437) 427-0758</a></span>
+              <span>
+                <a href="tel:+14374270758" style={{ color: "inherit" }}>
+                  (437) 427-0758
+                </a>
+              </span>
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Hours:</span>
@@ -61,20 +60,30 @@ export default function Footer() {
               <Link href="/faq">FAQ</Link>
               <Link href="/delivery">Delivery (Coming Soon)</Link>
               <Link href="/games">Games Arcade</Link>
-              <Link href="/info/york-weed-dispensary">Toronto Dispensary</Link>
-              <Link href="/info/cheap-weed-york">Cheap Weed Toronto</Link>
-              <Link href="/info/native-cigarettes-york">Native Cigarettes</Link>
-              <Link href="/info/weed-store-near-mississauga">Weed Store Near Mississauga</Link>
-              <Link href="/weed-dispensary-toronto/">Pleasant Cannabis Weed Dispensary in Toronto</Link>
+              <Link href="/info/mount-pleasant-weed-dispensary">
+                Mount Pleasant Dispensary
+              </Link>
+              <Link href="/info/cheap-weed-mount-pleasant">
+                Cheap Weed Mount Pleasant
+              </Link>
+              <Link href="/info/native-cigarettes-mount-pleasant">
+                Native Cigarettes
+              </Link>
+              <Link href="/info/weed-store-near-midtown-toronto">
+                Weed Store Near Mount Pleasant
+              </Link>
+              <Link href="/weed-dispensary-toronto/">
+                Pleasant Cannabis Weed Dispensary in Toronto
+              </Link>
               <Link href="/contact">Contact Us</Link>
-                          <Link href="/resources">Resources</Link>
+              <Link href="/resources">Resources</Link>
             </nav>
           </div>
         </div>
 
         <div className={styles.bottom}>
           <p>
-            © {new Date().getFullYear()} Pleasant Cannabis. Must be 19+ to
+            (c) {new Date().getFullYear()} Pleasant Cannabis. Must be 19+ to
             enter. Please consume responsibly.
           </p>
         </div>
