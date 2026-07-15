@@ -25,10 +25,10 @@ export const SEO_PAGES: SeoPageData[] = [
       {
         heading:
           "A Local Cannabis Stop Near Mount Pleasant and Midtown Toronto",
-        body: "Pleasant Cannabis is located at 758 Mt Pleasant Rd, Toronto, ON M4S 2N6. This page is built for shoppers around Mount Pleasant, Midtown Toronto, Davisville, Yonge and Eglinton, Leaside, Moore Park, Rosedale who want clear store information and simple menu paths before visiting.",
+        body: "Pleasant Cannabis is located at 758 Mt Pleasant Rd, Toronto, ON M4S 2N6. This page is built for shoppers around Mount Pleasant, Midtown Toronto, Davisville, Yonge and Eglinton, Leaside, Moore Park, Rosedale who want clear store information and simple menu sections before visiting.",
       },
       {
-        heading: "Flower Tiers And Menu Paths",
+        heading: "Flower Tiers And Menu Sections",
         body: "Pleasant Cannabis organizes flower into clear tiers, from Exotic and Premium to AAA+, AA, and Budget. You can also browse edibles, vapes, concentrates, pre-rolls, cigarettes, and accessories through the live menu before stopping in.",
       },
       {

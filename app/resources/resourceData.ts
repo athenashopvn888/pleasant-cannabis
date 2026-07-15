@@ -31,7 +31,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     intro: "A practical resource hub for Mount Pleasant and Midtown Toronto shoppers. Use it to move from local search intent to the right menu shelf: flower, pre-rolls, edibles, THC vapes, concentrates, accessories, cigarettes, Native smokes, Backwoods, and grabba.",
     cards: [
       { title: "Local Visit Guide", href: "/resources/mount-pleasant-midtown-visit-guide", text: "Plan the stop around Mount Pleasant, Midtown Toronto, Davisville, Yonge and Eglinton, Leaside, Moore Park, Rosedale, and TTC routes." },
-      { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the right category before jumping into product pages." },
+      { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the best category before jumping into product pages." },
       { title: "Flower Tier Guide", href: "/resources/flower-guide", text: "Compare Exotic, Premium, AAA+, AA, and Budget with 3g and 6g deal math." },
       { title: "Value Guide", href: "/resources/value-guide", text: "A cleaner path for cheap weed, budget weed, and affordable flower searches." },
       { title: "Native Smokes Prices", href: "/resources/native-smokes", text: "Brand and price notes for cigarettes, Backwoods, grabba, and pouch listings." }
@@ -39,12 +39,12 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     sections: [
       {
         heading: "Local Search, Useful Next Step",
-        body: "Pleasant Cannabis is listed at 758 Mt Pleasant Rd, Toronto, ON M4S 2N6. These resources support the protected GBP landing page, not replace it. Start with the local page for address and visit context, then use the resource guides for menu decisions.",
-        bullets: ["GBP landing page: /weed-dispensary-toronto", "Local areas: Mount Pleasant, Midtown Toronto, Davisville, Yonge and Eglinton, Leaside, Moore Park, Rosedale, and TTC routes", "Store hours shown in the site data: Open 24 Hours"]
+        body: "Pleasant Cannabis is listed at 758 Mt Pleasant Rd, Toronto, ON M4S 2N6. These resources support the protected store visit page, not replace it. Start with the local page for address and visit context, then use the resource guides for menu decisions.",
+        bullets: ["store visit page: /weed-dispensary-toronto", "Local areas: Mount Pleasant, Midtown Toronto, Davisville, Yonge and Eglinton, Leaside, Moore Park, Rosedale, and TTC routes", "Store hours shown in the site data: Open 24 Hours"]
       },
       {
-        heading: "Built Around Real Menu Paths",
-        body: "The pages are organized around high-intent keywords shoppers actually use: weed dispensary near Mount Pleasant / Midtown Toronto, cannabis store Toronto, cheap weed, budget weed, pre-rolls, edibles, THC vapes, concentrates, Native cigarettes, Backwoods, and grabba."
+        heading: "Built Around Real Menu Sections",
+        body: "The pages are organized around common shopper questions shoppers actually use: weed dispensary near Mount Pleasant / Midtown Toronto, cannabis store Toronto, cheap weed, budget weed, pre-rolls, edibles, THC vapes, concentrates, Native cigarettes, Backwoods, and grabba."
       }
     ],
   },
@@ -56,8 +56,8 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     eyebrow: "Visit Guide",
     intro: "Use this page when the search starts local: weed dispensary near Mount Pleasant / Midtown Toronto, cannabis store near 758 Mt Pleasant Rd, or a quick menu check before visiting from Mount Pleasant, Midtown Toronto, Davisville, Yonge and Eglinton, Leaside, Moore Park, Rosedale, and TTC routes.",
     cards: [
-      { title: "GBP Store Page", href: "/weed-dispensary-toronto", text: "Use the main local landing page for address, directions, hours, and NAP details." },
-      { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the product lane before opening deep menu pages." },
+      { title: "Store Visit Page", href: "/weed-dispensary-toronto", text: "Use the main store visit page for address, directions, hours, and store details." },
+      { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the product section before opening deep menu pages." },
       { title: "Value Guide", href: "/resources/value-guide", text: "Fast help for affordable flower and budget weed searches." }
     ],
     sections: [
@@ -66,9 +66,9 @@ export const RESOURCE_PAGES: ResourcePage[] = [
         body: "Pleasant Cannabis is listed at 758 Mt Pleasant Rd, Toronto, ON M4S 2N6. Keep that address as the local anchor, then use the resource pages to decide whether the trip is about flower, pre-rolls, edibles, THC vapes, concentrates, accessories, or cigarettes."
       },
       {
-        heading: "Neighborhood Search Paths",
-        body: "Midtown shoppers often describe the same trip as Mount Pleasant, Davisville, Yonge and Eglinton, Leaside, Moore Park, or Rosedale, so the resource pages tie those searches back to one clean menu path.",
-        bullets: ["Mount Pleasant cannabis store search path", "Midtown Toronto cannabis store search path", "Davisville cannabis store search path", "Yonge and Eglinton cannabis store search path", "Leaside cannabis store search path", "Moore Park cannabis store search path", "Rosedale cannabis store search path", "TTC cannabis store search path"]
+        heading: "Neighborhood Shopping Notes",
+        body: "Midtown shoppers often describe the same trip as Mount Pleasant, Davisville, Yonge and Eglinton, Leaside, Moore Park, or Rosedale, so the resource pages tie those searches back to one clean menu section.",
+        bullets: ["Mount Pleasant cannabis store shopping note", "Midtown Toronto cannabis store shopping note", "Davisville cannabis store shopping note", "Yonge and Eglinton cannabis store shopping note", "Leaside cannabis store shopping note", "Moore Park cannabis store shopping note", "Rosedale cannabis store shopping note", "TTC cannabis store shopping note"]
       },
       {
         heading: "Best First Click",
@@ -80,24 +80,24 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     slug: "menu-guide",
     title: "Pleasant Cannabis Menu Guide",
     seoTitle: "Pleasant Cannabis Menu Guide | Flower, Pre-Rolls, Edibles, Vapes And Cigarettes",
-    description: "A category-first menu guide for Pleasant Cannabis, covering flower tiers, pre-rolls, edibles, THC vapes, concentrates, accessories, cigarettes, and Native smokes.",
+    description: "A category-guided menu guide for Pleasant Cannabis, covering flower tiers, pre-rolls, edibles, THC vapes, concentrates, accessories, cigarettes, and Native smokes.",
     eyebrow: "Menu Guide",
-    intro: "The menu gets easier when you choose the lane first. Flower has tier math. Pre-rolls have format details. Edibles, THC vapes, concentrates, and accessories need category notes. Cigarettes need brand and price checks.",
+    intro: "The menu gets easier when you choose the section first. Flower has tier math. Pre-rolls have format details. Edibles, THC vapes, concentrates, and accessories need category notes. Cigarettes need brand and price checks.",
     cards: [
       { title: "Flower Tiers", href: "/resources/flower-guide", text: "Start here for Exotic, Premium, AAA+, AA, and Budget flower." },
       { title: "Pre-Rolls", href: "/resources/pre-roll-guide", text: "Use this for ready-to-smoke singles, packs, and quick-trip browsing." },
       { title: "Cigarettes", href: "/items/cigarettes", text: "Open the cigarette category for current Native smokes listings." },
-      { title: "GBP Store Page", href: "/weed-dispensary-toronto", text: "Return to the protected local store page." }
+      { title: "Store Visit Page", href: "/weed-dispensary-toronto", text: "Return to the store visit page." }
     ],
     sections: [
       {
         heading: "Pick The Shelf First",
-        body: "For Mount Pleasant and Midtown Toronto shoppers, the best menu path is simple: flower shoppers compare tiers, pre-roll shoppers compare format, edible and vape shoppers read product notes, and cigarette shoppers compare brand, full/light/menthol style, and price.",
-        bullets: ["Flower, pre-rolls, edibles, THC vapes, concentrates, accessories, and cigarettes each need their own pass.", "Use current category pages for live product details.", "Use resources for shopping logic and local planning."]
+        body: "For Mount Pleasant and Midtown Toronto shoppers, the best menu section is simple: flower shoppers compare tiers, pre-roll shoppers compare format, edible and vape shoppers read listing details, and cigarette shoppers compare brand, full/light/menthol style, and price.",
+        bullets: ["Flower, pre-rolls, edibles, THC vapes, concentrates, accessories, and cigarettes are easiest to compare separately.", "Use current category pages for live product details.", "Use resources for shopping details and local planning."]
       },
       {
-        heading: "Local Keywords Without The Mess",
-        body: "This page supports searches like weed dispensary near Mount Pleasant / Midtown Toronto, cannabis store Toronto, cheap weed near me, Native cigarettes, and THC vape menu while keeping the actual shopper path clear."
+        heading: "Local Shopping Notes Without The Mess",
+        body: "This page helps shoppers like weed dispensary near Mount Pleasant / Midtown Toronto, cannabis store Toronto, cheap weed near me, Native cigarettes, and THC vape menu while keeping the actual shopping trip clear."
       }
     ],
   },
@@ -131,7 +131,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     slug: "value-guide",
     title: "Pleasant Cannabis Value Weed Guide",
     seoTitle: "Pleasant Cannabis Value Weed Guide | Cheap Weed Near Mount Pleasant / Midtown Toronto",
-    description: "A value shopping guide for Pleasant Cannabis, covering cheap weed, budget weed, AA flower, AAA+ deals, 6g tier math, and affordable menu paths.",
+    description: "A value shopping guide for Pleasant Cannabis, covering cheap weed, budget weed, AA flower, AAA+ deals, 6g tier math, and affordable menu sections.",
     eyebrow: "Value Guide",
     intro: "For Mount Pleasant and Midtown value shopping, value shopping works best when the shelf is clear. Start with Budget, AA, and AAA+ before jumping into higher tiers or mixed categories.",
     cards: [
@@ -147,7 +147,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       },
       {
         heading: "Compare Inside The Category",
-        body: "Value means something different for flower, pre-rolls, edibles, THC vapes, concentrates, accessories, and cigarettes. Keep each comparison inside the right category so the decision does not get muddy."
+        body: "Value means something different for flower, pre-rolls, edibles, THC vapes, concentrates, accessories, and cigarettes. Keep each comparison inside the best category so the decision does not get muddy."
       }
     ],
   },
@@ -232,11 +232,11 @@ export const RESOURCE_PAGES: ResourcePage[] = [
   },
   {
     slug: "resource-centre-launch",
-    title: "Pleasant Cannabis Resource Centre Update",
-    seoTitle: "Pleasant Cannabis Resource Centre Update | Local Menu Guides",
-    description: "Pleasant Cannabis resource centre update with local visit planning, menu guide pages, flower tier pricing, value shopping, pre-roll tips, and Native smokes prices.",
+    title: "Pleasant Cannabis Resource Guide Refresh",
+    seoTitle: "Pleasant Cannabis Resource Guide Refresh | Local Menu Guides",
+    description: "Pleasant Cannabis resource guide refresh with local visit planning, menu guide pages, flower tier pricing, value shopping, pre-roll tips, and Native smokes prices.",
     eyebrow: "Resource Update",
-    intro: "The resource centre has been rebuilt around real shopper paths: local visit planning, category-first browsing, flower tier math, value shopping, pre-roll shortcuts, and cigarette price notes.",
+    intro: "The resource centre has been rebuilt around real shopping trips: local visit planning, category-guided browsing, flower tier math, value shopping, pre-roll shortcuts, and cigarette price notes.",
     cards: [
       { title: "Resource Home", href: "/resources", text: "Start at the main resource hub." },
       { title: "Local Visit Guide", href: "/resources/mount-pleasant-midtown-visit-guide", text: "Plan around Mount Pleasant, Midtown Toronto, Davisville, Yonge and Eglinton, Leaside, Moore Park, Rosedale, and TTC routes." },
@@ -246,7 +246,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     sections: [
       {
         heading: "What Changed",
-        body: "The resources now sound like Pleasant Cannabis and Mount Pleasant / Midtown Toronto, not a copied store template. Each page supports a specific shopper task and points back to the right category or local landing page."
+        body: "The resources now sound like Pleasant Cannabis and Mount Pleasant / Midtown Toronto, not a copied store template. Each page supports a specific shopper task and points back to the best category or store visit page."
       },
       {
         heading: "What Stayed Protected",
