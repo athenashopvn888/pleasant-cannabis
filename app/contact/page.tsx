@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Visit Pleasant Cannabis at 758 Mt Pleasant Rd, Toronto, ON M4S 2N6. Open 24 hours, 7 days a week. Walk-ins welcome.",
   alternates: {
-    canonical: "https://pleasantcannabis.ca/contact",
+    canonical: "https://www.pleasantcannabis.ca/contact",
   },
   openGraph: {
     title: "Contact Pleasant Cannabis — Toronto Dispensary",
@@ -95,16 +95,16 @@ export default function ContactPage() {
                 <br />
                 Just walk in and our staff will
                 <br />
-                help you find the perfect strain.
+                help you compare current menu options.
               </p>
               <div className={styles.featureList}>
                 <div className={styles.featureItem}>
                   <span className={styles.featureCheck}>✓</span>
-                  200+ strains in stock
+                  Browse the current flower menu
                 </div>
                 <div className={styles.featureItem}>
                   <span className={styles.featureCheck}>✓</span>
-                  Lab-tested &amp; safe
+                  Ask staff about product labels
                 </div>
                 <div className={styles.featureItem}>
                   <span className={styles.featureCheck}>✓</span>

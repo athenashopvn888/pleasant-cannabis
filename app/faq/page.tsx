@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Frequently asked questions about Pleasant Cannabis at 758 Mt Pleasant Rd, Toronto, ON M4S 2N6. Hours, location, products, category browsing, and visit planning.",
   alternates: {
-    canonical: "https://pleasantcannabis.ca/faq",
+    canonical: "https://www.pleasantcannabis.ca/faq",
   },
 };
 

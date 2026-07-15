@@ -84,7 +84,7 @@ export default function Footer() {
         <div className={styles.bottom}>
           <p>
             (c) {new Date().getFullYear()} Pleasant Cannabis. Must be 19+ to
-            enter. Please consume responsibly.
+            enter. Please follow applicable laws and product labels.
           </p>
         </div>
       </div>

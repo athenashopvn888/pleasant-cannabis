@@ -3,7 +3,7 @@ import "./globals.css";
 import AgeGate from "./components/AgeGate";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://pleasantcannabis.ca"),
+  metadataBase: new URL("https://www.pleasantcannabis.ca"),
   title: {
     default: "24 Hour Mount Pleasant Dispensary | Pleasant Cannabis",
     template: "%s | Pleasant Cannabis",
@@ -29,14 +29,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_CA",
-    url: "https://pleasantcannabis.ca",
+    url: "https://www.pleasantcannabis.ca",
     siteName: "Pleasant Cannabis",
     title: "24 Hour Mount Pleasant Dispensary | Pleasant Cannabis",
     description:
       "Pleasant Cannabis is a Midtown Toronto dispensary on Mt Pleasant Rd with flower, pre-rolls, vapes, edibles, concentrates, accessories, and adult 19+ info. Open 24 Hours.",
     images: [
       {
-        url: "https://pleasantcannabis.ca/wp-content/uploads/2026/04/46Oi5.jpg",
+        url: "https://www.pleasantcannabis.ca/wp-content/uploads/2026/04/46Oi5.jpg",
         width: 1200,
         height: 630,
         alt: "Pleasant Cannabis — Pleasant Cannabis Toronto",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     description:
       "Pleasant Cannabis is a Midtown Toronto dispensary on Mt Pleasant Rd with flower, pre-rolls, vapes, edibles, concentrates, accessories, and adult 19+ info. Open 24 Hours.",
     images: [
-      "https://pleasantcannabis.ca/wp-content/uploads/2026/04/46Oi5.jpg",
+      "https://www.pleasantcannabis.ca/wp-content/uploads/2026/04/46Oi5.jpg",
     ],
   },
   robots: {
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://pleasantcannabis.ca",
+    canonical: "https://www.pleasantcannabis.ca",
   },
   verification: {
     // google: "your-google-verification-code",
@@ -76,13 +76,13 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Store",
   additionalType: "https://schema.org/Store",
-  "@id": "https://pleasantcannabis.ca",
+  "@id": "https://www.pleasantcannabis.ca",
   name: "Pleasant Cannabis",
   description:
     "Cannabis dispensary at 758 Mt Pleasant Rd in Toronto, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open 24 Hours.",
-  url: "https://pleasantcannabis.ca",
+  url: "https://www.pleasantcannabis.ca",
   telephone: "+14374270758",
-  image: "https://pleasantcannabis.ca/wp-content/uploads/2026/04/7Clmh.jpg",
+  image: "https://www.pleasantcannabis.ca/wp-content/uploads/2026/04/7Clmh.jpg",
   priceRange: "$3 - $12/g",
   address: {
     "@type": "PostalAddress",

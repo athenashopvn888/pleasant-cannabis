@@ -32,7 +32,7 @@ export async function generateMetadata({
     title: catInfo.config.seoTitle || `${catInfo.config.name} — ${items.length} Products`,
     description: catInfo.config.seoIntro || `Shop ${items.length} ${catInfo.config.name.toLowerCase()} at Pleasant Cannabis.`,
     alternates: {
-      canonical: `https://pleasantcannabis.ca/items/${catSlug}`,
+      canonical: `https://www.pleasantcannabis.ca/items/${catSlug}`,
     },
   };
 }

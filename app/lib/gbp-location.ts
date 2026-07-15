@@ -1,7 +1,6 @@
-// Auto-generated Google Business Profile Local SEO Location Configuration
 export const gbpLocation = {
   storeName: "Pleasant Cannabis",
-  domain: "pleasantcannabis.ca",
+  domain: "www.pleasantcannabis.ca",
   city: "Toronto",
   province: "ON",
   country: "CA",
@@ -32,7 +31,7 @@ export const gbpLocation = {
   seoTitle: "Pleasant Cannabis | Weed Dispensary in Toronto",
   metaDescription: "Pleasant Cannabis is a local weed dispensary in Toronto offering flower, pre-rolls, edibles, vapes, concentrates, CBD, and service for adults 19+.",
   localLandmarks: ["Mount Pleasant", "Midtown Toronto", "Davisville"],
-  introVariant: "Pleasant Cannabis is your welcoming neighborhood weed dispensary in Toronto, located at 758 Mt Pleasant Rd near Mount Pleasant / Midtown Toronto. We carry a massive selection of weed, cannabis flower, pre-rolls, edibles, THC vapes, concentrates, and smoking accessories for adults 19+. Conveniently located near Midtown Toronto, our cannabis store and weed shop is designed to make finding the perfect strain easy and accessible.",
+  introVariant: "Pleasant Cannabis is a neighborhood weed dispensary in Toronto at 758 Mt Pleasant Rd near Midtown Toronto. Adults 19+ can browse menu categories including flower, pre-rolls, edibles, THC vapes, concentrates, and smoking accessories before visiting.",
   neighborhoodDescription: "Located in the vibrant Mount Pleasant / Midtown Toronto district, our cannabis store fits right into this active and historic community, surrounded by local retail shops and convenient transit links.",
   parkingNote: "Street parking is available along Mount Pleasant Road",
   transitNote: "Served by local TTC bus routes along Mount Pleasant Road and Eglinton Avenue.",
