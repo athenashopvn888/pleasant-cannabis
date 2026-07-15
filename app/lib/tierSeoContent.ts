@@ -13,11 +13,11 @@ export const TIER_SEO: Record<string, TierSeoData> = {
     sections: [
       {
         heading: "Exotic Flower At Pleasant Cannabis",
-        body: "Pleasant Cannabis lists Exotic flower as part of its tiered cannabis menu. Use this page for category context, then check the current menu for exact strain availability, THC details, and package pricing.",
+        body: "Pleasant Cannabis lists Exotic flower as part of its tiered cannabis menu. Use this page for category context, then check the current menu for exact strain listings, THC details, and package pricing.",
       },
       {
         heading: "Pricing Context From $20/g",
-        body: "The Exotic tier is presented with clear menu pricing and deal context where available. Prices and stock can change, so confirm the current menu or ask in store before purchase.",
+        body: "The Exotic tier is presented with clear menu pricing and deal context where listed. Prices and stock can change, so confirm the current menu or ask in store before purchase.",
       },
       {
         heading: "Local Store Context",
@@ -31,7 +31,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
       },
       {
         q: "Does this page guarantee current Exotic stock?",
-        a: "No. Use the current menu or ask in store for exact availability.",
+        a: "No. Use the current menu or ask in store for exact listings.",
       },
       {
         q: "Where is the store?",
@@ -47,11 +47,11 @@ export const TIER_SEO: Record<string, TierSeoData> = {
     sections: [
       {
         heading: "Premium Flower At Pleasant Cannabis",
-        body: "Pleasant Cannabis lists Premium flower as part of its tiered cannabis menu. Use this page for category context, then check the current menu for exact strain availability, THC details, and package pricing.",
+        body: "Pleasant Cannabis lists Premium flower as part of its tiered cannabis menu. Use this page for category context, then check the current menu for exact strain listings, THC details, and package pricing.",
       },
       {
         heading: "Pricing Context From $15/g",
-        body: "The Premium tier is presented with clear menu pricing and deal context where available. Prices and stock can change, so confirm the current menu or ask in store before purchase.",
+        body: "The Premium tier is presented with clear menu pricing and deal context where listed. Prices and stock can change, so confirm the current menu or ask in store before purchase.",
       },
       {
         heading: "Local Store Context",
@@ -65,7 +65,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
       },
       {
         q: "Does this page guarantee current Premium stock?",
-        a: "No. Use the current menu or ask in store for exact availability.",
+        a: "No. Use the current menu or ask in store for exact listings.",
       },
       {
         q: "Where is the store?",
@@ -81,11 +81,11 @@ export const TIER_SEO: Record<string, TierSeoData> = {
     sections: [
       {
         heading: "AAA+ Flower At Pleasant Cannabis",
-        body: "Pleasant Cannabis lists AAA+ flower as part of its tiered cannabis menu. Use this page for category context, then check the current menu for exact strain availability, THC details, and package pricing.",
+        body: "Pleasant Cannabis lists AAA+ flower as part of its tiered cannabis menu. Use this page for category context, then check the current menu for exact strain listings, THC details, and package pricing.",
       },
       {
         heading: "Pricing Context From $10/g",
-        body: "The AAA+ tier is presented with clear menu pricing and deal context where available. Prices and stock can change, so confirm the current menu or ask in store before purchase.",
+        body: "The AAA+ tier is presented with clear menu pricing and deal context where listed. Prices and stock can change, so confirm the current menu or ask in store before purchase.",
       },
       {
         heading: "Local Store Context",
@@ -99,7 +99,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
       },
       {
         q: "Does this page guarantee current AAA+ stock?",
-        a: "No. Use the current menu or ask in store for exact availability.",
+        a: "No. Use the current menu or ask in store for exact listings.",
       },
       {
         q: "Where is the store?",
@@ -115,11 +115,11 @@ export const TIER_SEO: Record<string, TierSeoData> = {
     sections: [
       {
         heading: "AA Flower At Pleasant Cannabis",
-        body: "Pleasant Cannabis lists AA flower as part of its tiered cannabis menu. Use this page for category context, then check the current menu for exact strain availability, THC details, and package pricing.",
+        body: "Pleasant Cannabis lists AA flower as part of its tiered cannabis menu. Use this page for category context, then check the current menu for exact strain listings, THC details, and package pricing.",
       },
       {
         heading: "Pricing Context From $4/g",
-        body: "The AA tier is presented with clear menu pricing and deal context where available. Prices and stock can change, so confirm the current menu or ask in store before purchase.",
+        body: "The AA tier is presented with clear menu pricing and deal context where listed. Prices and stock can change, so confirm the current menu or ask in store before purchase.",
       },
       {
         heading: "Local Store Context",
@@ -133,7 +133,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
       },
       {
         q: "Does this page guarantee current AA stock?",
-        a: "No. Use the current menu or ask in store for exact availability.",
+        a: "No. Use the current menu or ask in store for exact listings.",
       },
       {
         q: "Where is the store?",
@@ -149,11 +149,11 @@ export const TIER_SEO: Record<string, TierSeoData> = {
     sections: [
       {
         heading: "Budget Flower At Pleasant Cannabis",
-        body: "Pleasant Cannabis lists Budget flower as part of its tiered cannabis menu. Use this page for category context, then check the current menu for exact strain availability, THC details, and package pricing.",
+        body: "Pleasant Cannabis lists Budget flower as part of its tiered cannabis menu. Use this page for category context, then check the current menu for exact strain listings, THC details, and package pricing.",
       },
       {
         heading: "Pricing Context From $3/g",
-        body: "The Budget tier is presented with clear menu pricing and deal context where available. Prices and stock can change, so confirm the current menu or ask in store before purchase.",
+        body: "The Budget tier is presented with clear menu pricing and deal context where listed. Prices and stock can change, so confirm the current menu or ask in store before purchase.",
       },
       {
         heading: "Local Store Context",
@@ -167,7 +167,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
       },
       {
         q: "Does this page guarantee current Budget stock?",
-        a: "No. Use the current menu or ask in store for exact availability.",
+        a: "No. Use the current menu or ask in store for exact listings.",
       },
       {
         q: "Where is the store?",

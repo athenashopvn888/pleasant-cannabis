@@ -226,7 +226,7 @@ export function GBPLandingPage() {
               />
             ) : (
               <div style={{ padding: "40px", textAlign: "center", color: "var(--text-muted)" }}>
-                Map preview not available.
+                Map preview not listed.
               </div>
             )}
           </div>
@@ -279,7 +279,7 @@ export function GBPLandingPage() {
           <div className={styles.faqItem}>
             <h3 className={styles.faqQuestion}>Does this page show the local menu?</h3>
             <p className={styles.faqAnswer}>
-              This page links to the store website and menu/category areas where shoppers can browse store content. Product availability can change, so customers should check current store information before visiting.
+              This page links to the store website and menu/category areas where shoppers can browse current store content and listed item details before visiting.
             </p>
           </div>
           <div className={styles.faqItem}>
