@@ -80,7 +80,7 @@ const LOCAL_FAQS = [
   },
   {
     q: "Where is Pleasant Cannabis located?",
-    a: "We are located at 758 Mt Pleasant Rd, Toronto, ON M4S 2N6. Visit us in person or call us at (437) 427-0758. Free evening street parking is available.",
+    a: "We are located at 758 Mt Pleasant Rd, Toronto, ON M4S 2N6. Visit us in person or call us at +1 (289) 806-9425. Free evening street parking is available.",
   },
   {
     q: "What is the cheapest weed at Pleasant Cannabis?",

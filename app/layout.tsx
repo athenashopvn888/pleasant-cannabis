@@ -81,7 +81,7 @@ const jsonLd = {
   description:
     "Cannabis dispensary at 758 Mt Pleasant Rd in Toronto, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open 24 Hours.",
   url: "https://www.pleasantcannabis.ca",
-  telephone: "+14374270758",
+  telephone: "+12898069425",
   image: "https://www.pleasantcannabis.ca/wp-content/uploads/2026/04/7Clmh.jpg",
   priceRange: "$3 - $12/g",
   address: {

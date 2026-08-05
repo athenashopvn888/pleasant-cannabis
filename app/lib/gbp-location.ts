@@ -8,8 +8,8 @@ export const gbpLocation = {
   address: "758 Mt Pleasant Rd, Toronto, ON M4S 2N6",
   streetAddress: "758 Mt Pleasant Rd",
   postalCode: "M4S 2N6",
-  phone: "(437) 427-0758",
-  phoneIntl: "+14374270758",
+  phone: "+1 (289) 806-9425",
+  phoneIntl: "+12898069425",
   neighborhood: "Mount Pleasant / Midtown Toronto",
   nearbyAreas: ["Mount Pleasant", "Midtown Toronto", "Davisville", "Yonge and Eglinton", "Leaside", "Moore Park", "Rosedale", "TTC"],
   products: [
