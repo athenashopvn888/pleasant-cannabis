@@ -112,7 +112,7 @@ export default function DeliveryContent() {
           <p className={styles.ctaText}>
             Can&apos;t wait? Visit us in-store at{" "}
             <strong>758 Mt Pleasant Rd, Toronto</strong>. We are{" "}
-            <strong>Open 24 Hours</strong>. Call <strong>(437) 427-0758</strong>
+            <strong>Open 24 Hours</strong>. Call <strong>+1 (289) 806-9425</strong>
             .
           </p>
         </div>

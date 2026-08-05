@@ -22,7 +22,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: "What are your hours?",
-        a: "Pleasant Cannabis is open 24 hours. Check the site or call (437) 427-0758 if you need current visit details.",
+        a: "Pleasant Cannabis is open 24 hours. Check the site or call +1 (289) 806-9425 if you need current visit details.",
       },
       {
         q: "Is there parking nearby?",
@@ -147,7 +147,7 @@ export default function FAQPage() {
           <div className={styles.ctaSection}>
             <h2 className={styles.ctaTitle}>Still have questions?</h2>
             <p className={styles.ctaText}>
-              Call us at <strong>(437) 427-0758</strong> or visit us at 758 Mt
+              Call us at <strong>+1 (289) 806-9425</strong> or visit us at 758 Mt
               Pleasant Rd, Toronto.
             </p>
           </div>

@@ -37,7 +37,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         heading: "Open 24 Hours Near Mount Pleasant",
-        body: "Pleasant Cannabis is open 24 hours. Walk in when the shop is open, check the menu first, or call (437) 427-0758 if you need current in-store details.",
+        body: "Pleasant Cannabis is open 24 hours. Walk in when the shop is open, check the menu first, or call +1 (289) 806-9425 if you need current in-store details.",
       },
     ],
     faqs: [
