@@ -675,7 +675,7 @@ const TICKER_SLIDES = [
   "Browse Current Flower Menu",
   "Open 24 Hours",
   "ALL SALES ARE FINAL",
-  "🎮 Play Games at pleasantcannabis.ca/games",
+  "DELIVERY MENU at pleasantcannabis.ca/delivery",
 ];
 
 function VerticalTicker() {

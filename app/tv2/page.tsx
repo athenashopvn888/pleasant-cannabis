@@ -139,7 +139,7 @@ const TICKER_SLIDES = [
   "Open 24 Hours",
   "Pre-Rolls · Edibles · Vapes · Concentrates",
   "ALL SALES ARE FINAL",
-  "🎮 Play Games at pleasantcannabis.ca/games",
+  "DELIVERY MENU at pleasantcannabis.ca/delivery",
 ];
 
 function VerticalTicker() {
