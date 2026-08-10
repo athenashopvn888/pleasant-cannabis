@@ -110,7 +110,6 @@ export default function DeliveryContent() {
     </section>
     <section className={styles.deliveryDetails} aria-label="Pleasant Cannabis delivery details">
       <strong>$60 PRODUCT MINIMUM</strong>
-      <a href="sms:+14373794709"><span>DELIVERY TEXT NUMBER</span> +1 (437) 379-4709</a>
     </section>
     <section className={styles.loyalty} aria-labelledby="loyalty-title">
       <div><p>SAVE ON A LATER ORDER</p><h2 id="loyalty-title">Member Loyalty Savings</h2></div>
