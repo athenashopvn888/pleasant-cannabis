@@ -16,7 +16,8 @@
   min-height: 42px;
   box-sizing: border-box;
   padding: 0.65rem 1rem;
-  background: linear-gradient(90deg, #14532d, #16a34a, #14532d);
+  background: var(--green-deep, #052e16);
+  border-bottom: 3px solid var(--green-light, #22c55e);
   color: #fff;
   font: 800 clamp(0.78rem, 2.5vw, 0.95rem)/1.25 system-ui, sans-serif;
   letter-spacing: 0.04em;
