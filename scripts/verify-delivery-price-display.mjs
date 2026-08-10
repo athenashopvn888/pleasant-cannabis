@@ -62,6 +62,10 @@ const announcement = "NEW DELIVERY MENU IS HERE — CLICK TO EXPLORE";
 assert.equal(layoutSource.split(announcement).length - 1, 1, "delivery announcement must appear exactly once in the root layout");
 assert(/className="deliveryAnnouncement"\s+href="\/delivery"/.test(layoutSource), "delivery announcement must link to /delivery");
 assert(stylesSource.includes(".deliveryAnnouncement"), "delivery announcement styles must exist");
+assert(/\.deliveryAnnouncement\s*\{[^}]*display:\s*flex;/s.test(stylesSource), "delivery announcement must render as a visible flex strip");
+assert(/\.deliveryAnnouncement\s*\{[^}]*min-height:\s*42px;/s.test(stylesSource), "delivery announcement must keep a 42px click target");
+assert(/\.deliveryAnnouncement\s*\{[^}]*z-index:\s*1100;/s.test(stylesSource), "delivery announcement must stack above the fixed header");
+assert(/body\s*>\s*\.deliveryAnnouncement\s*~\s*\*\s*nav\s*\{[^}]*top:\s*42px\s*!important;/s.test(stylesSource), "fixed navigation must sit below the delivery announcement");
 
 function collectPublicSources(directory) {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
