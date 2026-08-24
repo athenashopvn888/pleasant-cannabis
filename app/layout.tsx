@@ -130,8 +130,8 @@ export default function RootLayout({
       <head>
         <meta name="geo.region" content="CA-ON" />
         <meta name="geo.placename" content="Toronto" />
-        <meta name="geo.position" content="43.7045;-79.3915" />
-        <meta name="ICBM" content="43.7045, -79.3915" />
+        <meta name="geo.position" content="43.7075699;-79.3901685" />
+        <meta name="ICBM" content="43.7075699, -79.3901685" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
