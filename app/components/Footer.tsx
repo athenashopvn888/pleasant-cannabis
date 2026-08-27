@@ -68,6 +68,9 @@ export default function Footer() {
               <Link href="/info/native-cigarettes-mount-pleasant">
                 Native Cigarettes
               </Link>
+              <Link href="/info/nicotine-vapes-mount-pleasant">
+                Nicotine Vapes Mount Pleasant
+              </Link>
               <Link href="/info/weed-store-near-midtown-toronto">
                 Weed Store Near Mount Pleasant
               </Link>
