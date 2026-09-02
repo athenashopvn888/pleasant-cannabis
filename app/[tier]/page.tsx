@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FlowerCard from "../components/FlowerCard";
@@ -8,7 +9,7 @@ import {
   getTierFromSlug,
   TIER_CONFIG,
 } from "../lib/products";
-import { TIER_SEO } from "../lib/tierSeoContent";
+import { TIER_COMPARE, TIER_LINKS, TIER_SEO } from "../lib/tierSeoContent";
 import styles from "./tier.module.css";
 
 /* -- Generate all tier pages at build -- */
@@ -29,14 +30,16 @@ export async function generateMetadata({
   const seo = TIER_SEO[tierInfo.key];
 
   return {
-    title: seo?.seoTitle || `${tierInfo.config.name} Cannabis Flower — ${flowers.length} Strains`,
-    description: seo?.seoIntro || `Shop ${flowers.length} ${tierInfo.config.name.toLowerCase()} cannabis strains at Pleasant Cannabis.`,
+    title: seo
+      ? { absolute: seo.seoTitle }
+      : `${tierInfo.config.name} Cannabis Flower — ${flowers.length} Strains`,
+    description: seo?.metaDescription || `Shop ${flowers.length} ${tierInfo.config.name.toLowerCase()} cannabis strains at Pleasant Cannabis.`,
     alternates: {
       canonical: `https://www.pleasantcannabis.ca/${tierSlug}`,
     },
     openGraph: {
-      title: `${tierInfo.config.name} Flower | Pleasant Cannabis`,
-      description: `Browse the current ${tierInfo.config.name.toLowerCase()} flower menu. Listed prices start from $${tierInfo.config.unitPrice}/g.`,
+      title: seo?.socialTitle || `${tierInfo.config.name} Flower | Pleasant Cannabis`,
+      description: seo?.socialDescription || `Browse the ${tierInfo.config.name.toLowerCase()} flower category at Pleasant Cannabis.`,
     },
   };
 }
@@ -67,7 +70,7 @@ export default async function TierPage({
       <section className={styles.bannerSection}>
         <img
           src={config.banner}
-          alt={`${config.name} Cannabis Flower — ${config.tagline}`}
+          alt={seo?.imageAlt || `${config.name} Cannabis Flower — ${config.tagline}`}
           className={styles.bannerImg}
         />
       </section>
@@ -82,7 +85,7 @@ export default async function TierPage({
             <div className={styles.heroTitleRow}>
               <span className={styles.heroIcon}>{config.icon}</span>
               <h1 className={styles.heroTitle}>
-                <span style={{ color: config.color }}>{config.name}</span>
+                <span style={{ color: config.color }}>{seo?.h1 || config.name}</span>
               </h1>
             </div>
             <p className={styles.heroTagline}>{config.tagline}</p>
@@ -154,9 +157,7 @@ export default async function TierPage({
           )}
 
           <h2 className={styles.sectionTitle}>
-            All{" "}
-            <span style={{ color: config.color }}>{config.name}</span>{" "}
-            Strains
+            {seo?.strainHeading || `All ${config.name} Strains`}
           </h2>
           <div className={styles.grid}>
             {regularFlowers.map((f) => (
@@ -183,6 +184,21 @@ export default async function TierPage({
                 <p className={styles.seoBody}>{s.body}</p>
               </div>
             ))}
+
+            <div className={styles.compareBlock}>
+              <h3 className={styles.seoHeading}>{TIER_COMPARE.heading}</h3>
+              <p className={styles.seoBody}>{TIER_COMPARE.body}</p>
+              <nav className={styles.tierLinks} aria-label="Pleasant Cannabis flower tiers">
+                {TIER_LINKS.map((link) => (
+                  <Link key={link.href} href={link.href}>{link.label}</Link>
+                ))}
+              </nav>
+              <p className={styles.ownerLink}>
+                Looking beyond a single flower tier? Visit the{" "}
+                <Link href={TIER_COMPARE.ownerHref}>{TIER_COMPARE.ownerLabel}</Link>{" "}
+                page for the broader Weed overview.
+              </p>
+            </div>
 
             {/* FAQ Accordion */}
             {seo.faqs.length > 0 && (
