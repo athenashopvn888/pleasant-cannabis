@@ -40,11 +40,11 @@ test("all nine V2 migrations are direct and permanent", () => {
 test("tier configuration uses Weed-first labels and compliant canonical slugs", () => {
   const products = read("app/lib/products.ts");
   const expected = [
-    ["Weed Exotic", "exotic-weed"],
-    ["Weed Premium", "premium-weed"],
-    ["Weed AAA+", "aaa-weed"],
-    ["Weed AA", "aa-weed"],
-    ["Weed Budget", "budget-weed"],
+    ["Exotic Weed", "exotic-weed"],
+    ["Premium Weed", "premium-weed"],
+    ["AAA+ Weed", "aaa-weed"],
+    ["AA Weed", "aa-weed"],
+    ["Budget Weed", "budget-weed"],
   ];
   for (const [name, slug] of expected) {
     assert.ok(products.includes(`name: "${name}"`));
