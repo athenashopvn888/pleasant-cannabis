@@ -31,7 +31,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     intro: "Pleasant Cannabis brings together practical guides for shoppers exploring Weed and cannabis in Midtown Toronto. Compare the five flower collections, get familiar with different parts of the menu, or explore broader Weed options before narrowing your selection.",
     cards: [
       { title: "Pleasant Cannabis Weed in Toronto", href: "/weed-dispensary-toronto/", text: "Start with the broader Pleasant Cannabis Weed selection before narrowing your browsing." },
-      { title: "Weed Flower Guide", href: "/resources/weed-flower-guide", text: "Compare Weed Exotic, Weed Premium, Weed AAA+, Weed AA and Weed Budget in one concise flower guide." },
+      { title: "Weed Flower Guide", href: "/resources/weed-flower-guide", text: "Compare Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed in one concise flower guide." },
       { title: "Weed Value Guide", href: "/resources/weed-value-guide", text: "Compare Weed flower collections using the information presented while you browse." },
       { title: "Weed Menu Guide", href: "/resources/weed-menu-guide", text: "Explore the broad Weed selection, individual flower collections and supporting Pleasant Cannabis guides." }
     ],
@@ -39,7 +39,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       {
         heading: "Explore Pleasant Cannabis Weed Flower Collections",
         body: "Each collection gives shoppers a focused place to explore one part of the Pleasant Cannabis flower selection.",
-        bullets: ["Weed Exotic", "Weed Premium", "Weed AAA+", "Weed AA", "Weed Budget"]
+        bullets: ["Exotic Weed", "Premium Weed", "AAA+ Weed", "AA Weed", "Budget Weed"]
       },
       {
         heading: "Start Broad or Explore One Collection",
@@ -84,11 +84,11 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     intro: "Pleasant Cannabis offers several ways to explore Weed and cannabis in Midtown Toronto. Start with the broader Weed selection, choose one of five flower collections, or use a supporting guide when you want to compare your options first.",
     cards: [
       { title: "Pleasant Cannabis Weed in Toronto", href: "/weed-dispensary-toronto/", text: "Begin with the broader Pleasant Cannabis Weed selection." },
-      { title: "Weed Exotic", href: "/exotic-weed", text: "Explore the dedicated Weed Exotic Cannabis Flower collection." },
-      { title: "Weed Premium", href: "/premium-weed", text: "Browse the dedicated Weed Premium Cannabis Flower collection." },
-      { title: "Weed AAA+", href: "/aaa-weed", text: "Explore the dedicated Weed AAA+ Cannabis Flower collection." },
-      { title: "Weed AA", href: "/aa-weed", text: "Browse the dedicated Weed AA Cannabis Flower collection." },
-      { title: "Weed Budget", href: "/budget-weed", text: "Explore the dedicated Weed Budget Cannabis Flower collection." },
+      { title: "Exotic Weed", href: "/exotic-weed", text: "Explore the dedicated Exotic Weed Cannabis Flower collection." },
+      { title: "Premium Weed", href: "/premium-weed", text: "Browse the dedicated Premium Weed Cannabis Flower collection." },
+      { title: "AAA+ Weed", href: "/aaa-weed", text: "Explore the dedicated AAA+ Weed Cannabis Flower collection." },
+      { title: "AA Weed", href: "/aa-weed", text: "Browse the dedicated AA Weed Cannabis Flower collection." },
+      { title: "Budget Weed", href: "/budget-weed", text: "Explore the dedicated Budget Weed Cannabis Flower collection." },
       { title: "Weed Flower Guide", href: "/resources/weed-flower-guide", text: "See all five flower collections together before exploring one." },
       { title: "Weed Value Guide", href: "/resources/weed-value-guide", text: "Use a simple framework for comparing what you see while browsing." }
     ],
@@ -107,16 +107,16 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     slug: "weed-flower-guide",
     title: "Pleasant Cannabis Weed Flower Guide",
     seoTitle: "Weed Flower Guide Toronto | Pleasant Cannabis",
-    description: "Explore Weed Exotic, Weed Premium, Weed AAA+, Weed AA and Weed Budget at Pleasant Cannabis and compare the five dedicated flower collections.",
+    description: "Explore Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed at Pleasant Cannabis and compare the five dedicated flower collections.",
     eyebrow: "Pleasant Cannabis Weed Flower",
-    intro: "Pleasant Cannabis organizes flower browsing across five Weed collections: Weed Exotic, Weed Premium, Weed AAA+, Weed AA and Weed Budget. Explore each collection individually or compare several before deciding where you want to browse next.",
+    intro: "Pleasant Cannabis organizes flower browsing across five Weed collections: Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed. Explore each collection individually or compare several before deciding where you want to browse next.",
     cards: [
       { title: "Pleasant Cannabis Weed in Toronto", href: "/weed-dispensary-toronto/", text: "Start with the broader Pleasant Cannabis Weed selection." },
-      { title: "Weed Exotic", href: "/exotic-weed", text: "Explore the Pleasant Cannabis Weed Exotic flower collection." },
-      { title: "Weed Premium", href: "/premium-weed", text: "Browse the dedicated Weed Premium flower collection." },
-      { title: "Weed AAA+", href: "/aaa-weed", text: "Explore Weed AAA+ through its dedicated Pleasant Cannabis flower collection." },
-      { title: "Weed AA", href: "/aa-weed", text: "Browse the dedicated Weed AA flower collection." },
-      { title: "Weed Budget", href: "/budget-weed", text: "Explore the Pleasant Cannabis Weed Budget flower collection." }
+      { title: "Exotic Weed", href: "/exotic-weed", text: "Explore the Pleasant Cannabis Exotic Weed flower collection." },
+      { title: "Premium Weed", href: "/premium-weed", text: "Browse the dedicated Premium Weed flower collection." },
+      { title: "AAA+ Weed", href: "/aaa-weed", text: "Explore AAA+ Weed through its dedicated Pleasant Cannabis flower collection." },
+      { title: "AA Weed", href: "/aa-weed", text: "Browse the dedicated AA Weed flower collection." },
+      { title: "Budget Weed", href: "/budget-weed", text: "Explore the Pleasant Cannabis Budget Weed flower collection." }
     ],
     sections: [
       {
@@ -129,7 +129,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       },
       {
         heading: "Explore More Than One Flower Collection",
-        body: "Move between Weed Exotic, Weed Premium, Weed AAA+, Weed AA and Weed Budget while deciding which sections you want to explore further, or start with Pleasant Cannabis Weed in Toronto for broader browsing."
+        body: "Move between Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed while deciding which sections you want to explore further, or start with Pleasant Cannabis Weed in Toronto for broader browsing."
       }
     ],
   },
@@ -137,15 +137,15 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     slug: "weed-value-guide",
     title: "Pleasant Cannabis Weed Value Guide",
     seoTitle: "Weed Value Guide Toronto | Pleasant Cannabis",
-    description: "Use the Pleasant Cannabis Weed Value Guide to compare flower collections and menu information while exploring Weed Exotic, Weed Premium, Weed AAA+, Weed AA and Weed Budget.",
+    description: "Use the Pleasant Cannabis Weed Value Guide to compare flower collections and menu information while exploring Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed.",
     eyebrow: "Pleasant Cannabis Weed Value",
     intro: "Different Pleasant Cannabis shoppers may value different things when exploring Weed flower. This guide provides a simple way to compare the five collections and the information shown with them without relying on fixed prices, temporary promotions or assumptions about which collection is right for everyone.",
     cards: [
-      { title: "Weed Budget", href: "/budget-weed", text: "Explore the dedicated Weed Budget Cannabis Flower collection." },
-      { title: "Weed AA", href: "/aa-weed", text: "Browse the dedicated Weed AA Cannabis Flower collection." },
-      { title: "Weed AAA+", href: "/aaa-weed", text: "Explore the dedicated Weed AAA+ Cannabis Flower collection." },
-      { title: "Weed Premium", href: "/premium-weed", text: "Browse the dedicated Weed Premium Cannabis Flower collection." },
-      { title: "Weed Exotic", href: "/exotic-weed", text: "Explore the dedicated Weed Exotic Cannabis Flower collection." },
+      { title: "Budget Weed", href: "/budget-weed", text: "Explore the dedicated Budget Weed Cannabis Flower collection." },
+      { title: "AA Weed", href: "/aa-weed", text: "Browse the dedicated AA Weed Cannabis Flower collection." },
+      { title: "AAA+ Weed", href: "/aaa-weed", text: "Explore the dedicated AAA+ Weed Cannabis Flower collection." },
+      { title: "Premium Weed", href: "/premium-weed", text: "Browse the dedicated Premium Weed Cannabis Flower collection." },
+      { title: "Exotic Weed", href: "/exotic-weed", text: "Explore the dedicated Exotic Weed Cannabis Flower collection." },
       { title: "Pleasant Cannabis Weed in Toronto", href: "/weed-dispensary-toronto/", text: "Browse more broadly before choosing one flower collection." },
       { title: "Weed Flower Guide", href: "/resources/weed-flower-guide", text: "See all five Pleasant Cannabis Weed flower collections together." }
     ],
