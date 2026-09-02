@@ -7,11 +7,11 @@ import styles from "./Navbar.module.css";
 
 const ALL_LINKS = [
   { href: "/careers/budtender", label: "Join Team" },
-  { href: "/exotic-weed", label: "Weed Exotic" },
-  { href: "/premium-weed", label: "Weed Premium" },
-  { href: "/aaa-weed", label: "Weed AAA+" },
-  { href: "/aa-weed", label: "Weed AA" },
-  { href: "/budget-weed", label: "Weed Budget" },
+  { href: "/exotic-weed", label: "Exotic Weed" },
+  { href: "/premium-weed", label: "Premium Weed" },
+  { href: "/aaa-weed", label: "AAA+ Weed" },
+  { href: "/aa-weed", label: "AA Weed" },
+  { href: "/budget-weed", label: "Budget Weed" },
   { href: "/items/edibles", label: "Edibles" },
   { href: "/items/prerolls", label: "Pre-Rolls" },
   { href: "/items/vapes", label: "Nicotine Vape" },
@@ -20,7 +20,7 @@ const ALL_LINKS = [
   { href: "/items/magic", label: "Magic Stuff" },
   { href: "/items/cigarettes", label: "Cigarettes" },
   { href: "/items/add-ons", label: "Accessories" },
-  { href: "/delivery", label: "DELIVERY MENU" },
+  { href: "/weed-delivery-toronto", label: "WEED DELIVERY" },
   { href: "/faq", label: "FAQ" },
   { href: "/weed-resources", label: "Weed Resources" },
 ];
@@ -51,8 +51,8 @@ export default function Navbar() {
           </span>
         </Link>
         <div className={styles.topBarRight}>
-          <Link href="/delivery" className={styles.gamesBtn}>
-            DELIVERY MENU
+          <Link href="/weed-delivery-toronto" className={styles.gamesBtn}>
+            WEED DELIVERY
           </Link>
           <span className={styles.open}>
             <span className={styles.dot}></span>
