@@ -211,19 +211,19 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
 
   "VAPE PENS": {
     banner: "/banners/01_Vape_Pens.webp",
-    name: "THC Vape",
+    name: "Nicotine Vape",
     slug: "vapes",
     color: "#8b5cf6",
     icon: "",
-    seoTitle: "THC Vape Toronto | Pleasant Cannabis",
+    seoTitle: "Nicotine Vape Toronto",
     seoIntro:
-      "Browse thc vape category information at Pleasant Cannabis near Mount Pleasant and Midtown Toronto.",
+      "Browse the Nicotine Vape category at Pleasant Cannabis. This category is separate from the site's THC Vape section and is intended for adults 19+.",
     seoDescription:
-      "Review thc vape category information for Pleasant Cannabis in Toronto. Confirm current menu details before visiting 758 Mt Pleasant Rd. This page supports browsing and does not promise current product listings.",
+      "Pleasant Cannabis keeps nicotine-vape browsing separate from cannabis THC vape browsing so the two categories have clear destinations.",
     faqs: [
       {
-        q: "What thc vape information can shoppers review?",
-        a: "Customers can review thc vape category information and confirm current menu details before visiting Pleasant Cannabis.",
+        q: "What is the Nicotine Vape category at Pleasant Cannabis?",
+        a: "The Nicotine Vape category is the site's dedicated nicotine-vape section and is separate from the THC Vape category. Nicotine is addictive and this section is intended for adults 19+.",
       },
       {
         q: "Does this page guarantee current listings?",
@@ -234,19 +234,19 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
 
   "VAPE DISPOSABLE": {
     banner: "/banners/02_Vape_Disposable.webp",
-    name: "Nic Vape",
+    name: "THC Vape",
     slug: "vape-disposables",
     color: "#a78bfa",
     icon: "",
-    seoTitle: "Nic Vape Toronto | Pleasant Cannabis",
+    seoTitle: "THC Vape Toronto",
     seoIntro:
-      "Browse nic vape category information at Pleasant Cannabis near Mount Pleasant and Midtown Toronto.",
+      "Browse the THC Vape category at Pleasant Cannabis, kept separate from the site's Nicotine Vape section.",
     seoDescription:
-      "Review nic vape category information for Pleasant Cannabis in Toronto. Confirm current menu details before visiting 758 Mt Pleasant Rd. This page supports browsing and does not promise current product listings.",
+      "This category is the cannabis THC vape destination on the Pleasant Cannabis site and should not be labelled as Nicotine Vape.",
     faqs: [
       {
-        q: "What nic vape information can shoppers review?",
-        a: "Customers can review nic vape category information and confirm current menu details before visiting Pleasant Cannabis.",
+        q: "Is the THC Vape category the same as Nicotine Vape?",
+        a: "No. THC Vape and Nicotine Vape use separate category routes on the Pleasant Cannabis site.",
       },
       {
         q: "Does this page guarantee current listings?",

@@ -59,8 +59,8 @@ const BENTO_TIERS = [
 
 /* ── Explore Categories Config (New Banners) ── */
 const EXPLORE_CATEGORIES = [
-  { name: "Vape Pens", slug: "items/vapes", banner: "/banners/01_Vape_Pens.webp", icon: "💨" },
-  { name: "Nic Vape", slug: "items/vape-disposables", banner: "/banners/02_Vape_Disposable.webp", icon: "💨" },
+  { name: "Nicotine Vapes", slug: "items/vapes", banner: "/banners/01_Vape_Pens.webp", icon: "💨" },
+  { name: "THC Vapes", slug: "items/vape-disposables", banner: "/banners/02_Vape_Disposable.webp", icon: "💨" },
   { name: "Concentrates", slug: "items/concentrates", banner: "/banners/03_Concentrates.webp", icon: "💎" },
   { name: "Pre-Rolls", slug: "items/prerolls", banner: "/banners/04_Pre_Rolls.webp", icon: "🚬" },
   { name: "Accessories", slug: "items/add-ons", banner: "/banners/05_Accessories.webp", icon: "➕" },
@@ -75,16 +75,16 @@ const LOCAL_FAQS = [
     a: "Pleasant Cannabis at 758 Mt Pleasant Rd, Toronto is Open 24 Hours a day, 7 days a week. Walk in anytime — no appointment needed.",
   },
   {
-    q: "What cannabis products do you carry?",
-    a: "We carry five tiers of premium flower: Exotic ($10-$12/g), Premium ($7-$10/g), AAA+ ($5-$6/g), AA ($4/g), and Budget ($3/g), plus a wide variety of edibles, prerolls, vapes, and concentrates.",
+    q: "How is cannabis flower organized at Pleasant Cannabis?",
+    a: "Pleasant Cannabis uses five dedicated flower tiers: Exotic, Premium, AAA+, AA, and Budget. Each tier has its own page, while the Weed Dispensary in Toronto page provides the broader Weed overview.",
   },
   {
     q: "Where is Pleasant Cannabis located?",
     a: "We are located at 758 Mt Pleasant Rd, Toronto, ON M4S 2N6. Visit us in person or call us at +1 (289) 806-9425. Free evening street parking is available.",
   },
   {
-    q: "What is the cheapest weed at Pleasant Cannabis?",
-    a: "Our budget flower starts at just $3/g. We also offer AA daily drivers from $4/g and AAA+ heavy hitters from $5-$6/g. View our budget menu for our latest deals.",
+    q: "What does the Budget flower tier mean?",
+    a: "Budget is the name of one dedicated cannabis flower category. The label does not guarantee a current price, deal, promotion, product, or availability.",
   },
 ];
 
