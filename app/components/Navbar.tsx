@@ -20,7 +20,7 @@ const ALL_LINKS = [
   { href: "/items/magic", label: "Magic Stuff" },
   { href: "/items/cigarettes", label: "Cigarettes" },
   { href: "/items/add-ons", label: "Accessories" },
-  { href: "/delivery", label: "DELIVERY MENU" },
+  { href: "/weed-delivery-toronto", label: "WEED DELIVERY" },
   { href: "/faq", label: "FAQ" },
   { href: "/weed-resources", label: "Weed Resources" },
 ];
@@ -51,8 +51,8 @@ export default function Navbar() {
           </span>
         </Link>
         <div className={styles.topBarRight}>
-          <Link href="/delivery" className={styles.gamesBtn}>
-            DELIVERY MENU
+          <Link href="/weed-delivery-toronto" className={styles.gamesBtn}>
+            WEED DELIVERY
           </Link>
           <span className={styles.open}>
             <span className={styles.dot}></span>
