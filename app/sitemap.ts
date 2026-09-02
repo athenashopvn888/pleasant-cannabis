@@ -57,7 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
   const resourcePages: MetadataRoute.Sitemap = RESOURCE_PAGES.map((page) => ({
-    url: page.slug ? `${BASE}/resources/${page.slug}` : `${BASE}/resources`,
+    url: page.slug ? `${BASE}/resources/${page.slug}` : `${BASE}/weed-resources`,
     lastModified: now,
     changeFrequency: "weekly" as const,
     priority: page.slug ? 0.65 : 0.75,
