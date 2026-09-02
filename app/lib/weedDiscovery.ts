@@ -24,8 +24,8 @@ export const weedOwner = {
   findTitle: "Find Your Weed at Pleasant Cannabis",
   discoveryLinks: [
   {
-    "label": "Weed Exotic",
-    "description": "Explore the Pleasant Cannabis Weed Exotic collection.",
+    "label": "Exotic Weed",
+    "description": "Explore the Pleasant Cannabis Exotic Weed collection.",
     "href": "/exotic-weed"
   },
   {
@@ -99,8 +99,8 @@ export const weedOwner = {
     "answer": "Bud is an informal term for cannabis flower. Flower is the standard category term."
   },
   {
-    "question": "Can I explore Weed Exotic?",
-    "answer": "Yes. Weed Exotic is one dedicated Pleasant Cannabis Cannabis Flower collection, alongside Weed Premium, Weed AAA+, Weed AA and Weed Budget."
+    "question": "Can I explore Exotic Weed?",
+    "answer": "Yes. Exotic Weed is one dedicated Pleasant Cannabis Cannabis Flower collection, alongside Premium Weed, AAA+ Weed, AA Weed and Budget Weed."
   },
   {
     "question": "How can I learn more about cannabis formats?",
