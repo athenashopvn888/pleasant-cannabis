@@ -12,6 +12,15 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      { source: "/exotic", destination: "/exotic-weed", permanent: true },
+      { source: "/premium", destination: "/premium-weed", permanent: true },
+      { source: "/aaa", destination: "/aaa-weed", permanent: true },
+      { source: "/aa", destination: "/aa-weed", permanent: true },
+      { source: "/budget", destination: "/budget-weed", permanent: true },
+      { source: "/resources", destination: "/weed-resources", permanent: true },
+      { source: "/resources/flower-guide", destination: "/resources/weed-flower-guide", permanent: true },
+      { source: "/resources/value-guide", destination: "/resources/weed-value-guide", permanent: true },
+      { source: "/resources/menu-guide", destination: "/resources/weed-menu-guide", permanent: true },
       {
         source: "/info/york-weed-dispensary",
         destination: "/info/mount-pleasant-weed-dispensary",

@@ -24,27 +24,26 @@ export interface ResourcePage {
 export const RESOURCE_PAGES: ResourcePage[] = [
   {
     slug: "",
-    title: "Pleasant Cannabis Resources",
-    seoTitle: "Pleasant Cannabis Resources | Mount Pleasant / Midtown Toronto Menu And Visit Guides",
-    description: "Pleasant Cannabis resource pages for Mount Pleasant / Midtown Toronto shoppers, with local visit planning, menu shortcuts, flower tier pricing, value shopping, pre-roll tips, and Native smokes prices.",
-    eyebrow: "Midtown Resource Hub",
-    intro: "A practical resource hub for Mount Pleasant and Midtown Toronto shoppers. Use it to find the relevant menu section for flower, pre-rolls, edibles, THC vapes, concentrates, accessories, cigarettes, Native smokes, Backwoods, and grabba.",
+    title: "Weed & Cannabis Resources from Pleasant Cannabis",
+    seoTitle: "Weed & Cannabis Resources Toronto | Pleasant Cannabis",
+    description: "Explore Pleasant Cannabis Weed resources for flower tiers, menu browsing and value-focused shopping, with direct paths to the Toronto Weed selection and five flower collections.",
+    eyebrow: "Pleasant Cannabis Weed Resources",
+    intro: "Pleasant Cannabis brings together practical guides for shoppers exploring Weed and cannabis in Midtown Toronto. Compare the five flower collections, get familiar with different parts of the menu, or explore broader Weed options before narrowing your selection.",
     cards: [
-      { title: "Local Visit Guide", href: "/resources/mount-pleasant-midtown-visit-guide", text: "Plan the stop around Mount Pleasant, Midtown Toronto, Davisville, Yonge and Eglinton, Leaside, Moore Park, Rosedale, and TTC routes." },
-      { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the best category before jumping into product pages." },
-      { title: "Flower Tier Guide", href: "/resources/flower-guide", text: "Compare Exotic, Premium, AAA+, AA, and Budget with 3g and 6g deal math." },
-      { title: "Value Guide", href: "/resources/value-guide", text: "A cleaner path for cheap weed, budget weed, and affordable flower searches." },
-      { title: "Native Smokes Prices", href: "/resources/native-smokes", text: "Brand and price notes for cigarettes, Backwoods, grabba, and pouch listings." }
+      { title: "Pleasant Cannabis Weed in Toronto", href: "/weed-dispensary-toronto/", text: "Start with the broader Pleasant Cannabis Weed selection before narrowing your browsing." },
+      { title: "Weed Flower Guide", href: "/resources/weed-flower-guide", text: "Compare Weed Exotic, Weed Premium, Weed AAA+, Weed AA and Weed Budget in one concise flower guide." },
+      { title: "Weed Value Guide", href: "/resources/weed-value-guide", text: "Compare Weed flower collections using the information presented while you browse." },
+      { title: "Weed Menu Guide", href: "/resources/weed-menu-guide", text: "Explore the broad Weed selection, individual flower collections and supporting Pleasant Cannabis guides." }
     ],
     sections: [
       {
-        heading: "Local Search, Useful Next Step",
-        body: "Pleasant Cannabis is listed at 758 Mt Pleasant Rd, Toronto, ON M4S 2N6. These resources support the protected store visit page, not replace it. Start with the local page for address and visit context, then use the resource guides for menu decisions.",
-        bullets: ["store visit page: /weed-dispensary-toronto", "Local areas: Mount Pleasant, Midtown Toronto, Davisville, Yonge and Eglinton, Leaside, Moore Park, Rosedale, and TTC routes", "Store hours shown in the site data: Open 24 Hours"]
+        heading: "Explore Pleasant Cannabis Weed Flower Collections",
+        body: "Each collection gives shoppers a focused place to explore one part of the Pleasant Cannabis flower selection.",
+        bullets: ["Weed Exotic", "Weed Premium", "Weed AAA+", "Weed AA", "Weed Budget"]
       },
       {
-        heading: "Built Around Real Menu Sections",
-        body: "The pages are organized around common shopper questions shoppers actually use: weed dispensary near Mount Pleasant / Midtown Toronto, cannabis store Toronto, cheap weed, budget weed, pre-rolls, edibles, THC vapes, concentrates, Native cigarettes, Backwoods, and grabba."
+        heading: "Start Broad or Explore One Collection",
+        body: "If you have a particular flower collection in mind, go directly to it. If you want to browse more broadly first, start with Pleasant Cannabis Weed in Toronto and narrow your selection from there."
       }
     ],
   },
@@ -57,8 +56,8 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     intro: "Use this page when the search starts local: weed dispensary near Mount Pleasant / Midtown Toronto, cannabis store near 758 Mt Pleasant Rd, or a quick menu check before visiting from Mount Pleasant, Midtown Toronto, Davisville, Yonge and Eglinton, Leaside, Moore Park, Rosedale, and TTC routes.",
     cards: [
       { title: "Store Visit Page", href: "/weed-dispensary-toronto", text: "Use the main store visit page for address, directions, hours, and store details." },
-      { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the product section before opening deep menu pages." },
-      { title: "Value Guide", href: "/resources/value-guide", text: "Fast help for affordable flower and budget weed searches." }
+      { title: "Weed Menu Guide", href: "/resources/weed-menu-guide", text: "Explore the broad Weed selection, five flower collections and supporting guides." },
+      { title: "Weed Value Guide", href: "/resources/weed-value-guide", text: "Compare Weed flower collections using the information presented while browsing." }
     ],
     sections: [
       {
@@ -77,77 +76,88 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     ],
   },
   {
-    slug: "menu-guide",
-    title: "Pleasant Cannabis Menu Guide",
-    seoTitle: "Pleasant Cannabis Menu Guide | Flower, Pre-Rolls, Edibles, Vapes And Cigarettes",
-    description: "A category-guided menu guide for Pleasant Cannabis, covering flower tiers, pre-rolls, edibles, THC vapes, concentrates, accessories, cigarettes, and Native smokes.",
-    eyebrow: "Menu Guide",
-    intro: "The menu gets easier when you choose the section first. Flower has tier math. Pre-rolls have format details. Edibles, THC vapes, concentrates, and accessories need category notes. Cigarettes need brand and price checks.",
+    slug: "weed-menu-guide",
+    title: "Pleasant Cannabis Weed Menu Guide",
+    seoTitle: "Weed Menu Guide Toronto | Pleasant Cannabis",
+    description: "Explore the Pleasant Cannabis Weed menu through the broad Toronto Weed selection, five flower collections and supporting shopping guides.",
+    eyebrow: "Pleasant Cannabis Weed Menu",
+    intro: "Pleasant Cannabis offers several ways to explore Weed and cannabis in Midtown Toronto. Start with the broader Weed selection, choose one of five flower collections, or use a supporting guide when you want to compare your options first.",
     cards: [
-      { title: "Flower Tiers", href: "/resources/flower-guide", text: "Start here for Exotic, Premium, AAA+, AA, and Budget flower." },
-      { title: "Pre-Rolls", href: "/resources/pre-roll-guide", text: "Use this for ready-to-smoke singles, packs, and quick-trip browsing." },
-      { title: "Cigarettes", href: "/items/cigarettes", text: "Open the cigarette category for current Native smokes listings." },
-      { title: "Store Visit Page", href: "/weed-dispensary-toronto", text: "Return to the store visit page." }
+      { title: "Pleasant Cannabis Weed in Toronto", href: "/weed-dispensary-toronto/", text: "Begin with the broader Pleasant Cannabis Weed selection." },
+      { title: "Weed Exotic", href: "/exotic-weed", text: "Explore the dedicated Weed Exotic Cannabis Flower collection." },
+      { title: "Weed Premium", href: "/premium-weed", text: "Browse the dedicated Weed Premium Cannabis Flower collection." },
+      { title: "Weed AAA+", href: "/aaa-weed", text: "Explore the dedicated Weed AAA+ Cannabis Flower collection." },
+      { title: "Weed AA", href: "/aa-weed", text: "Browse the dedicated Weed AA Cannabis Flower collection." },
+      { title: "Weed Budget", href: "/budget-weed", text: "Explore the dedicated Weed Budget Cannabis Flower collection." },
+      { title: "Weed Flower Guide", href: "/resources/weed-flower-guide", text: "See all five flower collections together before exploring one." },
+      { title: "Weed Value Guide", href: "/resources/weed-value-guide", text: "Use a simple framework for comparing what you see while browsing." }
     ],
     sections: [
       {
-        heading: "Pick The Shelf First",
-        body: "For Mount Pleasant and Midtown Toronto shoppers, the best menu section is simple: flower shoppers compare tiers, pre-roll shoppers compare format, edible and vape shoppers read listing details, and cigarette shoppers compare brand, full/light/menthol style, and price.",
-        bullets: ["Flower, pre-rolls, edibles, THC vapes, concentrates, accessories, and cigarettes are easiest to compare separately.", "Use current category pages for live product details.", "Use resources for shopping details and local planning."]
+        heading: "Compare Weed Flower Collections",
+        body: "If you want to see the five flower collections together before exploring one, use the Pleasant Cannabis Weed Flower Guide."
       },
       {
-        heading: "Local Shopping Notes Without The Mess",
-        body: "This page helps shoppers like weed dispensary near Mount Pleasant / Midtown Toronto, cannabis store Toronto, cheap weed near me, Native cigarettes, and THC vape menu while keeping the actual shopping trip clear."
+        heading: "Explore Weed with Value in Mind",
+        body: "If you want a simple framework for comparing the information presented while you browse, use the Pleasant Cannabis Weed Value Guide."
       }
     ],
   },
   {
-    slug: "flower-guide",
-    title: "Pleasant Cannabis Flower Tier And 6g Price Guide",
-    seoTitle: "Pleasant Cannabis Flower Tier Guide | Exotic, Premium, AAA+, AA And Budget",
-    description: "Compare Pleasant Cannabis flower tiers with posted per-gram prices, 3g specials, 6g deal math, Budget flower, AA flower, AAA+, Premium, and Exotic.",
-    eyebrow: "Flower Tiers",
-    intro: "Here is the clean flower read: Exotic is posted at $20/g, Premium at $15/g, AAA+ at $10/g, AA at $4/g, and Budget at $3/g. Where the 6g tier deal applies, shoppers can compare Exotic around $60 for 6g, Premium around $45 for 6g, and AAA+ around $30 for 6g.",
+    slug: "weed-flower-guide",
+    title: "Pleasant Cannabis Weed Flower Guide",
+    seoTitle: "Weed Flower Guide Toronto | Pleasant Cannabis",
+    description: "Explore Weed Exotic, Weed Premium, Weed AAA+, Weed AA and Weed Budget at Pleasant Cannabis and compare the five dedicated flower collections.",
+    eyebrow: "Pleasant Cannabis Weed Flower",
+    intro: "Pleasant Cannabis organizes flower browsing across five Weed collections: Weed Exotic, Weed Premium, Weed AAA+, Weed AA and Weed Budget. Explore each collection individually or compare several before deciding where you want to browse next.",
     cards: [
-      { title: "Exotic Flower", href: "/exotic", text: "$20/g, with 3g and 6g deal logic where listed." },
-      { title: "Premium Flower", href: "/premium", text: "$15/g, with 3g and 6g deal logic where listed." },
-      { title: "AAA+ Flower", href: "/aaa", text: "$10/g, with 3g and 6g deal logic where listed." },
-      { title: "AA Flower", href: "/aa", text: "$4/g for a direct value lane." },
-      { title: "Budget Flower", href: "/budget", text: "$3/g, with a $10 / 3g special where listed." }
+      { title: "Pleasant Cannabis Weed in Toronto", href: "/weed-dispensary-toronto/", text: "Start with the broader Pleasant Cannabis Weed selection." },
+      { title: "Weed Exotic", href: "/exotic-weed", text: "Explore the Pleasant Cannabis Weed Exotic flower collection." },
+      { title: "Weed Premium", href: "/premium-weed", text: "Browse the dedicated Weed Premium flower collection." },
+      { title: "Weed AAA+", href: "/aaa-weed", text: "Explore Weed AAA+ through its dedicated Pleasant Cannabis flower collection." },
+      { title: "Weed AA", href: "/aa-weed", text: "Browse the dedicated Weed AA flower collection." },
+      { title: "Weed Budget", href: "/budget-weed", text: "Explore the Pleasant Cannabis Weed Budget flower collection." }
     ],
     sections: [
       {
-        heading: "Why The 6g Line Matters",
-        body: "A straight per-gram price does not always tell the whole shelf story. The top flower lanes can show 3g and 6g deal logic, so a shopper comparing Exotic, Premium, and AAA+ should read the bundle line before judging value.",
-        bullets: ["Exotic: $20/g, 3g for $40 or 6g around $60 where listed.", "Premium: $15/g, 3g for $30 or 6g around $45 where listed.", "AAA+: $10/g, 3g for $20 or 6g around $30 where listed."]
+        heading: "Compare Five Weed Flower Collections",
+        body: "The five collections give you different parts of the Pleasant Cannabis flower selection to explore. Start with one that interests you or move between several while comparing the information presented with each collection."
       },
       {
-        heading: "Budget And AA Keep It Simple",
-        body: "For cheap weed and budget weed searches, Budget at $3/g and AA at $4/g are the simplest lanes to compare. Check the current tier page for listed product names, prices, and item notes."
+        heading: "Weed, Cannabis and Flower at Pleasant Cannabis",
+        body: "Weed, cannabis, bud and flower are common terms shoppers use while browsing dispensary selections. Pleasant Cannabis uses those terms naturally while keeping each flower collection easy to distinguish."
+      },
+      {
+        heading: "Explore More Than One Flower Collection",
+        body: "Move between Weed Exotic, Weed Premium, Weed AAA+, Weed AA and Weed Budget while deciding which sections you want to explore further, or start with Pleasant Cannabis Weed in Toronto for broader browsing."
       }
     ],
   },
   {
-    slug: "value-guide",
-    title: "Pleasant Cannabis Value Weed Guide",
-    seoTitle: "Pleasant Cannabis Value Weed Guide | Cheap Weed Near Mount Pleasant / Midtown Toronto",
-    description: "A value shopping guide for Pleasant Cannabis, covering cheap weed, budget weed, AA flower, AAA+ deals, 6g tier math, and affordable menu sections.",
-    eyebrow: "Value Guide",
-    intro: "For Mount Pleasant and Midtown value shopping, value shopping works best when the shelf is clear. Start with Budget, AA, and AAA+ before jumping into higher tiers or mixed categories.",
+    slug: "weed-value-guide",
+    title: "Pleasant Cannabis Weed Value Guide",
+    seoTitle: "Weed Value Guide Toronto | Pleasant Cannabis",
+    description: "Use the Pleasant Cannabis Weed Value Guide to compare flower collections and menu information while exploring Weed Exotic, Weed Premium, Weed AAA+, Weed AA and Weed Budget.",
+    eyebrow: "Pleasant Cannabis Weed Value",
+    intro: "Different Pleasant Cannabis shoppers may value different things when exploring Weed flower. This guide provides a simple way to compare the five collections and the information shown with them without relying on fixed prices, temporary promotions or assumptions about which collection is right for everyone.",
     cards: [
-      { title: "Budget Flower", href: "/budget", text: "$3/g for the lowest posted flower lane." },
-      { title: "AA Flower", href: "/aa", text: "$4/g for a simple low-spend lane." },
-      { title: "AAA+ Flower", href: "/aaa", text: "$10/g, 3g for $20, or 6g around $30 where listed." },
-      { title: "Native Smokes Prices", href: "/resources/native-smokes", text: "Use this if cigarettes or Backwoods are part of the same stop." }
+      { title: "Weed Budget", href: "/budget-weed", text: "Explore the dedicated Weed Budget Cannabis Flower collection." },
+      { title: "Weed AA", href: "/aa-weed", text: "Browse the dedicated Weed AA Cannabis Flower collection." },
+      { title: "Weed AAA+", href: "/aaa-weed", text: "Explore the dedicated Weed AAA+ Cannabis Flower collection." },
+      { title: "Weed Premium", href: "/premium-weed", text: "Browse the dedicated Weed Premium Cannabis Flower collection." },
+      { title: "Weed Exotic", href: "/exotic-weed", text: "Explore the dedicated Weed Exotic Cannabis Flower collection." },
+      { title: "Pleasant Cannabis Weed in Toronto", href: "/weed-dispensary-toronto/", text: "Browse more broadly before choosing one flower collection." },
+      { title: "Weed Flower Guide", href: "/resources/weed-flower-guide", text: "See all five Pleasant Cannabis Weed flower collections together." }
     ],
     sections: [
       {
-        heading: "Start With Budget, Then Move Up",
-        body: "If the search is cheap weed, budget weed, or affordable cannabis near Mount Pleasant / Midtown Toronto, start with Budget and AA. If the trip can stretch a little, AAA+ gives shoppers another value lane with 3g and 6g deal logic."
+        heading: "Compare What You See While You Browse",
+        body: "When exploring different Weed flower collections, look at the product information presented with the items that interest you and compare another collection whenever useful.",
+        bullets: ["The Weed flower collection you are browsing", "Product information presented with individual items", "Other collections you want to explore", "Whether broader Weed browsing would be more useful"]
       },
       {
-        heading: "Compare Inside The Category",
-        body: "Value means something different for flower, pre-rolls, edibles, THC vapes, concentrates, accessories, and cigarettes. Keep each comparison inside the best category so the decision does not get muddy."
+        heading: "Explore Pleasant Cannabis More Broadly",
+        body: "If you do not want to start with one specific flower collection, browse Pleasant Cannabis Weed in Toronto or use the Weed Flower Guide for an introduction to all five collections."
       }
     ],
   },
@@ -160,8 +170,8 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     intro: "Pre-roll shoppers usually want a faster path than loose flower shoppers. Use this page when the goal is ready-to-smoke options, a quick stop, or a small add-on beside another category.",
     cards: [
       { title: "Pre-Rolls", href: "/items/prerolls", text: "Open the current pre-roll category." },
-      { title: "Flower Tiers", href: "/resources/flower-guide", text: "Switch here if the visit turns into loose flower." },
-      { title: "Menu Guide", href: "/resources/menu-guide", text: "Use this if the stop includes edibles, vapes, concentrates, or accessories." }
+      { title: "Flower Tiers", href: "/resources/weed-flower-guide", text: "Switch here if the visit turns into loose flower." },
+      { title: "Menu Guide", href: "/resources/weed-menu-guide", text: "Use this if the stop includes edibles, vapes, concentrates, or accessories." }
     ],
     sections: [
       {
@@ -238,9 +248,9 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     eyebrow: "Resource Update",
     intro: "The resource centre has been rebuilt around real shopping trips: local visit planning, category-guided browsing, flower tier math, value shopping, pre-roll shortcuts, and cigarette price notes.",
     cards: [
-      { title: "Resource Home", href: "/resources", text: "Start at the main resource hub." },
+      { title: "Resource Home", href: "/weed-resources", text: "Start at the main resource hub." },
       { title: "Local Visit Guide", href: "/resources/mount-pleasant-midtown-visit-guide", text: "Plan around Mount Pleasant, Midtown Toronto, Davisville, Yonge and Eglinton, Leaside, Moore Park, Rosedale, and TTC routes." },
-      { title: "Flower Tier Guide", href: "/resources/flower-guide", text: "Review the 3g and 6g pricing logic." },
+      { title: "Weed Flower Guide", href: "/resources/weed-flower-guide", text: "Compare five dedicated Weed flower collections." },
       { title: "Native Smokes Prices", href: "/resources/native-smokes", text: "Check brand and price notes." }
     ],
     sections: [

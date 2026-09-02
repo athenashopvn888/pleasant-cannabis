@@ -24,24 +24,24 @@ export const weedOwner = {
   findTitle: "Find Your Weed at Pleasant Cannabis",
   discoveryLinks: [
   {
-    "label": "Exotic Flower",
-    "description": "Explore the verified Exotic flower section.",
-    "href": "/exotic"
+    "label": "Weed Exotic",
+    "description": "Explore the Pleasant Cannabis Weed Exotic collection.",
+    "href": "/exotic-weed"
   },
   {
     "label": "Flower Guide",
     "description": "Learn more about cannabis flower.",
-    "href": "/resources/flower-guide"
+    "href": "/resources/weed-flower-guide"
   },
   {
     "label": "Menu Guide",
     "description": "Compare common cannabis formats.",
-    "href": "/resources/menu-guide"
+    "href": "/resources/weed-menu-guide"
   },
   {
     "label": "Value Guide",
     "description": "Explore value-oriented cannabis shopping concepts without current-price claims.",
-    "href": "/resources/value-guide"
+    "href": "/resources/weed-value-guide"
   },
   {
     "label": "Pre-Roll Guide",
@@ -51,7 +51,7 @@ export const weedOwner = {
   {
     "label": "Pleasant Cannabis Resources",
     "description": "Explore additional information.",
-    "href": "/resources"
+    "href": "/weed-resources"
   }
 ] satisfies WeedDiscoveryLink[],
   guides: [
@@ -63,17 +63,17 @@ export const weedOwner = {
   {
     "label": "Menu Guide",
     "description": "Compare common cannabis formats.",
-    "href": "/resources/menu-guide"
+    "href": "/resources/weed-menu-guide"
   },
   {
     "label": "Flower Guide",
     "description": "Learn more about cannabis flower.",
-    "href": "/resources/flower-guide"
+    "href": "/resources/weed-flower-guide"
   },
   {
     "label": "Value Guide",
     "description": "Explore value-oriented shopping.",
-    "href": "/resources/value-guide"
+    "href": "/resources/weed-value-guide"
   },
   {
     "label": "Pre-Roll Guide",
@@ -99,8 +99,8 @@ export const weedOwner = {
     "answer": "Bud is an informal term for cannabis flower. Flower is the standard category term."
   },
   {
-    "question": "Can I explore Exotic flower?",
-    "answer": "The verified Exotic section provides an Exotic flower starting point. It does not imply that any specific product is currently in stock."
+    "question": "Can I explore Weed Exotic?",
+    "answer": "Yes. Weed Exotic is one dedicated Pleasant Cannabis Cannabis Flower collection, alongside Weed Premium, Weed AAA+, Weed AA and Weed Budget."
   },
   {
     "question": "How can I learn more about cannabis formats?",
@@ -120,6 +120,6 @@ export const weedOwner = {
     text: "Pleasant Cannabis is open 24 hours at 758 Mt Pleasant Rd. Adults 19+ can explore Weed, Cannabis, flower information and store-specific guides.",
     primaryLabel: "Explore Weed at Pleasant Cannabis",
     secondaryLabel: "Explore the Flower Guide",
-    secondaryHref: "/resources/flower-guide",
+    secondaryHref: "/resources/weed-flower-guide",
   },
 };

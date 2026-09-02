@@ -14,36 +14,36 @@ import Papa from "papaparse";
 /* ── Bento Mosaic Config ── */
 const BENTO_TIERS = [
   {
-    name: "EXOTICS",
-    slug: "exotic",
+    name: "WEED EXOTIC",
+    slug: "exotic-weed",
     price: "$10-$12/g",
     banner: "/banners/exotics_banner.webp",
     className: styles.bentoExotic,
   },
   {
-    name: "PREMIUM",
-    slug: "premium",
+    name: "WEED PREMIUM",
+    slug: "premium-weed",
     price: "$7-$10/g",
     banner: "/banners/premium_banner.webp",
     className: styles.bentoPremium,
   },
   {
-    name: "AAA+",
-    slug: "aaa",
+    name: "WEED AAA+",
+    slug: "aaa-weed",
     price: "$5-$6/g",
     banner: "/banners/aaa_plus_banner.webp",
     className: styles.bentoTile,
   },
   {
-    name: "AA",
-    slug: "aa",
+    name: "WEED AA",
+    slug: "aa-weed",
     price: "$4/g",
     banner: "/banners/aa_banner.webp",
     className: styles.bentoTile,
   },
   {
-    name: "BUDGET",
-    slug: "budget",
+    name: "WEED BUDGET",
+    slug: "budget-weed",
     price: "$3/g",
     banner: "/banners/budget_banner.webp",
     className: styles.bentoTile,
@@ -76,7 +76,7 @@ const LOCAL_FAQS = [
   },
   {
     q: "How is cannabis flower organized at Pleasant Cannabis?",
-    a: "Pleasant Cannabis uses five dedicated flower tiers: Exotic, Premium, AAA+, AA, and Budget. Each tier has its own page, while the Weed Dispensary in Toronto page provides the broader Weed overview.",
+    a: "Pleasant Cannabis uses five dedicated flower tiers: Weed Exotic, Weed Premium, Weed AAA+, Weed AA, and Weed Budget. Each collection offers a focused way to explore Cannabis Flower, while Pleasant Cannabis Weed in Toronto provides a broader starting point.",
   },
   {
     q: "Where is Pleasant Cannabis located?",
