@@ -12,6 +12,7 @@ const migrations = [
   ["/aaa", "/aaa-weed"],
   ["/aa", "/aa-weed"],
   ["/budget", "/budget-weed"],
+  ["/delivery", "/weed-delivery-toronto"],
   ["/resources", "/weed-resources"],
   ["/resources/flower-guide", "/resources/weed-flower-guide"],
   ["/resources/value-guide", "/resources/weed-value-guide"],
@@ -26,7 +27,7 @@ function appSources(directory = path.join(root, "app")) {
   });
 }
 
-test("all nine V2 migrations are direct and permanent", () => {
+test("all ten V2.1 migrations are direct and permanent", () => {
   const config = read("next.config.ts");
   for (const [legacy, canonical] of migrations) {
     assert.match(
@@ -37,7 +38,7 @@ test("all nine V2 migrations are direct and permanent", () => {
   }
 });
 
-test("tier configuration uses Weed-first labels and compliant canonical slugs", () => {
+test("tier configuration uses tier-first labels and compliant canonical slugs", () => {
   const products = read("app/lib/products.ts");
   const expected = [
     ["Exotic Weed", "exotic-weed"],
@@ -52,11 +53,11 @@ test("tier configuration uses Weed-first labels and compliant canonical slugs", 
   }
 });
 
-test("tier SEO titles and H1s use Weed-first naming with Cannabis Flower", () => {
+test("tier SEO titles and H1s use tier-first naming with Cannabis Flower", () => {
   const seo = read("app/lib/tierSeoContent.ts");
   for (const tier of ["Exotic", "Premium", "AAA+", "AA", "Budget"]) {
-    assert.ok(seo.includes(`seoTitle: "Weed ${tier} & Cannabis Flower Toronto | Pleasant Cannabis"`));
-    assert.ok(seo.includes(`h1: "Weed ${tier} & Cannabis Flower in Toronto"`));
+    assert.ok(seo.includes(`seoTitle: "${tier} Weed & Cannabis Flower Toronto | Pleasant Cannabis"`));
+    assert.ok(seo.includes(`h1: "${tier} Weed & Cannabis Flower in Toronto"`));
   }
 });
 
@@ -101,7 +102,10 @@ test("sitemap and resource home canonical use only the new owner", () => {
 
 test("protected delivery and vape route identities remain explicit", () => {
   const navigation = read("app/components/Navbar.tsx");
-  assert.ok(navigation.includes('{ href: "/delivery", label: "DELIVERY MENU" }'));
+  assert.ok(navigation.includes('{ href: "/weed-delivery-toronto", label: "WEED DELIVERY" }'));
+  const delivery = read("app/weed-delivery-toronto/page.tsx");
+  assert.match(delivery, /Weed Delivery Toronto \| Pleasant Cannabis/);
+  for (const reversed of ["Weed Exotic", "Weed Premium", "Weed AAA", "Weed AA", "Weed Budget"]) assert.ok(!read("app/lib/tierSeoContent.ts").includes(reversed));
   assert.ok(navigation.includes('{ href: "/items/vapes", label: "Nicotine Vape" }'));
   assert.ok(navigation.includes('{ href: "/items/vape-disposables", label: "THC Vape" }'));
 });
