@@ -31,6 +31,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     intro: "Pleasant Cannabis brings together practical guides for shoppers exploring Weed and cannabis in Midtown Toronto. Compare the five flower collections, get familiar with different parts of the menu, or explore broader Weed options before narrowing your selection.",
     cards: [
       { title: "Pleasant Cannabis Weed in Toronto", href: "/weed-dispensary-toronto/", text: "Start with the broader Pleasant Cannabis Weed selection before narrowing your browsing." },
+      { title: "Cannabis Dispensary vs. Weed Dispensary", href: "/resources/cannabis-dispensary-vs-weed-dispensary", text: "They use whichever words feel natural: cannabis, weed, cannabis store, weed dispensary, or simply dispensary." },
       { title: "Weed Flower Guide", href: "/resources/weed-flower-guide", text: "Compare Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed in one concise flower guide." },
       { title: "Weed Value Guide", href: "/resources/weed-value-guide", text: "Compare Weed flower collections using the information presented while you browse." },
       { title: "Weed Menu Guide", href: "/resources/weed-menu-guide", text: "Explore the broad Weed selection, individual flower collections and supporting Pleasant Cannabis guides." }
