@@ -24,9 +24,12 @@ const nextConfig: NextConfig = {
       { source: "/resources/menu-guide", destination: "/resources/weed-menu-guide", permanent: true },
       {
         source: "/info/york-weed-dispensary",
-        destination: "/info/mount-pleasant-weed-dispensary",
+        destination: "/weed-dispensary-toronto",
         permanent: true,
       },
+      { source: "/info/mount-pleasant-weed-dispensary", destination: "/weed-dispensary-toronto", permanent: true },
+      { source: "/info/weed-store-near-midtown-toronto", destination: "/weed-dispensary-toronto", permanent: true },
+      { source: "/info/dispensary-near-me-mount-pleasant", destination: "/weed-dispensary-toronto", permanent: true },
       {
         source: "/info/cheap-weed-york",
         destination: "/info/cheap-weed-mount-pleasant",

@@ -11,22 +11,6 @@ export const metadata: Metadata = {
   },
   description:
     "Pleasant Cannabis is a Midtown Toronto dispensary on Mt Pleasant Rd with flower, pre-rolls, vapes, edibles, concentrates, accessories, and adult 19+ info. Open 24 Hours.",
-  keywords: [
-    "cannabis dispensary Toronto",
-    "weed store Toronto",
-    "exotic flower Toronto",
-    "premium cannabis",
-    "Pleasant Cannabis",
-    "cheap weed Toronto",
-    "dispensary near me",
-    "THC flower",
-    "indica sativa hybrid",
-    "edibles Toronto",
-    "vapes",
-    "pre-rolls",
-    "native cigarettes Toronto",
-    "weed store Mount Pleasant",
-  ],
   openGraph: {
     type: "website",
     locale: "en_CA",
@@ -75,9 +59,10 @@ export const metadata: Metadata = {
 /* JSON-LD Structured Data */
 const jsonLd = {
   "@context": "https://schema.org",
+  "@graph": [
+  {
   "@type": "Store",
-  additionalType: "https://schema.org/Store",
-  "@id": "https://www.pleasantcannabis.ca",
+  "@id": "https://www.pleasantcannabis.ca/#store",
   name: "Pleasant Cannabis",
   description:
     "Cannabis dispensary at 758 Mt Pleasant Rd in Toronto, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open 24 Hours.",
@@ -114,10 +99,23 @@ const jsonLd = {
       closes: "23:59",
     },
   ],
+  sameAs: [
+    "https://www.google.com/maps/search/?api=1&query=Pleasant+Cannabis%2C+758+Mt+Pleasant+Rd%2C+Toronto%2C+ON+M4S+2N6",
+  ],
+  hasMap: "https://www.google.com/maps/search/?api=1&query=Pleasant+Cannabis%2C+758+Mt+Pleasant+Rd%2C+Toronto%2C+ON+M4S+2N6",
   areaServed: {
     "@type": "City",
     name: "Toronto",
   },
+  },
+  {
+    "@type": "WebSite",
+    "@id": "https://www.pleasantcannabis.ca/#website",
+    url: "https://www.pleasantcannabis.ca/",
+    name: "Pleasant Cannabis",
+    publisher: { "@id": "https://www.pleasantcannabis.ca/#store" },
+  },
+  ],
 };
 
 export default function RootLayout({

@@ -239,7 +239,7 @@ export const SEO_PAGES: SeoPageData[] = [
     faqs: [
       {
         q: "Where is the closest local page for this store?",
-        a: "Start with /weed-dispensary-toronto for GBP-style address and visit details.",
+        a: "Start with our Toronto store page for address, directions, hours, and visit details.",
       },
       {
         q: "Is walk-in shopping supported?",
@@ -261,7 +261,7 @@ export const SEO_PAGES: SeoPageData[] = [
     heroTagline: "Adults 19+ · Nicotine is addictive.",
     heroPreview: {
       eyebrow: "PLEASANT CANNABIS • MOUNT PLEASANT / MIDTOWN TORONTO • ADULTS 19+",
-      intro: "Searching for nicotine vapes near me around Mount Pleasant or Midtown Toronto? This adult-only Pleasant Cannabis guide features six live-checked VAPE PENS product pages. Compare their supported names, then use /items/vapes for the current nicotine category. Product details can change. Nicotine is addictive.",
+      intro: "Searching for nicotine vapes near Mount Pleasant or Midtown Toronto? This adult-only Pleasant Cannabis guide highlights six vape product pages. Compare their names, then browse the vape section for the current category. Product details can change. Nicotine is addictive.",
       products: [
         { name: "ENVI DRIP’N – 5% | 28K PUFFS", image: "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/1092-Envi-Dripn-28K.webp", sourceSlug: "envi-dripn-5-28k-puffs" },
         { name: "GEEK PROMAX – 5% | 30K PUFFS", image: "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/GEEK-PROMAX.jpg", sourceSlug: "geek-promax-5-30k-puffs" },
@@ -270,11 +270,11 @@ export const SEO_PAGES: SeoPageData[] = [
         { name: "OVNS 10000 – 5% | 10K PUFFS", image: "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/1081OVNS10000.jpg", sourceSlug: "ovns-10000-5-10k-puffs" },
         { name: "OVNS DISPOSABLE – 5% | 8ML | MANY FLAVORS", image: "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/OVNS500x500HQ.webp", sourceSlug: "ovns-disposable-5-8ml-many-flavors" },
       ],
-      disclosure: "Featured cards are live-checked starting points, not guarantees of current stock, price or availability.",
+      disclosure: "Featured cards are helpful starting points, not guarantees of current stock, price or availability.",
       theme: "nicotine", menuHref: "/items/vapes", primaryLabel: "Browse Nicotine Vapes", secondaryLabel: "Compare the Six Featured Items", secondaryHref: "#featured-vapes",
       identityStrip: "Pleasant Cannabis | Mount Pleasant / Midtown Toronto | Adults 19+ | Nicotine is addictive.",
-      featuredHeading: "Six Live-Checked Pleasant Cannabis Vape Cards",
-      featuredIntro: "This shortlist contains six live-checked ENVI, Geek, NEXA and OVNS VAPE PENS product pages. Use each card for its supported display name, then rely on /items/vapes for the current Pleasant Cannabis category listing.",
+      featuredHeading: "Six Pleasant Cannabis Vape Options",
+      featuredIntro: "This shortlist includes six ENVI, Geek, NEXA and OVNS vape product pages. Use each card to compare names, then browse the vape section for the current Pleasant Cannabis selection.",
       warning: "Adults 19+. Nicotine is addictive.",
     },
     sections: [
@@ -284,7 +284,7 @@ export const SEO_PAGES: SeoPageData[] = [
       { heading: "Review the Current Mount Pleasant Category", body: "Before choosing, open /items/vapes and the individual product page for current supported details. This guide does not claim prices, stock or guaranteed availability." },
     ],
     faqs: [
-      { q: "Where should I check Pleasant Cannabis’s current nicotine selection?", a: "Use /items/vapes. The six featured cards are live-checked starting points while the current category listing controls selection information." },
+      { q: "Where should I check Pleasant Cannabis’s current nicotine selection?", a: "Browse the vape section. The six featured cards are helpful starting points, while the category page provides the current selection information." },
       { q: "Does every featured item use the same format?", a: "No format should be assumed. One featured page explicitly identifies an OVNS disposable. Read each current product page for its supported format and details." },
       { q: "Does this page include cannabis vapes?", a: "No. It covers nicotine products from the VAPE PENS category for adults 19+. THC and cannabis vape products under /items/vape-disposables are excluded." },
     ],
