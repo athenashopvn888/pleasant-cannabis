@@ -59,9 +59,6 @@ export default function Footer() {
               <Link href="/items/vapes">Nicotine Vape</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/weed-delivery-toronto">WEED DELIVERY</Link>
-              <Link href="/info/mount-pleasant-weed-dispensary">
-                Mount Pleasant Dispensary
-              </Link>
               <Link href="/info/cheap-weed-mount-pleasant">
                 Cheap Weed Mount Pleasant
               </Link>
@@ -70,9 +67,6 @@ export default function Footer() {
               </Link>
               <Link href="/info/nicotine-vapes-mount-pleasant">
                 Nicotine Vapes Mount Pleasant
-              </Link>
-              <Link href="/info/weed-store-near-midtown-toronto">
-                Weed Store Near Mount Pleasant
               </Link>
               <Link href="/weed-dispensary-toronto/">
                 Pleasant Cannabis Weed Dispensary in Toronto

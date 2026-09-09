@@ -260,7 +260,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       },
       {
         heading: "What Stayed Protected",
-        body: "The important SEO paths stay intact: /weed-dispensary-toronto, /resources, /resources/menu-guide, /resources/flower-guide, /resources/value-guide, /resources/pre-roll-guide, /resources/native-smokes, and /resources/native-smokes/native-cigarettes-guide."
+        body: "The familiar store, flower, menu, value, pre-roll, and Native smokes guides remain easy to reach from the resource centre."
       }
     ],
   }
