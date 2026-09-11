@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/careers/budtender`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/weed-delivery-toronto`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/resources/cannabis-dispensary-vs-weed-dispensary`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
   ];
 
   /* Tier pages */
