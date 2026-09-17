@@ -120,6 +120,7 @@ body > .deliveryAnnouncement ~ * nav {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 148px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

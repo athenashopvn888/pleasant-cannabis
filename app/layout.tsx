@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import AgeGate from "./components/AgeGate";
+import { cannabisStoreJsonLd, STORE_NAP, toJsonLd } from "./lib/storeNap";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.pleasantcannabis.ca"),
+  metadataBase: new URL(STORE_NAP.homeUrl),
   title: {
     default: "24 Hour Mount Pleasant Dispensary | Pleasant Cannabis",
     template: "%s | Pleasant Cannabis",
@@ -14,17 +15,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_CA",
-    url: "https://www.pleasantcannabis.ca",
+    url: STORE_NAP.homeUrl,
     siteName: "Pleasant Cannabis",
     title: "24 Hour Mount Pleasant Dispensary | Pleasant Cannabis",
     description:
       "Pleasant Cannabis is a Midtown Toronto dispensary on Mt Pleasant Rd with flower, pre-rolls, vapes, edibles, concentrates, accessories, and adult 19+ info. Open 24 Hours.",
     images: [
       {
-        url: "https://www.pleasantcannabis.ca/wp-content/uploads/2026/04/46Oi5.jpg",
+        url: STORE_NAP.imageUrl,
         width: 1200,
         height: 630,
-        alt: "Pleasant Cannabis — Pleasant Cannabis Toronto",
+        alt: "Pleasant Cannabis — Mount Pleasant dispensary",
       },
     ],
   },
@@ -33,9 +34,7 @@ export const metadata: Metadata = {
     title: "24 Hour Mount Pleasant Dispensary | Pleasant Cannabis",
     description:
       "Pleasant Cannabis is a Midtown Toronto dispensary on Mt Pleasant Rd with flower, pre-rolls, vapes, edibles, concentrates, accessories, and adult 19+ info. Open 24 Hours.",
-    images: [
-      "https://www.pleasantcannabis.ca/wp-content/uploads/2026/04/46Oi5.jpg",
-    ],
+    images: [STORE_NAP.imageUrl],
   },
   robots: {
     index: true,
@@ -49,74 +48,13 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.pleasantcannabis.ca",
+    canonical: STORE_NAP.homeUrl,
   },
   verification: {
     // google: "your-google-verification-code",
   },
 };
 
-/* JSON-LD Structured Data */
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-  {
-  "@type": "Store",
-  "@id": "https://www.pleasantcannabis.ca/#store",
-  name: "Pleasant Cannabis",
-  description:
-    "Cannabis dispensary at 758 Mt Pleasant Rd in Toronto, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open 24 Hours.",
-  url: "https://www.pleasantcannabis.ca",
-  telephone: "+12898069425",
-  image: "https://www.pleasantcannabis.ca/wp-content/uploads/2026/04/7Clmh.jpg",
-  priceRange: "$3 - $12/g",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "758 Mt Pleasant Rd",
-    addressLocality: "Toronto",
-    addressRegion: "ON",
-    postalCode: "M4S 2N6",
-    addressCountry: "CA",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 43.7075699,
-    longitude: -79.3901685,
-  },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday",
-      ],
-      opens: "00:00",
-      closes: "23:59",
-    },
-  ],
-  sameAs: [
-    "https://www.google.com/maps/search/?api=1&query=Pleasant+Cannabis%2C+758+Mt+Pleasant+Rd%2C+Toronto%2C+ON+M4S+2N6",
-  ],
-  hasMap: "https://www.google.com/maps/search/?api=1&query=Pleasant+Cannabis%2C+758+Mt+Pleasant+Rd%2C+Toronto%2C+ON+M4S+2N6",
-  areaServed: {
-    "@type": "City",
-    name: "Toronto",
-  },
-  },
-  {
-    "@type": "WebSite",
-    "@id": "https://www.pleasantcannabis.ca/#website",
-    url: "https://www.pleasantcannabis.ca/",
-    name: "Pleasant Cannabis",
-    publisher: { "@id": "https://www.pleasantcannabis.ca/#store" },
-  },
-  ],
-};
 
 export default function RootLayout({
   children,
@@ -127,7 +65,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="geo.region" content="CA-ON" />
-        <meta name="geo.placename" content="Toronto" />
+        <meta name="geo.placename" content="Mount Pleasant, Toronto" />
         <meta name="geo.position" content="43.7075699;-79.3901685" />
         <meta name="ICBM" content="43.7075699, -79.3901685" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -138,7 +76,7 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: toJsonLd(cannabisStoreJsonLd) }}
         />
         <script
           async

@@ -8,7 +8,7 @@ export const weedOwner = {
   city: "Toronto",
   streetAddress: "758 Mt Pleasant Rd",
   postalCode: "M4S 2N6",
-  phoneDisplay: "+1 (289) 806-9425",
+  phoneDisplay: "+1 289 806 9425",
   phoneIntl: "+12898069425",
   hoursLabel: "Open 24 Hours · 7 Days a Week",
   openingHours: "Mo-Su 00:00-23:59",
@@ -19,7 +19,7 @@ export const weedOwner = {
   intro: [
   "Pleasant Cannabis is located at 758 Mt Pleasant Rd in Toronto and is open 24 hours a day, seven days a week.",
   "Adults 19+ can begin with flower or use the menu, value and pre-roll guides to decide which cannabis format they want to explore.",
-  "If you have one specific item in mind, call +1 (289) 806-9425 before making a special trip."
+  "If you have one specific item in mind, call +1 289 806 9425 before making a special trip."
 ],
   findTitle: "Find Your Weed at Pleasant Cannabis",
   discoveryLinks: [
@@ -108,7 +108,7 @@ export const weedOwner = {
   },
   {
     "question": "How can I ask about a particular item?",
-    "answer": "Call Pleasant Cannabis at +1 (289) 806-9425."
+    "answer": "Call Pleasant Cannabis at +1 289 806 9425."
   },
   {
     "question": "Do I need to be 19+?",
@@ -116,8 +116,8 @@ export const weedOwner = {
   }
 ] satisfies WeedFaq[],
   home: {
-    title: "Weed in Toronto at Pleasant Cannabis",
-    text: "Pleasant Cannabis is open 24 hours at 758 Mt Pleasant Rd. Adults 19+ can explore Weed, Cannabis, flower information and store-specific guides.",
+    title: "Weed on Mount Pleasant at Pleasant Cannabis",
+    text: "Pleasant Cannabis is open 24 hours at 758 Mt Pleasant Rd in Midtown. Adults 19+ can explore Weed, Cannabis, flower information and store-specific guides.",
     primaryLabel: "Explore Weed at Pleasant Cannabis",
     secondaryLabel: "Explore the Flower Guide",
     secondaryHref: "/resources/weed-flower-guide",

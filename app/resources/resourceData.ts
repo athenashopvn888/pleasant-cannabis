@@ -30,7 +30,8 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     eyebrow: "Pleasant Cannabis Weed Resources",
     intro: "Pleasant Cannabis brings together practical guides for shoppers exploring Weed and cannabis in Midtown Toronto. Compare the five flower collections, get familiar with different parts of the menu, or explore broader Weed options before narrowing your selection.",
     cards: [
-      { title: "Pleasant Cannabis Weed in Toronto", href: "/weed-dispensary-toronto/", text: "Start with the broader Pleasant Cannabis Weed selection before narrowing your browsing." },
+      { title: "Homepage visit hub", href: "/", text: "Address, hours, map, and directions for Pleasant Cannabis live on the homepage." },
+      { title: "How to reach the store", href: "/visit", text: "TTC, parking, and Midtown landmarks for the Mount Pleasant shop." },
       { title: "Weed Flower Guide", href: "/resources/weed-flower-guide", text: "Compare Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed in one concise flower guide." },
       { title: "Weed Value Guide", href: "/resources/weed-value-guide", text: "Compare Weed flower collections using the information presented while you browse." },
       { title: "Weed Menu Guide", href: "/resources/weed-menu-guide", text: "Explore the broad Weed selection, individual flower collections and supporting Pleasant Cannabis guides." }
@@ -55,7 +56,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     eyebrow: "Visit Guide",
     intro: "Use this page when the search starts local: weed dispensary near Mount Pleasant / Midtown Toronto, cannabis store near 758 Mt Pleasant Rd, or a quick menu check before visiting from Mount Pleasant, Midtown Toronto, Davisville, Yonge and Eglinton, Leaside, Moore Park, Rosedale, and TTC routes.",
     cards: [
-      { title: "Store Visit Page", href: "/weed-dispensary-toronto", text: "Use the main store visit page for address, directions, hours, and store details." },
+      { title: "How to reach Pleasant Cannabis", href: "/visit", text: "TTC, parking, hours, and the 758 Mt Pleasant Rd pin." },
       { title: "Weed Menu Guide", href: "/resources/weed-menu-guide", text: "Explore the broad Weed selection, five flower collections and supporting guides." },
       { title: "Weed Value Guide", href: "/resources/weed-value-guide", text: "Compare Weed flower collections using the information presented while browsing." }
     ],
@@ -71,7 +72,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       },
       {
         heading: "Best First Click",
-        body: "If you need store details, start with /weed-dispensary-toronto. If you are comparing product types, start with the menu guide. If the trip is about Native smokes or cigarettes, start with the Native smokes page and then confirm the current category page."
+        body: "If you need store details, start on the homepage visit hub. If you want TTC and parking notes, open /visit. If you are comparing product types, start with the menu guide. If the trip is about Native smokes or cigarettes, start with the Native smokes page and then confirm the current category page."
       }
     ],
   },

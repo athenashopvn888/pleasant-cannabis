@@ -4,7 +4,7 @@ import test from "node:test";
 
 const landing = readFileSync("app/components/GBPLandingPage.tsx", "utf8");
 const discovery = readFileSync("app/lib/weedDiscovery.ts", "utf8");
-const home = readFileSync("app/page.tsx", "utf8");
+const home = readFileSync("app/HomePage.tsx", "utf8");
 const tierPage = readFileSync("app/[tier]/page.tsx", "utf8");
 const tierCopy = readFileSync("app/lib/tierSeoContent.ts", "utf8");
 

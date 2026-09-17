@@ -22,6 +22,7 @@ const ALL_LINKS = [
   { href: "/items/add-ons", label: "Accessories" },
   { href: "/weed-delivery-toronto", label: "WEED DELIVERY" },
   { href: "/faq", label: "FAQ" },
+  { href: "/visit", label: "Visit" },
   { href: "/weed-resources", label: "Weed Resources" },
 ];
 

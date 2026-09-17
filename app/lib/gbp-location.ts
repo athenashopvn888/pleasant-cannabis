@@ -8,7 +8,7 @@ export const gbpLocation = {
   address: "758 Mt Pleasant Rd, Toronto, ON M4S 2N6",
   streetAddress: "758 Mt Pleasant Rd",
   postalCode: "M4S 2N6",
-  phone: "+1 (289) 806-9425",
+  phone: "+1 289 806 9425",
   phoneIntl: "+12898069425",
   neighborhood: "Mount Pleasant / Midtown Toronto",
   nearbyAreas: ["Mount Pleasant", "Midtown Toronto", "Davisville", "Yonge and Eglinton", "Leaside", "Moore Park", "Rosedale", "TTC"],
@@ -33,7 +33,7 @@ export const gbpLocation = {
   localLandmarks: ["Mount Pleasant", "Midtown Toronto", "Davisville"],
   introVariant: "Pleasant Cannabis is a neighborhood weed dispensary in Toronto at 758 Mt Pleasant Rd near Midtown Toronto. Adults 19+ can browse menu categories including flower, pre-rolls, edibles, THC vapes, concentrates, and smoking accessories before visiting.",
   neighborhoodDescription: "Located in the vibrant Mount Pleasant / Midtown Toronto district, our cannabis store fits right into this active and historic community, surrounded by local retail shops and convenient transit links.",
-  parkingNote: "Street parking is available along Mount Pleasant Road",
-  transitNote: "Served by local TTC bus routes along Mount Pleasant Road and Eglinton Avenue.",
+  parkingNote: "Street parking is available along Mount Pleasant Road. Free evening street parking is available. Check posted signs.",
+  transitNote: "Served by the 74 Mount Pleasant bus along Mount Pleasant Road and by TTC routes on Eglinton Avenue. Eglinton station on Line 1 is the closest subway.",
   sectionTitle: "Serving Customers Near Mount Pleasant and Midtown Toronto"
 };
