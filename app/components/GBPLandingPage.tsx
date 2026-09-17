@@ -55,7 +55,7 @@ export function GBPLandingPage() {
         <section className={styles.visitSection} id="visit">
           <div><p className={styles.kicker}>{store.hoursLabel || "Adults 19+"}</p><h2>{store.storeName}</h2><address>{store.streetAddress}<br />{store.city}, ON {store.postalCode}</address></div>
           <div className={styles.visitFacts}>{store.hoursLabel && <strong>{store.hoursLabel}</strong>}<a href={`tel:${store.phoneIntl}`}>Phone: {store.phoneDisplay}</a><span>Adults 19+</span></div>
-          <p>Call ahead if one particular product is the reason for your trip. This page does not make a current inventory claim.</p>
+          <p>Call ahead if one particular product is the reason for your trip. This page does not make a current inventory claim. Address, hours, and the map live on the <Link href="/">homepage visit hub</Link>. TTC and parking notes are on the <Link href="/visit">how-to-reach page</Link>.</p>
         </section>
 
         <section className={styles.section}>

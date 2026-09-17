@@ -16,7 +16,7 @@ export default function Footer() {
             </p>
             <div className={styles.buttons}>
               <a href="tel:+12898069425" className={styles.btnPrimary}>
-                Call Now
+                Call +1 289 806 9425
               </a>
             </div>
           </div>
@@ -34,7 +34,7 @@ export default function Footer() {
               <span className={styles.infoLabel}>Phone:</span>
               <span>
                 <a href="tel:+12898069425" style={{ color: "inherit" }}>
-                  +1 (289) 806-9425
+                  +1 289 806 9425
                 </a>
               </span>
             </div>
@@ -58,6 +58,7 @@ export default function Footer() {
               <Link href="/items/cigarettes">Cigarettes</Link>
               <Link href="/items/vapes">Nicotine Vape</Link>
               <Link href="/faq">FAQ</Link>
+              <Link href="/visit">Visit Mount Pleasant</Link>
               <Link href="/weed-delivery-toronto">WEED DELIVERY</Link>
               <Link href="/info/cheap-weed-mount-pleasant">
                 Cheap Weed Mount Pleasant
