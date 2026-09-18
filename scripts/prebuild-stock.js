@@ -10,8 +10,11 @@ const fs = require('fs');
 const path = require('path');
 
 const APPS_SCRIPT_URL = process.env.APPS_SCRIPT_URL || '';
+const STORE_CODE = 'PCB01';
+const FETCH_TIMEOUT_MS = 120000;
 const FLOWERS_PATH = path.join(__dirname, '..', 'app', 'lib', 'flowers.json');
 const ITEMS_PATH = path.join(__dirname, '..', 'app', 'lib', 'items.json');
+const SNAPSHOT_PATH = path.join(__dirname, '..', 'app', 'lib', 'stock-snapshot.json');
 
 async function main() {
   if (!APPS_SCRIPT_URL) {
@@ -19,11 +22,13 @@ async function main() {
     return;
   }
 
-  console.log('[prebuild] Fetching live stock from Apps Script...');
+  console.log(`[prebuild] Fetching live stock from Apps Script (store=${STORE_CODE})...`);
 
   try {
-    const url = `${APPS_SCRIPT_URL}?store=PCB01`;
-    const res = await fetch(url, { signal: AbortSignal.timeout(30000) });
+    // Combined flowers+items includes current catalog prices filtered by ONHAND.
+    // stock=1 is fetched separately for the ONHAND date / sku count snapshot.
+    const url = `${APPS_SCRIPT_URL}?store=${STORE_CODE}`;
+    const res = await fetch(url, { signal: AbortSignal.timeout(FETCH_TIMEOUT_MS) });
 
     if (!res.ok) {
       throw new Error(`HTTP ${res.status}: ${res.statusText}`);
@@ -98,7 +103,36 @@ async function main() {
     data.items.forEach(i => { cats[i.category] = (cats[i.category] || 0) + 1; });
     Object.entries(cats).sort().forEach(([c, n]) => console.log(`  ${c}: ${n}`));
 
-    console.log(`[prebuild] Stock date: ${data.stockDate || 'unknown'}`);
+    let stockDate = data.stockDate || null;
+    let skuCount = null;
+    let storeCode = data.storeCode || STORE_CODE;
+    try {
+      const stockUrl = `${APPS_SCRIPT_URL}?store=${STORE_CODE}&stock=1`;
+      const stockRes = await fetch(stockUrl, { signal: AbortSignal.timeout(FETCH_TIMEOUT_MS) });
+      if (stockRes.ok) {
+        const stockData = await stockRes.json();
+        storeCode = stockData.storeCode || storeCode;
+        stockDate = stockData.date || stockDate;
+        skuCount = stockData.skuCount || (stockData.stock ? Object.keys(stockData.stock).length : null);
+        console.log(`[prebuild] ONHAND stock=1 date: ${stockDate || 'unknown'} (${skuCount ?? '?'} SKUs)`);
+      } else {
+        console.warn(`[prebuild] stock=1 HTTP ${stockRes.status}; using combined stockDate`);
+      }
+    } catch (stockErr) {
+      console.warn(`[prebuild] stock=1 fetch failed: ${stockErr.message}; using combined stockDate`);
+    }
+
+    const snapshot = {
+      storeCode,
+      stockDate,
+      skuCount,
+      flowers: data.flowers.length,
+      items: data.items.length,
+    };
+    fs.writeFileSync(SNAPSHOT_PATH, JSON.stringify(snapshot, null, 2) + '\n', 'utf-8');
+    console.log(`[prebuild] stock-snapshot.json written`);
+
+    console.log(`[prebuild] Stock date: ${stockDate || 'unknown'}`);
     console.log('[prebuild] Done!');
 
   } catch (err) {
