@@ -41,9 +41,12 @@ test("homepage schema is CannabisStore with FAQPage and a unique local image", (
   assert.doesNotMatch(home, /7Clmh\.jpg|46Oi5\.jpg/);
 });
 
-test("/visit is a supporting reach page that canonicalizes to the homepage", () => {
-  assert.match(visit, /canonical: STORE_NAP\.homeUrl/);
-  assert.match(visit, /openGraph:[\s\S]*url: STORE_NAP\.homeUrl/);
+test("/visit is a supporting reach page that self-canonicalizes", () => {
+  assert.match(visit, /const visitUrl = `\$\{STORE_NAP\.homeUrl\}\$\{STORE_NAP\.visitPath\}`/);
+  assert.match(visit, /canonical: visitUrl/);
+  assert.match(visit, /openGraph:[\s\S]*url: visitUrl/);
+  assert.doesNotMatch(visit, /canonical: STORE_NAP\.homeUrl/);
+  assert.doesNotMatch(visit, /openGraph:[\s\S]*url: STORE_NAP\.homeUrl/);
   assert.match(visitContent, /74 Mount Pleasant/);
   assert.match(visitContent, /Street parking is available along Mount Pleasant Road/);
   assert.match(visitContent, /758 Mt Pleasant Rd/);
