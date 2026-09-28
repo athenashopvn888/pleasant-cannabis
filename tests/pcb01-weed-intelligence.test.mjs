@@ -56,8 +56,8 @@ test("tier configuration uses tier-first labels and compliant canonical slugs", 
 test("tier SEO titles and H1s use tier-first naming with Cannabis Flower", () => {
   const seo = read("app/lib/tierSeoContent.ts");
   for (const tier of ["Exotic", "Premium", "AAA+", "AA", "Budget"]) {
-    assert.ok(seo.includes(`seoTitle: "${tier} Weed & Cannabis Flower Toronto | Pleasant Cannabis"`));
-    assert.ok(seo.includes(`h1: "${tier} Weed & Cannabis Flower in Toronto"`));
+    assert.ok(seo.includes(`seoTitle: "${tier} Weed & Cannabis Flower | Mount Pleasant & Eglinton, Midtown Toronto | Pleasant Cannabis"`));
+    assert.ok(seo.includes(`h1: "${tier} Weed & Cannabis Flower at Mount Pleasant & Eglinton"`));
   }
 });
 

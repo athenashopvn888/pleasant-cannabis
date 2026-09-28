@@ -55,11 +55,11 @@ test("/visit is a supporting reach page that self-canonicalizes", () => {
   assert.match(visitContent, /STORE_NAP\.hoursLabel/);
 });
 
-test("city weed-dispensary URL is noindexed and canonicalized to the homepage", () => {
-  assert.match(city, /index: false/);
-  assert.match(city, /canonical: STORE_NAP\.homeUrl/);
+test("restored city weed-dispensary URL stays indexable and self-canonical", () => {
+  assert.match(city, /index: true/);
+  assert.match(city, /canonical: `\$\{STORE_NAP\.homeUrl\}\/weed-dispensary-toronto`/);
   assert.match(sitemap, /\$\{BASE\}\/visit/);
-  assert.doesNotMatch(sitemap, /weed-dispensary-toronto/);
+  assert.match(sitemap, /weed-dispensary-toronto/);
 });
 
 test("homepage is the visit hub with Mount Pleasant copy", () => {
