@@ -158,6 +158,7 @@ export default async function SeoLandingPage({
             </div>
           )}
           {heroPreview?.warning && <p className={styles.nicotineWarning}>{heroPreview.warning}</p>}
+          {(slug === "native-cigarettes-mount-pleasant" || slug === "nicotine-vapes-mount-pleasant") && <div className={styles.section}><h2 className={styles.sectionTitle}>Mount Pleasant category guide</h2><p className={styles.sectionBody}>Continue to the dedicated local pillar for store details, directions, current-category access and adult ID information.</p><Link href={slug === "native-cigarettes-mount-pleasant" ? "/native-cigarettes-mount-pleasant" : "/nicotine-vape-mount-pleasant"} className={styles.productHeroPrimary}>Open the Mount Pleasant guide</Link></div>}
         </div>
       </section>
 

@@ -16,6 +16,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/careers/budtender`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/weed-delivery-toronto`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/weed-dispensary-mount-pleasant`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/24-hour-mount-pleasant-dispensary`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/native-cigarettes-mount-pleasant`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${BASE}/nicotine-vape-mount-pleasant`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
   ];
 
   /* Tier pages */

@@ -240,6 +240,13 @@
   border-top: 1px solid rgba(255, 255, 255, 0.03);
 }
 
+.authoritySection{padding:78px 0;background:linear-gradient(180deg,#06120d,#0b1e14);border-block:1px solid rgba(165,255,191,.12)}
+.authorityEyebrow{display:block;margin-bottom:10px;color:#9df6bd;font-size:.76rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.authorityGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.authorityCard{min-height:180px;padding:25px;display:flex;flex-direction:column;gap:12px;border:1px solid rgba(165,255,191,.16);border-radius:20px;color:#f7fff9;background:rgba(255,255,255,.035);text-decoration:none;transition:transform .2s ease,border-color .2s ease}
+.authorityCard:hover{transform:translateY(-3px);border-color:#9df6bd}.authorityCard strong{font-size:1.2rem}.authorityCard span{color:#aebeb4;line-height:1.55}.authorityCard em{margin-top:auto;color:#9df6bd;font-style:normal;font-weight:850}
+@media(max-width:780px){.authorityGrid{grid-template-columns:1fr}}
+
 .container {
   width: min(100% - 2rem, 1200px);
   margin-inline: auto;

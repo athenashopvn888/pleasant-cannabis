@@ -30,6 +30,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const scrollBarRef = useRef<HTMLDivElement>(null);
   const [canAdvance, setCanAdvance] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const updateScrollState = useCallback(() => { const scrollBar = scrollBarRef.current; if (!scrollBar) return; setCanAdvance(scrollBar.scrollWidth - scrollBar.clientWidth - scrollBar.scrollLeft > 2); }, []);
   useEffect(() => { const scrollBar = scrollBarRef.current; if (!scrollBar) return; updateScrollState(); scrollBar.addEventListener("scroll", updateScrollState, { passive: true }); window.addEventListener("resize", updateScrollState); const resizeObserver = new ResizeObserver(updateScrollState); resizeObserver.observe(scrollBar); if (scrollBar.firstElementChild) resizeObserver.observe(scrollBar.firstElementChild); return () => { scrollBar.removeEventListener("scroll", updateScrollState); window.removeEventListener("resize", updateScrollState); resizeObserver.disconnect(); }; }, [pathname, updateScrollState]);
   const advanceScrollBar = () => { const scrollBar = scrollBarRef.current; if (!scrollBar) return; const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches; scrollBar.scrollBy({ left: Math.max(180, scrollBar.clientWidth * 0.75), behavior: reduceMotion ? "auto" : "smooth" }); };
@@ -59,7 +60,14 @@ export default function Navbar() {
             <span className={styles.dot}></span>
             Open Now
           </span>
+          <button type="button" className={styles.menuButton} aria-label={mobileOpen ? "Close store navigation" : "Open store navigation"} aria-expanded={mobileOpen} aria-controls="mobile-store-navigation" onClick={() => setMobileOpen((open) => !open)}>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d={mobileOpen ? "M6 6l12 12M18 6L6 18" : "M4 7h16M4 12h16M4 17h16"} /></svg>
+          </button>
         </div>
+      </div>
+
+      <div id="mobile-store-navigation" className={`${styles.mobileMenu} ${mobileOpen ? styles.mobileMenuOpen : ""}`}>
+        {ALL_LINKS.map((link) => <Link key={`mobile-${link.href}`} href={link.href} onClick={() => setMobileOpen(false)}>{link.label}</Link>)}
       </div>
 
       {/* Scrollable link bar */}

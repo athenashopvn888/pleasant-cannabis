@@ -70,6 +70,15 @@ const EXPLORE_CATEGORIES = [
   { name: "Magic Stuff", slug: "items/magic", banner: "/banners/09_Magic_Stuff.webp", icon: "🍄" },
 ];
 
+const LOCAL_AUTHORITY_LINKS = [
+  { href: "/weed-dispensary-mount-pleasant", label: "Mount Pleasant Weed Dispensary", detail: "Local counter and neighbourhood guide" },
+  { href: "/24-hour-mount-pleasant-dispensary", label: "Open 24 Hours", detail: "Late-night and early-morning visit details" },
+  { href: "/weed-delivery-toronto", label: "Weed Delivery", detail: "Review the existing Toronto delivery guide" },
+  { href: "/native-cigarettes-mount-pleasant", label: "Native Cigarettes", detail: "Adult cigarette category and visit guide" },
+  { href: "/nicotine-vape-mount-pleasant", label: "Nicotine Vapes", detail: "Adult nicotine products, separate from THC" },
+  { href: "/visit", label: "Plan Your Visit", detail: "Directions, TTC, parking, NAP and hours" },
+];
+
 
 interface Review {
   name: string;
@@ -83,6 +92,8 @@ interface ReviewStats {
 }
 
 export default function HomePage() {
+  // Existing cards hydrate from the browser-side menu pool after mount.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [featuredStrains, setFeaturedStrains] = useState<any[]>([]);
   const [reviews, setReviews] = useState<Review[]>([]);
   const [reviewsStats, setReviewsStats] = useState<ReviewStats | null>(null);
@@ -164,6 +175,7 @@ export default function HomePage() {
       tierCounts[f.tier] = tc + 1;
     }
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setFeaturedStrains(picked);
   }, []);
 
@@ -257,6 +269,17 @@ export default function HomePage() {
       </section>
 
       <WeedDiscoveryModule />
+
+      <section className={styles.authoritySection} aria-labelledby="local-guide-title">
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
+            <span className={styles.authorityEyebrow}>Mount Pleasant & Eglinton</span>
+            <h2 className={styles.sectionTitle} id="local-guide-title">Local store guides</h2>
+            <p className={styles.sectionSubtitle}>Six useful routes connecting the store, current categories, delivery and arrival details.</p>
+          </div>
+          <div className={styles.authorityGrid}>{LOCAL_AUTHORITY_LINKS.map((item) => <Link href={item.href} key={item.href} className={styles.authorityCard}><strong>{item.label}</strong><span>{item.detail}</span><em>Open guide →</em></Link>)}</div>
+        </div>
+      </section>
 
       {/* ── FEATURED PRODUCTS ── */}
       <section className={styles.featuredSection}>

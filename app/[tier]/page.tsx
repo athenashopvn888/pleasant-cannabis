@@ -10,6 +10,7 @@ import {
   TIER_CONFIG,
 } from "../lib/products";
 import { TIER_COMPARE, TIER_LINKS, TIER_SEO } from "../lib/tierSeoContent";
+import { STORE_NAP, toJsonLd } from "../lib/storeNap";
 import styles from "./tier.module.css";
 
 /* -- Generate all tier pages at build -- */
@@ -61,9 +62,42 @@ export default async function TierPage({
   const saleFlowers = flowers.filter((f) => f.isSale);
   const regularFlowers = flowers.filter((f) => !f.isSale);
   const hotFlowers = flowers.filter((f) => f.isHot);
+  const canonicalUrl = `${STORE_NAP.homeUrl}/${tierSlug}`;
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${canonicalUrl}#webpage`,
+        url: canonicalUrl,
+        name: seo?.seoTitle || config.name,
+        description: seo?.metaDescription,
+        isPartOf: { "@id": `${STORE_NAP.homeUrl}/#website` },
+        about: { "@id": `${STORE_NAP.homeUrl}/#store` },
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: STORE_NAP.homeUrl },
+            { "@type": "ListItem", position: 2, name: config.name, item: canonicalUrl },
+          ],
+        },
+        mainEntity: {
+          "@type": "ItemList",
+          numberOfItems: flowers.length,
+          itemListElement: flowers.map((flower, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: flower.name,
+            url: `${STORE_NAP.homeUrl}/flower/${flower.slug}`,
+          })),
+        },
+      },
+    ],
+  };
 
   return (
     <main className={styles.main}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(collectionSchema) }} />
       <Navbar />
 
       {/* ── Banner Image (standalone, no overlay text) ── */}
