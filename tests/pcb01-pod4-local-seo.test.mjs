@@ -39,6 +39,8 @@ test("homepage schema is CannabisStore with FAQPage and a unique local image", (
   assert.match(nap, /imageUrl: "https:\/\/www\.pleasantcannabis\.ca\/banners\/welcome_banner\.webp"/);
   assert.doesNotMatch(layout, /7Clmh\.jpg|46Oi5\.jpg/);
   assert.doesNotMatch(home, /7Clmh\.jpg|46Oi5\.jpg/);
+  assert.match(layout, /Open 24 Hours in Midtown \| Pleasant Cannabis/);
+  assert.match(layout, /Open 24 hours, 7 days a week/);
 });
 
 test("/visit is a supporting reach page that self-canonicalizes", () => {
@@ -53,6 +55,8 @@ test("/visit is a supporting reach page that self-canonicalizes", () => {
   assert.match(visitContent, /Toronto ON M4S 2N6/);
   assert.match(visitContent, /STORE_NAP\.phoneDisplay/);
   assert.match(visitContent, /STORE_NAP\.hoursLabel/);
+  assert.match(visitContent, /<h2>Open 24\/7<\/h2>/);
+  assert.match(visitContent, /open 24 hours, 7 days a week/);
 });
 
 test("restored city weed-dispensary URL stays indexable and self-canonical", () => {
