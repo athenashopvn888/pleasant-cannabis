@@ -55,7 +55,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   /* SEO landing pages */
-  const seoPages: MetadataRoute.Sitemap = SEO_PAGES.map((p) => ({
+  const redirectedSeoPages = new Set([
+    "dispensary-near-me-mount-pleasant",
+    "mount-pleasant-weed-dispensary",
+    "weed-store-near-midtown-toronto",
+  ]);
+  const seoPages: MetadataRoute.Sitemap = SEO_PAGES.filter((p) => !redirectedSeoPages.has(p.slug)).map((p) => ({
     url: `${BASE}/info/${p.slug}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
