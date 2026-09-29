@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
+import { Outfit, Playfair_Display, Quicksand } from "next/font/google";
 import "./globals.css";
 import AgeGate from "./components/AgeGate";
 import { cannabisStoreJsonLd, STORE_NAP, toJsonLd } from "./lib/storeNap";
+
+const outfit = Outfit({ subsets: ["latin"], display: "swap", variable: "--font-outfit" });
+const playfair = Playfair_Display({ subsets: ["latin"], display: "swap", preload: false, variable: "--font-playfair" });
+const quicksand = Quicksand({ subsets: ["latin"], display: "swap", preload: false, variable: "--font-quicksand" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(STORE_NAP.homeUrl),
@@ -68,37 +74,21 @@ export default function RootLayout({
         <meta name="geo.placename" content="Mount Pleasant, Toronto" />
         <meta name="geo.position" content="43.7075699;-79.3901685" />
         <meta name="ICBM" content="43.7075699, -79.3901685" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: toJsonLd(cannabisStoreJsonLd) }}
         />
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-5STHBE8TXT"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-5STHBE8TXT');
-            `,
-          }}
-        />
       </head>
-      <body>
+      <body className={`${outfit.variable} ${playfair.variable} ${quicksand.variable}`}>
         <Link className="deliveryAnnouncement" href="/weed-delivery-toronto">
           NEW WEED DELIVERY MENU IS HERE — CLICK TO EXPLORE
         </Link>
         {children}
         <AgeGate />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-5STHBE8TXT" strategy="lazyOnload" />
+        <Script id="google-analytics" strategy="lazyOnload">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-5STHBE8TXT');`}
+        </Script>
       </body>
     </html>
   );
