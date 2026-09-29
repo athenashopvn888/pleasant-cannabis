@@ -7,11 +7,11 @@ import { cannabisStoreJsonLd, STORE_NAP, toJsonLd } from "./lib/storeNap";
 export const metadata: Metadata = {
   metadataBase: new URL(STORE_NAP.homeUrl),
   title: {
-    default: "24 Hour Mount Pleasant Dispensary | Pleasant Cannabis",
+    default: "Open 24 Hours in Midtown | Pleasant Cannabis",
     template: "%s | Pleasant Cannabis",
   },
   description:
-    "Pleasant Cannabis is a Midtown Toronto dispensary on Mt Pleasant Rd with flower, pre-rolls, vapes, edibles, concentrates, accessories, and adult 19+ info. Open 24 Hours.",
+    "Open 24 hours, 7 days a week. Visit Pleasant Cannabis at 758 Mt Pleasant Rd in Midtown Toronto, near Mount Pleasant and Eglinton. Adults 19+.",
   openGraph: {
     type: "website",
     locale: "en_CA",

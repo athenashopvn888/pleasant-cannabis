@@ -52,6 +52,15 @@ export default function VisitPage() {
 
       <section className={styles.grid}>
         <article className={styles.card}>
+          <h2>Open 24/7</h2>
+          <p>
+            Pleasant Cannabis is open 24 hours, 7 days a week at 758 Mt Pleasant Rd in Midtown Toronto. The same walk-in counter is open during the day, overnight, and after midnight. Adults 19+ should bring government photo ID.
+          </p>
+        </article>
+      </section>
+
+      <section className={styles.grid}>
+        <article className={styles.card}>
           <h2>TTC to Mount Pleasant &amp; Eglinton</h2>
           <p>
             The shop sits on Mount Pleasant Road in Midtown, east of
