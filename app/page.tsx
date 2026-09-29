@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
+import { HOME_TITLE } from "./lib/homeDelivery";
 import Papa from "papaparse";
 import HomePage, { type Review, type ReviewStats } from "./HomePage";
 import { faqPageJsonLd, toJsonLd } from "./lib/storeNap";
+
+export const metadata: Metadata = {
+  title: { absolute: HOME_TITLE },
+  openGraph: { title: HOME_TITLE },
+  twitter: { card: "summary_large_image", title: HOME_TITLE },
+};
 
 const REVIEWS_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSu6iy9W3YKRzBYo_r96rXcbJsAOzlkzn5Rw9QMFnE0NbYSBgPxKX8kPRZNC9QcffZYj57155esmnqH/pub?gid=1555782756&single=true&output=csv";
 
