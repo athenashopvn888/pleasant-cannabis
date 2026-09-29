@@ -1,4 +1,8 @@
 "use client";
+import { HOME_TITLE } from "./lib/homeDelivery";
+import CohortDeliveryActions from "./components/CohortDeliveryActions";
+import HomeDeliverySection from "./components/HomeDeliverySection";
+import HomepageTopNotices from "./components/HomepageTopNotices";
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
@@ -133,9 +137,11 @@ export default function HomePage({ initialReviews, initialReviewStats }: HomePag
 
   return (
     <main className={styles.main}>
+      <Navbar />
+      <HomepageTopNotices />
       <FleetAnnouncementBanner />
       {/* ── NAVBAR ── */}
-      <Navbar />
+
       <HiringCallout />
 
       {/* ── WELCOME BANNER ── */}
@@ -172,7 +178,8 @@ export default function HomePage({ initialReviews, initialReviewStats }: HomePag
           {/* Brand branding */}
           <div className={styles.brandBlock}>
             <Image src="/brand-logo-small.webp" alt="Pleasant Cannabis Icon" width={60} height={60} loading="lazy" style={{ objectFit: "contain", borderRadius: "8px", marginBottom: "8px" }} />
-            <h1 className={styles.brandTitle}>PLEASANT CANNABIS</h1>
+            <h1 className={styles.brandTitle}>{HOME_TITLE}</h1>
+            <CohortDeliveryActions variant="hero" />
             <p className={styles.brandSub}>Mount Pleasant / Midtown walk-in</p>
             <div className={styles.brandBadge}>Open 24 Hours</div>
           </div>
@@ -204,6 +211,8 @@ export default function HomePage({ initialReviews, initialReviewStats }: HomePag
           </div>
         </div>
       </section>
+
+      <HomeDeliverySection />
 
       {/* ── EXPLORE CATEGORIES ── */}
       <section className={styles.categoriesSection} id="menu">
