@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import FleetAnnouncementBanner from "./components/FleetAnnouncementBanner";
@@ -11,7 +12,6 @@ import FlowerCard from "./components/FlowerCard";
 import { WeedDiscoveryModule } from "./components/WeedDiscoveryModule";
 import { allFlowers } from "./lib/products";
 import { HOME_FAQS, STORE_NAP } from "./lib/storeNap";
-import Papa from "papaparse";
 
 /* ── Bento Mosaic Config ── */
 const BENTO_TIERS = [
@@ -80,103 +80,55 @@ const LOCAL_AUTHORITY_LINKS = [
 ];
 
 
-interface Review {
+export interface Review {
   name: string;
   comment: string;
   date: string;
 }
 
-interface ReviewStats {
+export interface ReviewStats {
   total: number;
   avg: number;
 }
 
-export default function HomePage() {
+interface HomePageProps {
+  initialReviews: Review[];
+  initialReviewStats: ReviewStats | null;
+}
+
+export default function HomePage({ initialReviews, initialReviewStats }: HomePageProps) {
   // Existing cards hydrate from the browser-side menu pool after mount.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [featuredStrains, setFeaturedStrains] = useState<any[]>([]);
-  const [reviews, setReviews] = useState<Review[]>([]);
-  const [reviewsStats, setReviewsStats] = useState<ReviewStats | null>(null);
-  const [reviewsLoading, setReviewsLoading] = useState(true);
-
-  /* ── 1. Fetch Client-Side Google Reviews ── */
-  useEffect(() => {
-    const STORE_KEY = "PCB01";
-    const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSu6iy9W3YKRzBYo_r96rXcbJsAOzlkzn5Rw9QMFnE0NbYSBgPxKX8kPRZNC9QcffZYj57155esmnqH/pub?gid=1555782756&single=true&output=csv";
-
-    fetch(url)
-      .then((r) => {
-        if (!r.ok) throw new Error(`Review feed returned ${r.status}`);
-        return r.text();
-      })
-      .then((raw) => {
-        const rows = Papa.parse<Record<string, string>>(raw, {
-          header: true,
-          skipEmptyLines: true,
-        }).data;
-
-        const reviewsPool: Review[] = [];
-        let totalVal: number | null = null;
-        let avgVal: number | null = null;
-        let hasStats = false;
-
-        rows.forEach((row) => {
-          if (row.StoreKey !== STORE_KEY) return;
-
-          const rn = row.ReviewerName || "";
-          if (rn === "__STATS__") {
-            const parsedTotal = parseInt(row.Comment || "", 10);
-            const parsedAvg = parseFloat(row.CreateTime || "");
-            if (Number.isFinite(parsedTotal) && Number.isFinite(parsedAvg)) {
-              totalVal = parsedTotal;
-              avgVal = parsedAvg;
-              hasStats = true;
-            }
-            return;
-          }
-
-          const comment = row.Comment || "";
-          if (!comment || comment.length < 10) return;
-          const name = rn || "Customer";
-          const dateStr = row.CreateTime || "";
-          reviewsPool.push({ name, comment, date: dateStr });
-        });
-
-        setReviews(reviewsPool.slice(0, 6));
-        if (hasStats && totalVal !== null && avgVal !== null) {
-          setReviewsStats({ total: totalVal, avg: avgVal });
-        }
-        setReviewsLoading(false);
-      })
-      .catch((err) => {
-        console.warn("Reviews fetch failed:", err);
-        setReviewsLoading(false);
-      });
-  }, []);
+  const featuredSectionRef = useRef<HTMLElement>(null);
+  const reviews = initialReviews;
+  const reviewsStats = initialReviewStats;
 
   /* ── 2. Build Featured Strains ── */
   useEffect(() => {
-    const pool = [...allFlowers].filter((f) => f.image);
-    // Shuffle pool securely
-    for (let i = pool.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [pool[i], pool[j]] = [pool[j], pool[i]];
-    }
-
-    const picked: typeof pool = [];
-    const tierCounts: Record<string, number> = {};
-
-    for (const f of pool) {
-      if (picked.length >= 8) break;
-      const tc = tierCounts[f.tier] || 0;
-      if (tc >= 2) continue; // max 2 per tier
-      if (picked.some((p) => p.name === f.name)) continue; // avoid exact duplicates
-      picked.push(f);
-      tierCounts[f.tier] = tc + 1;
-    }
-
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setFeaturedStrains(picked);
+    const section = featuredSectionRef.current;
+    if (!section) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      const pool = [...allFlowers].filter((flower) => flower.image);
+      for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [pool[i], pool[j]] = [pool[j], pool[i]];
+      }
+      const picked: typeof pool = [];
+      const tierCounts: Record<string, number> = {};
+      for (const flower of pool) {
+        if (picked.length >= 8) break;
+        const tierCount = tierCounts[flower.tier] || 0;
+        if (tierCount >= 2 || picked.some((item) => item.name === flower.name)) continue;
+        picked.push(flower);
+        tierCounts[flower.tier] = tierCount + 1;
+      }
+      setFeaturedStrains(picked);
+      observer.disconnect();
+    }, { rootMargin: "300px" });
+    observer.observe(section);
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -189,24 +141,37 @@ export default function HomePage() {
       {/* ── WELCOME BANNER ── */}
       <section className={styles.welcomeBannerSection}>
         <div className={styles.welcomeBannerContainer}>
-          <img
+          <Image
             src="/banners/welcome_banner.webp"
             alt="Welcome to Pleasant Cannabis — Premium Toronto Cannabis Dispensary"
             className={styles.welcomeBannerImg}
+            width={1320}
+            height={330}
+            sizes="(max-width: 768px) calc(100vw - 32px), 1272px"
+            quality={60}
+            priority
+            fetchPriority="high"
           />
         </div>
       </section>
 
       {/* ── BENTO MOSAIC HERO ── */}
       <section className={styles.hero}>
-        <div className={styles.heroBg} />
+        <Image
+          src="/banners/homepage_hero.webp"
+          alt=""
+          className={styles.heroBg}
+          fill
+          loading="lazy"
+          sizes="100vw"
+        />
         <div className={styles.heroOverlay} />
         <div className={styles.heroStars} />
 
         <div className={styles.heroContent}>
           {/* Brand branding */}
           <div className={styles.brandBlock}>
-            <img src="/storeFavicon.webp" alt="Pleasant Cannabis Icon" style={{ height: "60px", width: "60px", objectFit: "contain", borderRadius: "8px", marginBottom: "8px" }} />
+            <Image src="/brand-logo-small.webp" alt="Pleasant Cannabis Icon" width={60} height={60} loading="lazy" style={{ objectFit: "contain", borderRadius: "8px", marginBottom: "8px" }} />
             <h1 className={styles.brandTitle}>PLEASANT CANNABIS</h1>
             <p className={styles.brandSub}>Mount Pleasant / Midtown walk-in</p>
             <div className={styles.brandBadge}>Open 24 Hours</div>
@@ -218,11 +183,16 @@ export default function HomePage() {
               <Link
                 key={tier.slug}
                 href={`/${tier.slug}`}
+                prefetch={false}
                 className={`${styles.bentoTile} ${tier.className}`}
               >
-                <div
+                <Image
+                  src={tier.banner}
+                  alt={`${tier.name} Pleasant Cannabis banner`}
                   className={styles.bentoTileBg}
-                  style={{ backgroundImage: `url('${tier.banner}')` }}
+                  fill
+                  loading="lazy"
+                  sizes="(max-width: 700px) calc(100vw - 48px), (max-width: 1100px) calc(50vw - 36px), 380px"
                 />
                 <div className={styles.bentoTileOverlay} />
                 <div className={styles.bentoTileContent}>
@@ -250,11 +220,16 @@ export default function HomePage() {
               <Link
                 key={cat.slug}
                 href={`/${cat.slug}`}
+                prefetch={false}
                 className={styles.categoryCard}
               >
-                <div
+                <Image
+                  src={cat.banner}
+                  alt={`${cat.name} Pleasant Cannabis banner`}
                   className={styles.categoryCardBg}
-                  style={{ backgroundImage: `url('${cat.banner}')` }}
+                  fill
+                  loading="lazy"
+                  sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1000px) calc(50vw - 34px), 288px"
                 />
                 <div className={styles.categoryCardOverlay} />
                 <div className={styles.categoryCardContent}>
@@ -282,7 +257,7 @@ export default function HomePage() {
       </section>
 
       {/* ── FEATURED PRODUCTS ── */}
-      <section className={styles.featuredSection}>
+      <section ref={featuredSectionRef} className={styles.featuredSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Featured Strains</h2>
@@ -339,9 +314,7 @@ export default function HomePage() {
           </div>
 
           <div className={styles.reviewsGrid}>
-            {reviewsLoading ? (
-              <div className={styles.reviewsLoading}>Loading reviews...</div>
-            ) : reviews.length === 0 ? (
+            {reviews.length === 0 ? (
               <div className={styles.reviewsLoading}>
                 Reviews are not available right now.
               </div>

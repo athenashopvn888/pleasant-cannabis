@@ -10,6 +10,22 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev", pathname: "/products/**" },
     ],
   },
+  async headers() {
+    return [
+      {
+        source: "/banners/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=86400" }],
+      },
+      {
+        source: "/products/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=86400" }],
+      },
+      {
+        source: "/brand-logo-small.webp",
+        headers: [{ key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=86400" }],
+      },
+    ];
+  },
   async redirects() {
     return [
       { source: "/exotic", destination: "/exotic-weed", permanent: true },
