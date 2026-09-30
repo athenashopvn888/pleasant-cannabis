@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { HOME_TITLE } from "./lib/homeDelivery";
 import Papa from "papaparse";
 import HomePage, { type Review, type ReviewStats } from "./HomePage";
+import FleetAnnouncementBanner from "./components/FleetAnnouncementBanner";
 import { faqPageJsonLd, toJsonLd } from "./lib/storeNap";
 
 export const metadata: Metadata = {
@@ -53,6 +54,7 @@ export default async function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: toJsonLd(faqPageJsonLd) }}
       />
+      <FleetAnnouncementBanner holidayOnly />
       <HomePage initialReviews={reviews} initialReviewStats={stats} />
     </>
   );
