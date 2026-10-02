@@ -26,6 +26,7 @@ const ALL_LINKS = [
   { href: "/faq", label: "FAQ" },
   { href: "/visit", label: "Visit" },
   { href: "/weed-resources", label: "Weed Resources" },
+  { href: "/guides", label: "Guides" },
 ];
 
 export default function Navbar() {
