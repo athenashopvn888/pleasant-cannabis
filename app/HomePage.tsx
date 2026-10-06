@@ -149,7 +149,7 @@ export default function HomePage({ initialReviews, initialReviewStats }: HomePag
         <div className={styles.welcomeBannerContainer}>
           <Image
             src="/banners/welcome_banner.webp"
-            alt="Welcome to Pleasant Cannabis — Premium Toronto Cannabis Dispensary"
+            alt="Pleasant Cannabis Dispensary Weed Delivery"
             className={styles.welcomeBannerImg}
             width={1320}
             height={330}
