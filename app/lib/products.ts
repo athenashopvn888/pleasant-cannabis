@@ -371,16 +371,16 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
 };
 
 /* Helper functions */
-export function getFlowersByTier(tier: string): FlowerProduct[] {
-  return allFlowers.filter((f) => f.tier.toUpperCase() === tier.toUpperCase());
+export function getFlowersByTier(tier: string, flowers = allFlowers): FlowerProduct[] {
+  return flowers.filter((f) => f.tier.toUpperCase() === tier.toUpperCase());
 }
 
 export function getFlowerBySlug(slug: string): FlowerProduct | undefined {
   return allFlowers.find((f) => f.slug === slug);
 }
 
-export function getItemsByCategory(category: string): ItemProduct[] {
-  return allItems.filter(
+export function getItemsByCategory(category: string, items = allItems): ItemProduct[] {
+  return items.filter(
     (i) => i.category.toUpperCase() === category.toUpperCase(),
   );
 }
