@@ -9,10 +9,13 @@ import {
   getTierFromSlug,
   TIER_CONFIG,
 } from "../lib/products";
+import { getResolvedFlowers } from "../lib/resolvedProducts";
 import { TIER_COMPARE, TIER_LINKS, TIER_SEO } from "../lib/tierSeoContent";
 import { STORE_NAP, toJsonLd } from "../lib/storeNap";
 import styles from "./tier.module.css";
 import { getTierGuideLinks } from "../lib/guideRegistry";
+
+export const revalidate = 0;
 
 /* -- Generate all tier pages at build -- */
 export function generateStaticParams() {
@@ -28,7 +31,7 @@ export async function generateMetadata({
   const { tier: tierSlug } = await params;
   const tierInfo = getTierFromSlug(tierSlug);
   if (!tierInfo) return {};
-  const flowers = getFlowersByTier(tierInfo.key);
+  const flowers = getFlowersByTier(tierInfo.key, await getResolvedFlowers());
   const seo = TIER_SEO[tierInfo.key];
 
   return {
@@ -56,7 +59,7 @@ export default async function TierPage({
   const tierInfo = getTierFromSlug(tierSlug);
   if (!tierInfo) notFound();
 
-  const flowers = getFlowersByTier(tierInfo.key);
+  const flowers = getFlowersByTier(tierInfo.key, await getResolvedFlowers());
   const { config } = tierInfo;
   const guideLinks = getTierGuideLinks(`/${tierSlug}`);
   const seo = TIER_SEO[tierInfo.key];
