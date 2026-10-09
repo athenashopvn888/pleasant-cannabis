@@ -58,6 +58,7 @@ export default function Footer() {
               <Link href="/items/cigarettes">Cigarettes</Link>
               <Link href="/items/vapes">Nicotine Vape</Link>
               <Link href="/faq">FAQ</Link>
+              <Link href="/hours">Store Hours</Link>
               <Link href="/visit">Visit Mount Pleasant</Link>
               <Link href="/weed-delivery-toronto">WEED DELIVERY</Link>
               <Link href="/info/cheap-weed-mount-pleasant">
