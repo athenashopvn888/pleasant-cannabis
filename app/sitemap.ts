@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/24-hour-mount-pleasant-dispensary`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/native-cigarettes-mount-pleasant`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/nicotine-vape-mount-pleasant`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${BASE}/vape-shop-mount-pleasant`, lastModified: now, changeFrequency: "daily", priority: 0.85 },
   ];
 
   /* Tier pages */
