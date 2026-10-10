@@ -80,6 +80,7 @@ const LOCAL_AUTHORITY_LINKS = [
   { href: "/weed-delivery-toronto", label: "Weed Delivery", detail: "Review the existing Toronto delivery guide" },
   { href: "/native-cigarettes-mount-pleasant", label: "Native Cigarettes", detail: "Adult cigarette category and visit guide" },
   { href: "/nicotine-vape-mount-pleasant", label: "Nicotine Vapes", detail: "Adult nicotine products, separate from THC" },
+  { href: "/vape-shop-mount-pleasant", label: "Vape Shop", detail: "Current nicotine listings and contact options" },
   { href: "/visit", label: "Plan Your Visit", detail: "Directions, TTC, parking, NAP and hours" },
 ];
 

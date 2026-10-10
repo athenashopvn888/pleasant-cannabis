@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { STORE_NAP, toJsonLd } from "../lib/storeNap";
 import styles from "./AuthorityLanding.module.css";
+import VapeActionPanel from "./VapeActionPanel";
 
 export type AuthorityPage = {
   path: string;
@@ -31,6 +32,7 @@ export default function AuthorityLanding({ page }: { page: AuthorityPage }) {
       <span>{page.eyebrow}</span><h1>{page.title}</h1><p>{page.summary}</p>
       <div className={styles.actions}><Link href={page.menuHref}>{page.menuLabel}</Link><a href={STORE_NAP.mapsSearchUrl}>Open Google Maps</a></div>
     </div></section>
+    {page.path === "/nicotine-vape-mount-pleasant" && <VapeActionPanel compact />}
     <section className={styles.content}><div className={styles.wrap}>
       <article><h2>At the Mount Pleasant Road counter</h2><p>{page.body}</p></article>
       <aside><h2>Plan your visit</h2><p><strong>{STORE_NAP.name}</strong><br />{STORE_NAP.addressLine}<br /><a href={`tel:${STORE_NAP.phoneIntl}`}>{STORE_NAP.phoneDisplay}</a><br />Open 24 hours, seven days a week</p><p>Adults 19+ with government photo ID.</p><Link href="/visit">TTC, parking and arrival details</Link></aside>
