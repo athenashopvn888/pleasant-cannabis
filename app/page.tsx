@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { HOME_TITLE } from "./lib/homeDelivery";
 import Papa from "papaparse";
 import HomePage, { type Review, type ReviewStats } from "./HomePage";
 import { faqPageJsonLd, toJsonLd } from "./lib/storeNap";
+import type { FlowerProduct } from "./lib/products";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: { absolute: HOME_TITLE },
@@ -45,15 +49,30 @@ async function getReviews(): Promise<{ reviews: Review[]; stats: ReviewStats | n
   }
 }
 
+async function fetchHomepageFlowers(): Promise<FlowerProduct[]> {
+  try {
+    const requestHeaders = await headers();
+    const host = (requestHeaders.get("x-forwarded-host") || requestHeaders.get("host") || "").split(",")[0].trim();
+    if (!host) return [];
+    const protocol = (requestHeaders.get("x-forwarded-proto") || (host.startsWith("localhost") ? "http" : "https")).split(",")[0].trim();
+    const response = await fetch(`${protocol}://${host}/api/tv-data?type=flowers`, { cache: "no-store" });
+    if (!response.ok) return [];
+    const data: unknown = await response.json();
+    return Array.isArray(data) ? data as FlowerProduct[] : [];
+  } catch {
+    return [];
+  }
+}
+
 export default async function Page() {
-  const { reviews, stats } = await getReviews();
+  const [{ reviews, stats }, flowers] = await Promise.all([getReviews(), fetchHomepageFlowers()]);
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: toJsonLd(faqPageJsonLd) }}
       />
-      <HomePage initialReviews={reviews} initialReviewStats={stats} />
+      <HomePage initialReviews={reviews} initialReviewStats={stats} initialFlowers={flowers} />
     </>
   );
 }
