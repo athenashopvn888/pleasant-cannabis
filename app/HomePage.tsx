@@ -105,9 +105,10 @@ export interface ReviewStats {
 interface HomePageProps {
   initialReviews: Review[];
   initialReviewStats: ReviewStats | null;
+  initialFlowers: Parameters<typeof storeTierRange>[0];
 }
 
-export default function HomePage({ initialReviews, initialReviewStats }: HomePageProps) {
+export default function HomePage({ initialReviews, initialReviewStats, initialFlowers }: HomePageProps) {
   // Existing cards hydrate from the browser-side menu pool after mount.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [featuredStrains, setFeaturedStrains] = useState<any[]>([]);
@@ -212,7 +213,7 @@ export default function HomePage({ initialReviews, initialReviewStats }: HomePag
                 <div className={styles.bentoTileOverlay} />
                 <div className={styles.bentoTileContent}>
                   <span className={styles.bentoLabel}>{tier.name}</span>
-                  {tier.key ? (() => { const line = tierRangeText(storeTierRange(allFlowers, tier.key)); return line ? <span className={styles.bentoPrice}><small className="price-scope-label">In-store price</small>{line}</span> : null; })() : <span className={styles.bentoPrice}>{tier.price}</span>}
+                  {tier.key ? (() => { const line = tierRangeText(storeTierRange(initialFlowers, tier.key)); return line ? <span className={styles.bentoPrice}><small className="price-scope-label">In-store price</small>{line}</span> : null; })() : <span className={styles.bentoPrice}>{tier.price}</span>}
                 </div>
               </Link>
             ))}
