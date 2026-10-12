@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import FleetAnnouncementBanner from "./components/FleetAnnouncementBanner";
+import HomeTitleBlock from "./components/HomeTitleBlock";
 import Navbar from "./components/Navbar";
 import HiringCallout from "./components/HiringCallout";
 import Footer from "./components/Footer";
@@ -147,6 +148,7 @@ export default function HomePage({ initialReviews, initialReviewStats, initialFl
     <main className={styles.main}>
       <Navbar />
       <HomepageTopNotices />
+      <HomeTitleBlock title={HOME_TITLE} />
       <FleetAnnouncementBanner />
       {/* ── NAVBAR ── */}
 
@@ -186,7 +188,7 @@ export default function HomePage({ initialReviews, initialReviewStats, initialFl
           {/* Brand branding */}
           <div className={styles.brandBlock}>
             <Image src="/brand-logo-small.webp" alt="Pleasant Cannabis Icon" width={60} height={60} loading="lazy" style={{ objectFit: "contain", borderRadius: "8px", marginBottom: "8px" }} />
-            <h1 className={styles.brandTitle}>{HOME_TITLE}</h1>
+            <p className={styles.brandTitle}>{HOME_TITLE}</p>
             <CohortDeliveryActions variant="hero" />
             <p className={styles.brandSub}>Mount Pleasant / Midtown walk-in</p>
             <div className={styles.brandBadge}>Open 24 Hours</div>
