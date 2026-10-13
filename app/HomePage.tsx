@@ -9,7 +9,6 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import FleetAnnouncementBanner from "./components/FleetAnnouncementBanner";
-import HomeTitleBlock from "./components/HomeTitleBlock";
 import Navbar from "./components/Navbar";
 import HiringCallout from "./components/HiringCallout";
 import Footer from "./components/Footer";
@@ -147,9 +146,8 @@ export default function HomePage({ initialReviews, initialReviewStats, initialFl
   return (
     <main className={styles.main}>
       <Navbar />
+      <FleetAnnouncementBanner title={HOME_TITLE} />
       <HomepageTopNotices />
-      <HomeTitleBlock title={HOME_TITLE} />
-      <FleetAnnouncementBanner />
       {/* ── NAVBAR ── */}
 
       <HiringCallout />
