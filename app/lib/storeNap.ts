@@ -39,6 +39,10 @@ export const STORE_NAP = {
 
 export const HOME_FAQS = [
   {
+    q: "Where's a cannabis dispensary near me in Midtown, on Mount Pleasant?",
+    a: "Pleasant Cannabis is at 758 Mt Pleasant Rd, Toronto, in Midtown on Mount Pleasant Road. We're open 24 hours for adults 19+ with valid photo ID.",
+  },
+  {
     q: "What are the hours for Pleasant Cannabis?",
     a: "Pleasant Cannabis at 758 Mt Pleasant Rd, Toronto is Open 24 Hours a day, 7 days a week. Walk in anytime — no appointment needed.",
   },
