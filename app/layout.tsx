@@ -1,3 +1,4 @@
+import FullNameNap from "./components/FullNameNap";
 import PinnedNavClearance from "./components/PinnedNavClearance";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -84,6 +85,7 @@ export default function RootLayout({
           NEW WEED DELIVERY MENU IS HERE — CLICK TO EXPLORE
         </Link>
         {children}
+        <FullNameNap />
         <PinnedNavClearance />
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-5STHBE8TXT" strategy="lazyOnload" />
         <Script id="google-analytics" strategy="lazyOnload">
