@@ -1,3 +1,4 @@
+import { cigaretteSafeContent } from "../lib/siteConfig";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "../components/Footer";
@@ -8,7 +9,7 @@ import styles from "./guides-index.module.css";
 const BASE = "https://www.pleasantcannabis.ca";
 const CANONICAL = `${BASE}/guides`;
 const TITLE = "Guides | Pleasant Cannabis";
-const DESCRIPTION = "Browse Pleasant Cannabis name guides for strains, Native Cigarettes, Nicotine Vape, and THC Vape. Adults 19+ only; check today's menu for current listings.";
+const DESCRIPTION = cigaretteSafeContent("Browse Pleasant Cannabis name guides for strains, Native Cigarettes, Nicotine Vape, and THC Vape. Adults 19+ only; check today's menu for current listings.");
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },

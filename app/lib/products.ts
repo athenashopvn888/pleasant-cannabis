@@ -1,3 +1,4 @@
+import { SHOW_CIGARETTES, filterCigaretteItems, isCigaretteCategory } from "./siteConfig";
 /* -- Product & Item Types -- */
 export interface FlowerProduct {
   sku: string;
@@ -39,7 +40,9 @@ import itemsJson from "./items.json";
 import type { BoardDeal } from "./flowerDeals";
 
 export const allFlowers: FlowerProduct[] = flowersJson as FlowerProduct[];
-export const allItems: ItemProduct[] = itemsJson as ItemProduct[];
+export const allItems: ItemProduct[] = SHOW_CIGARETTES
+  ? itemsJson as ItemProduct[]
+  : (itemsJson as ItemProduct[]).filter((item) => !isCigaretteCategory(item.category));
 
 /* Live stock fetch from Apps Script */
 const APPS_SCRIPT_URL = process.env.APPS_SCRIPT_URL || "";
@@ -79,7 +82,7 @@ export async function fetchLiveProducts(): Promise<{
     const data: LiveStockResponse = await res.json();
     return {
       flowers: data.flowers || allFlowers,
-      items: data.items || allItems,
+      items: filterCigaretteItems(data.items || allItems),
       isLive: true,
       stockDate: data.stockDate || null,
     };
@@ -389,6 +392,7 @@ export function getTierFromSlug(
 export function getCategoryFromSlug(
   slug: string,
 ): { key: string; config: (typeof CATEGORY_CONFIG)[string] } | undefined {
+  if (!SHOW_CIGARETTES && isCigaretteCategory(slug)) return undefined;
   const entry = Object.entries(CATEGORY_CONFIG).find(
     ([, v]) => v.slug === slug,
   );

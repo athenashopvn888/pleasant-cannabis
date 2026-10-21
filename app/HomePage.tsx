@@ -1,4 +1,7 @@
 "use client";
+
+import { cigaretteSafeContent } from "./lib/siteConfig";
+
 import { HOME_TITLE } from "./lib/homeDelivery";
 import CohortDeliveryActions from "./components/CohortDeliveryActions";
 import HomeDeliverySection from "./components/HomeDeliverySection";
@@ -70,7 +73,7 @@ const BENTO_TIERS = [
 ];
 
 /* ── Explore Categories Config (New Banners) ── */
-const EXPLORE_CATEGORIES = [
+const EXPLORE_CATEGORIES = cigaretteSafeContent([
   { name: "Nicotine Vapes", slug: "items/vapes", banner: "/banners/01_Vape_Pens.webp", icon: "💨" },
   { name: "THC Vapes", slug: "items/vape-disposables", banner: "/banners/02_Vape_Disposable.webp", icon: "💨" },
   { name: "Concentrates", slug: "items/concentrates", banner: "/banners/03_Concentrates.webp", icon: "💎" },
@@ -78,9 +81,9 @@ const EXPLORE_CATEGORIES = [
   { name: "Accessories", slug: "items/add-ons", banner: "/banners/05_Accessories.webp", icon: "➕" },
   { name: "Cigarettes", slug: "items/cigarettes", banner: "/banners/native-cigarette-offer-20260822.webp", icon: "🏷️" },
   { name: "Magic Stuff", slug: "items/magic", banner: "/banners/09_Magic_Stuff.webp", icon: "🍄" },
-];
+]);
 
-const LOCAL_AUTHORITY_LINKS = [
+const LOCAL_AUTHORITY_LINKS = cigaretteSafeContent([
   { href: "/weed-dispensary-mount-pleasant", label: "Mount Pleasant Weed Dispensary", detail: "Local counter and neighbourhood guide" },
   { href: "/24-hour-mount-pleasant-dispensary", label: "Open 24 Hours", detail: "Late-night and early-morning visit details" },
   { href: "/weed-delivery-toronto", label: "Weed Delivery", detail: "Review the existing Toronto delivery guide" },
@@ -88,7 +91,7 @@ const LOCAL_AUTHORITY_LINKS = [
   { href: "/nicotine-vape-mount-pleasant", label: "Nicotine Vapes", detail: "Adult nicotine products, separate from THC" },
   { href: "/vape-shop-mount-pleasant", label: "Vape Shop", detail: "Current nicotine listings and contact options" },
   { href: "/visit", label: "Plan Your Visit", detail: "Directions, TTC, parking, NAP and hours" },
-];
+]);
 
 
 export interface Review {
