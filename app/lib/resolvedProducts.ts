@@ -3,6 +3,7 @@ import "server-only";
 import { cache } from "react";
 import { allFlowers, allItems, type FlowerProduct, type ItemProduct } from "./products";
 import { getTvData } from "./tvStock";
+import { filterCigaretteItems } from "./siteConfig";
 
 export const getResolvedFlowers = cache(async (): Promise<FlowerProduct[]> => {
   const { body } = await getTvData({
@@ -19,5 +20,5 @@ export const getResolvedItems = cache(async (): Promise<ItemProduct[]> => {
     staticFlowers: allFlowers,
     staticItems: allItems,
   });
-  return body as ItemProduct[];
+  return filterCigaretteItems(body as ItemProduct[]);
 });

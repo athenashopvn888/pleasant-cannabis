@@ -1,3 +1,4 @@
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 import Link from "next/link";
 import styles from "./Footer.module.css";
 
@@ -55,7 +56,7 @@ export default function Footer() {
               <Link href="/aa-weed">AA Weed</Link>
               <Link href="/budget-weed">Budget Weed</Link>
               <Link href="/items/edibles">Edibles</Link>
-              <Link href="/items/cigarettes">Cigarettes</Link>
+              {SHOW_CIGARETTES ? (<Link href="/items/cigarettes">Cigarettes</Link>) : null}
               <Link href="/items/vapes">Nicotine Vape</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/hours">Store Hours</Link>
@@ -64,9 +65,9 @@ export default function Footer() {
               <Link href="/info/cheap-weed-mount-pleasant">
                 Cheap Weed Mount Pleasant
               </Link>
-              <Link href="/info/native-cigarettes-mount-pleasant">
+              {SHOW_CIGARETTES ? (<Link href="/info/native-cigarettes-mount-pleasant">
                 Native Cigarettes
-              </Link>
+              </Link>) : null}
               <Link href="/info/nicotine-vapes-mount-pleasant">
                 Nicotine Vapes Mount Pleasant
               </Link>
