@@ -1,6 +1,7 @@
-import { cigaretteSafeContent } from "./lib/siteConfig";
+import FleetContentProvider from "./components/FleetContentProvider";
 import FullNameNap from "./components/FullNameNap";
 import PinnedNavClearance from "./components/PinnedNavClearance";
+import { getFleetContent } from "./lib/fleetContent";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
@@ -12,7 +13,7 @@ const outfit = Outfit({ subsets: ["latin"], display: "swap", variable: "--font-o
 const playfair = Playfair_Display({ subsets: ["latin"], display: "swap", preload: false, variable: "--font-playfair" });
 const quicksand = Quicksand({ subsets: ["latin"], display: "swap", preload: false, variable: "--font-quicksand" });
 
-export const metadata: Metadata = {
+const ROOT_METADATA: Metadata = {
   metadataBase: new URL(STORE_NAP.homeUrl),
   title: {
     default: "Open 24 Hours in Midtown | Pleasant Cannabis",
@@ -63,15 +64,29 @@ export const metadata: Metadata = {
   },
 };
 
+export async function generateMetadata(): Promise<Metadata> {
+  const fleet = await getFleetContent();
+  if (!fleet.active) return ROOT_METADATA;
+  const description = fleet.pages.Home?.metaDescription || "";
+  if (!description || description === ROOT_METADATA.description) return ROOT_METADATA;
+  return {
+    ...ROOT_METADATA,
+    description,
+    openGraph: { ...ROOT_METADATA.openGraph, description },
+    twitter: { ...ROOT_METADATA.twitter, description },
+  };
+}
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const fleet = await getFleetContent();
   return (
     <html lang="en">
       <head>
+        <meta name="fleet-content-version" content={fleet.version} />
         <meta name="geo.region" content="CA-ON" />
         <meta name="geo.placename" content="Mount Pleasant, Toronto" />
         <meta name="geo.position" content="43.7075699;-79.3901685" />
@@ -85,9 +100,11 @@ export default function RootLayout({
         <Link className="deliveryAnnouncement" href="/weed-delivery-toronto">
           NEW WEED DELIVERY MENU IS HERE — CLICK TO EXPLORE
         </Link>
-        {children}
-        <FullNameNap />
-        <PinnedNavClearance />
+        <FleetContentProvider value={{ active: fleet.active, version: fleet.version, nap: fleet.nap }}>
+          {children}
+          <FullNameNap />
+          <PinnedNavClearance />
+        </FleetContentProvider>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-5STHBE8TXT" strategy="lazyOnload" />
         <Script id="google-analytics" strategy="lazyOnload">
           {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-5STHBE8TXT');`}

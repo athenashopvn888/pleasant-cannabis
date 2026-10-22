@@ -1,3 +1,4 @@
+import { loadFleetArticles } from "./lib/fleet/articles";
 import { SHOW_CIGARETTES, isCigarettePath } from "./lib/siteConfig";
 const withoutCigaretteUrls = (entries: MetadataRoute.Sitemap): MetadataRoute.Sitemap =>
   SHOW_CIGARETTES ? entries : entries.filter((entry) => !isCigarettePath(new URL(entry.url).pathname));
@@ -11,7 +12,7 @@ import { DELIVERY_GUIDE_REGISTRY } from "./lib/deliveryGuideRegistry";
 
 const BASE = "https://www.pleasantcannabis.ca";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date().toISOString();
 
   const staticPages: MetadataRoute.Sitemap = [
@@ -91,5 +92,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/guides`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
   ];
 
-  return withoutCigaretteUrls([...guideIndex, ...guidePages, ...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...seoPages, ...resourcePages]);
+  let fleetArticlePages: MetadataRoute.Sitemap = [];
+  try {
+    const loaded = await loadFleetArticles();
+    if (loaded.ok) {
+      const codedSlugs = new Set(RESOURCE_PAGES.map((page) => page.slug));
+      fleetArticlePages = loaded.articles.filter((article) => !codedSlugs.has(article.slug)).map((article) => ({
+        url: `${BASE}/articles/${article.slug}`,
+        lastModified: article.publishedAt,
+        changeFrequency: "weekly" as const,
+        priority: 0.6,
+      }));
+    }
+  } catch {
+    fleetArticlePages = [];
+  }
+
+  return withoutCigaretteUrls([...guideIndex, ...guidePages, ...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...seoPages, ...resourcePages, ...fleetArticlePages]);
 }
