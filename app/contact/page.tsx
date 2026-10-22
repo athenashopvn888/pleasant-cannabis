@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import { FULL_NAME_NAP } from "../lib/fullNameNap";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { getFleetContent } from "../lib/fleetContent";
 import styles from "./contact.module.css";
 
-export const metadata: Metadata = {
+export const dynamic = "force-dynamic";
+
+const CONTACT_METADATA: Metadata = {
   title: "Contact Us — Pleasant Cannabis | 758 Mt Pleasant Rd, Toronto",
   description:
     "Visit Pleasant Cannabis at 758 Mt Pleasant Rd, Toronto, ON M4S 2N6. Open 24 hours, 7 days a week. Walk-ins welcome.",
@@ -17,6 +20,22 @@ export const metadata: Metadata = {
       "758 Mt Pleasant Rd, Toronto. Open 24 hours, 7 days a week. Premium cannabis, always fire.",
   },
 };
+
+export async function generateMetadata(): Promise<Metadata> {
+  const fleet = await getFleetContent();
+  if (!fleet.active) return CONTACT_METADATA;
+  const page = fleet.pages.Contact;
+  const description = page?.metaDescription || "";
+  const title = page?.metaTitle || "";
+  const sameDescription = !description || description === CONTACT_METADATA.description;
+  const sameTitle = !title || title === CONTACT_METADATA.title;
+  if (sameDescription && sameTitle) return CONTACT_METADATA;
+  return {
+    ...CONTACT_METADATA,
+    ...(description && description !== CONTACT_METADATA.description ? { description } : {}),
+    ...(title && title !== CONTACT_METADATA.title ? { title: { absolute: title } } : {}),
+  };
+}
 
 export default function ContactPage() {
   return (

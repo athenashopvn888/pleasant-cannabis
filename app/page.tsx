@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
+import { CODED_BANNERS } from "./lib/fleet/config";
+import { getFleetContent } from "./lib/fleetContent";
 import { HOME_TITLE } from "./lib/homeDelivery";
 import Papa from "papaparse";
 import HomePage, { type Review, type ReviewStats } from "./HomePage";
@@ -65,14 +67,15 @@ async function fetchHomepageFlowers(): Promise<FlowerProduct[]> {
 }
 
 export default async function Page() {
-  const [{ reviews, stats }, flowers] = await Promise.all([getReviews(), fetchHomepageFlowers()]);
+  const [{ reviews, stats }, flowers, fleet] = await Promise.all([getReviews(), fetchHomepageFlowers(), getFleetContent()]);
+  const contentBanners = fleet.active && fleet.banners.some((banner, index) => banner !== CODED_BANNERS[index]) ? fleet.banners : undefined;
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: toJsonLd(faqPageJsonLd) }}
       />
-      <HomePage initialReviews={reviews} initialReviewStats={stats} initialFlowers={flowers} />
+      <HomePage initialReviews={reviews} initialReviewStats={stats} initialFlowers={flowers} contentBanners={contentBanners} />
     </>
   );
 }

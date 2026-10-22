@@ -12,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import FleetAnnouncementBanner from "./components/FleetAnnouncementBanner";
+import type { ResolvedBanner } from "./lib/fleet/types";
 import Navbar from "./components/Navbar";
 import HiringCallout from "./components/HiringCallout";
 import Footer from "./components/Footer";
@@ -109,9 +110,10 @@ interface HomePageProps {
   initialReviews: Review[];
   initialReviewStats: ReviewStats | null;
   initialFlowers: Parameters<typeof storeTierRange>[0];
+  contentBanners?: ResolvedBanner[];
 }
 
-export default function HomePage({ initialReviews, initialReviewStats, initialFlowers }: HomePageProps) {
+export default function HomePage({ initialReviews, initialReviewStats, initialFlowers, contentBanners }: HomePageProps) {
   // Existing cards hydrate from the browser-side menu pool after mount.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [featuredStrains, setFeaturedStrains] = useState<any[]>([]);
@@ -149,7 +151,7 @@ export default function HomePage({ initialReviews, initialReviewStats, initialFl
   return (
     <main className={styles.main}>
       <Navbar />
-      <FleetAnnouncementBanner title={HOME_TITLE} />
+      <FleetAnnouncementBanner title={HOME_TITLE} banners={contentBanners} />
       <HomepageTopNotices />
       {/* ── NAVBAR ── */}
 
