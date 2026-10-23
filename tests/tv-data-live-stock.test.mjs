@@ -6,6 +6,7 @@ import { beforeEach, test } from "node:test";
 const require = createRequire(import.meta.url);
 const {
   DEFAULT_APPS_SCRIPT_URL,
+  getCigaretteDataset,
   getTvData,
   postprocessFlowers,
   postprocessItems,
@@ -278,6 +279,40 @@ test("HTTP 200 HTML, 429, and throws serve last-good with reason and cooldown", 
     await getTvData({ type: "flowers", staticFlowers, staticItems, fetchImpl: failure.fetchImpl, now });
     assert.equal(failure.calls.length, 2);
   }
+});
+
+test("cigarette dataset reads the feed cig block on the short cache", async () => {
+  const flowers = list(staticFlowers.length, (index) => flower(`CIG FLOWER ${index}`));
+  const items = list(staticItems.length, (index) => item(`CIG ITEM ${index}`));
+  const cig = { on: true, tvOn: true, webOn: false, master: true };
+  const { fetchImpl, calls } = mockFetch({
+    flowers,
+    items,
+    stockDate: "2026-10-23T03:07:19.000Z",
+    cig,
+  });
+  const dataset = await getCigaretteDataset({
+    staticFlowers,
+    staticItems,
+    fetchImpl,
+    now: 5_000,
+  });
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0].opts.cache, undefined);
+  assert.equal(calls[0].opts.next.revalidate, 60);
+  assert.equal(dataset.source, "live");
+  assert.equal(dataset.cig.tvOn, true);
+  assert.equal(dataset.cig.webOn, false);
+  assert.equal(dataset.items.length, staticItems.length);
+
+  const cached = await getCigaretteDataset({
+    staticFlowers,
+    staticItems,
+    fetchImpl,
+    now: 30_000,
+  });
+  assert.equal(calls.length, 1);
+  assert.equal(cached.cig.tvOn, true);
 });
 
 test("prebuild uses the shared post-processor", () => {
