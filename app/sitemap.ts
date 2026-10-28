@@ -80,6 +80,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: "weekly" as const,
     priority: page.slug ? 0.65 : 0.75,
   }));
+  const exoticWeedArticle: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE}/resources/what-is-exotic-weed`,
+      lastModified: "2026-10-28",
+      changeFrequency: "weekly",
+      priority: 0.65,
+    },
+  ];
 
   const guidePages: MetadataRoute.Sitemap = [...GUIDE_REGISTRY, ...DELIVERY_GUIDE_REGISTRY].map((guide) => ({
     url: `${BASE}/guides/${guide.slug}`,
@@ -108,5 +116,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     fleetArticlePages = [];
   }
 
-  return withoutCigaretteUrls([...guideIndex, ...guidePages, ...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...seoPages, ...resourcePages, ...fleetArticlePages]);
+  return withoutCigaretteUrls([...guideIndex, ...guidePages, ...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...seoPages, ...resourcePages, ...exoticWeedArticle, ...fleetArticlePages]);
 }
