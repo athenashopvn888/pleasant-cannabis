@@ -88,6 +88,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.65,
     },
   ];
+  const bubblerPipeArticle: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE}/resources/what-is-a-bubbler-pipe`,
+      lastModified: "2026-11-04",
+      changeFrequency: "weekly",
+      priority: 0.65,
+    },
+  ];
 
   const guidePages: MetadataRoute.Sitemap = [...GUIDE_REGISTRY, ...DELIVERY_GUIDE_REGISTRY].map((guide) => ({
     url: `${BASE}/guides/${guide.slug}`,
@@ -116,5 +124,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     fleetArticlePages = [];
   }
 
-  return withoutCigaretteUrls([...guideIndex, ...guidePages, ...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...seoPages, ...resourcePages, ...exoticWeedArticle, ...fleetArticlePages]);
+  return withoutCigaretteUrls([...guideIndex, ...guidePages, ...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...seoPages, ...resourcePages, ...exoticWeedArticle, ...bubblerPipeArticle, ...fleetArticlePages]);
 }
