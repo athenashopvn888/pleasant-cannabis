@@ -96,6 +96,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.65,
     },
   ];
+  const strainNamingArticle: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE}/resources/strain-vs-cultivar-vs-phenotype`,
+      lastModified: "2026-11-11",
+      changeFrequency: "weekly",
+      priority: 0.65,
+    },
+  ];
 
   const guidePages: MetadataRoute.Sitemap = [...GUIDE_REGISTRY, ...DELIVERY_GUIDE_REGISTRY].map((guide) => ({
     url: `${BASE}/guides/${guide.slug}`,
@@ -124,5 +132,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     fleetArticlePages = [];
   }
 
-  return withoutCigaretteUrls([...guideIndex, ...guidePages, ...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...seoPages, ...resourcePages, ...exoticWeedArticle, ...bubblerPipeArticle, ...fleetArticlePages]);
+  return withoutCigaretteUrls([...guideIndex, ...guidePages, ...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...seoPages, ...resourcePages, ...exoticWeedArticle, ...bubblerPipeArticle, ...strainNamingArticle, ...fleetArticlePages]);
 }
