@@ -1,4 +1,5 @@
 export const HOME_TITLE = "Pleasant Cannabis Dispensary Weed Delivery";
+export const HOME_DOCUMENT_TITLE = "Pleasant Cannabis Dispensary near me | Weed Delivery";
 export const HOME_MENU_HREF = "/exotic-weed";
 export const HOME_DELIVERY_HREF = "/delivery";
 export const HOME_DELIVERY_H2 = "Cannabis Delivery in Midtown";

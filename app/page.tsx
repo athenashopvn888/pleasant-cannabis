@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { CODED_BANNERS } from "./lib/fleet/config";
 import { getFleetContent } from "./lib/fleetContent";
-import { HOME_TITLE } from "./lib/homeDelivery";
+import { HOME_DOCUMENT_TITLE } from "./lib/homeDelivery";
 import Papa from "papaparse";
 import HomePage, { type Review, type ReviewStats } from "./HomePage";
 import { faqPageJsonLd, toJsonLd } from "./lib/storeNap";
@@ -11,9 +11,9 @@ import type { FlowerProduct } from "./lib/products";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: { absolute: HOME_TITLE },
-  openGraph: { title: HOME_TITLE },
-  twitter: { card: "summary_large_image", title: HOME_TITLE },
+  title: { absolute: HOME_DOCUMENT_TITLE },
+  openGraph: { title: HOME_DOCUMENT_TITLE },
+  twitter: { card: "summary_large_image", title: HOME_DOCUMENT_TITLE },
 };
 
 const REVIEWS_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSu6iy9W3YKRzBYo_r96rXcbJsAOzlkzn5Rw9QMFnE0NbYSBgPxKX8kPRZNC9QcffZYj57155esmnqH/pub?gid=1555782756&single=true&output=csv";
