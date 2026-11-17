@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import test from "node:test";
-import { HOME_DELIVERY_CARDS, HOME_DELIVERY_FAQS, HOME_DELIVERY_HREF, HOME_MENU_HREF, HOME_TITLE } from "../app/lib/homeDelivery.ts";
+import { HOME_DELIVERY_CARDS, HOME_DELIVERY_FAQS, HOME_DELIVERY_HREF, HOME_DOCUMENT_TITLE, HOME_MENU_HREF, HOME_TITLE } from "../app/lib/homeDelivery.ts";
 
 const home = fs.readFileSync("app/HomePage.tsx", "utf8");
 const page = fs.readFileSync("app/page.tsx", "utf8");
@@ -12,11 +12,12 @@ const globals = fs.readFileSync("app/globals.css", "utf8");
 
 test("locked Cohort B title and paths", () => {
   assert.equal(HOME_TITLE, "Pleasant Cannabis Dispensary Weed Delivery");
+  assert.equal(HOME_DOCUMENT_TITLE, "Pleasant Cannabis Dispensary near me | Weed Delivery");
   assert.equal(HOME_TITLE.match(/Dispensary/g)?.length, 1);
   assert.match(home, /alt="Pleasant Cannabis Dispensary Weed Delivery"/);
-  assert.match(page, /title: \{ absolute: HOME_TITLE \}/);
-  assert.match(page, /openGraph: \{ title: HOME_TITLE \}/);
-  assert.match(page, /twitter: \{ card: "summary_large_image", title: HOME_TITLE \}/);
+  assert.match(page, /title: \{ absolute: HOME_DOCUMENT_TITLE \}/);
+  assert.match(page, /openGraph: \{ title: HOME_DOCUMENT_TITLE \}/);
+  assert.match(page, /twitter: \{ card: "summary_large_image", title: HOME_DOCUMENT_TITLE \}/);
   assert.match(nap, /"@type": "CannabisStore"[\s\S]*name: "Pleasant Cannabis Dispensary Weed Delivery"/);
   assert.equal(HOME_MENU_HREF, "/exotic-weed");
   assert.equal(HOME_DELIVERY_HREF, "/delivery");
