@@ -1,6 +1,7 @@
 "use client";
 
-import { cigaretteSafeContent } from "./lib/siteConfig";
+import { cigaretteSafeContent, isCigaretteEntry } from './lib/siteConfig';
+import { useCigaretteState } from './components/CigaretteStateProvider';
 
 import { HOME_TITLE } from "./lib/homeDelivery";
 import CohortDeliveryActions from "./components/CohortDeliveryActions";
@@ -114,6 +115,9 @@ interface HomePageProps {
 }
 
 export default function HomePage({ initialReviews, initialReviewStats, initialFlowers, contentBanners }: HomePageProps) {
+  const showCigarettes = useCigaretteState().web;
+  const exploreCategories = showCigarettes ? EXPLORE_CATEGORIES : EXPLORE_CATEGORIES.filter((category) => !isCigaretteEntry(category));
+  const authorityLinks = showCigarettes ? LOCAL_AUTHORITY_LINKS : LOCAL_AUTHORITY_LINKS.filter((link) => !isCigaretteEntry(link));
   // Existing cards hydrate from the browser-side menu pool after mount.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [featuredStrains, setFeaturedStrains] = useState<any[]>([]);
@@ -234,12 +238,12 @@ export default function HomePage({ initialReviews, initialReviewStats, initialFl
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Explore Categories</h2>
             <p className={styles.sectionSubtitle}>
-              From custom disposable vapes and concentrates to accessories and cigarettes.
+              From custom disposable vapes and concentrates to accessories{showCigarettes ? " and cigarettes" : ""}.
             </p>
           </div>
 
           <div className={styles.categoriesGrid}>
-            {EXPLORE_CATEGORIES.map((cat) => (
+            {exploreCategories.map((cat) => (
               <Link
                 key={cat.slug}
                 href={`/${cat.slug}`}
@@ -275,7 +279,7 @@ export default function HomePage({ initialReviews, initialReviewStats, initialFl
             <h2 className={styles.sectionTitle} id="local-guide-title">Local store guides</h2>
             <p className={styles.sectionSubtitle}>Six useful routes connecting the store, current categories, delivery and arrival details.</p>
           </div>
-          <div className={styles.authorityGrid}>{LOCAL_AUTHORITY_LINKS.map((item) => <Link href={item.href} key={item.href} className={styles.authorityCard}><strong>{item.label}</strong><span>{item.detail}</span><em>Open guide →</em></Link>)}</div>
+          <div className={styles.authorityGrid}>{authorityLinks.map((item) => <Link href={item.href} key={item.href} className={styles.authorityCard}><strong>{item.label}</strong><span>{item.detail}</span><em>Open guide →</em></Link>)}</div>
         </div>
       </section>
 

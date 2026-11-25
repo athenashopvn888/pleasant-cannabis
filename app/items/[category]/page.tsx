@@ -1,5 +1,6 @@
 import CigaretteSeasonalNotice from "../../components/CigaretteSeasonalNotice";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from 'next/navigation';
+import { getCigaretteSnapshot, reconcileSurfaceItems } from '../../lib/cigaretteFeed';
 import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
@@ -32,6 +33,8 @@ export async function generateMetadata({
   params: Promise<{ category: string }>;
 }): Promise<Metadata> {
   const { category: catSlug } = await params;
+  const { web } = await getCigaretteSnapshot();
+  if (catSlug === 'cigarettes' && !web.show) redirect('/items/vapes');
   const catInfo = getCategoryFromSlug(catSlug);
   if (!catInfo) return {};
   const items = getItemsByCategory(catInfo.key, await getResolvedItems());
@@ -51,11 +54,13 @@ export default async function ItemsCategoryPage({
   params: Promise<{ category: string }>;
 }) {
   const { category: catSlug } = await params;
+  const { web } = await getCigaretteSnapshot();
+  if (catSlug === 'cigarettes' && !web.show) redirect('/items/vapes');
   const catInfo = getCategoryFromSlug(catSlug);
   if (!catInfo) notFound();
 
   /* Pre-Rolls also shows accessories (ADD ONS) */
-  const resolvedItems = await getResolvedItems();
+  const resolvedItems = reconcileSurfaceItems(await getResolvedItems(), [], web.show);
   let items = getItemsByCategory(catInfo.key, resolvedItems);
   if (catInfo.key === "PREROLLS") {
     const accessories = getItemsByCategory("ADD ONS", resolvedItems);
