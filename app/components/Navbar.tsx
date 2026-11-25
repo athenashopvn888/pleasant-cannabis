@@ -1,6 +1,7 @@
 "use client";
 
-import { filterCigaretteEntries } from "../lib/siteConfig";
+import { filterCigaretteEntries, isCigaretteEntry } from '../lib/siteConfig';
+import { useCigaretteState } from './CigaretteStateProvider';
 
 import CohortDeliveryActions from "./CohortDeliveryActions";
 
@@ -32,9 +33,11 @@ const ALL_LINKS_RAW = [
   { href: "/guides", label: "Guides" },
 ];
 
-const ALL_LINKS = filterCigaretteEntries(ALL_LINKS_RAW);
+const configuredLinks = filterCigaretteEntries(ALL_LINKS_RAW);
 
 export default function Navbar() {
+  const showCigarettes = useCigaretteState().web;
+  const ALL_LINKS = showCigarettes ? configuredLinks : configuredLinks.filter((link) => !isCigaretteEntry(link));
   const pathname = usePathname();
   const scrollBarRef = useRef<HTMLDivElement>(null);
   const [canAdvance, setCanAdvance] = useState(false);
